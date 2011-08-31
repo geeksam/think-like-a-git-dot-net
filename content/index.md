@@ -6,17 +6,14 @@ filter:
   - markdown
 ---
 
-# <%= @page.title %>
+## Introduction
 
-Git has a famously steep learning curve.
+Git is [in]famously hard to learn.
 
-Once people achieve some level of Git enlightenment, they tend to make statements of the form 'Git gets a lot easier once you realize X' -- but that doesn't do much to help people staring up that steep slope.
+When you're just getting started, something as straightforward as a merge can be terrifying. It can take a long time to really become comfortable using some of Git's more advanced features.  *(It took me a year or two.)*
 
-When you're just getting started, something as straightforward as a merge can be terrifying. It can take a long time to really become comfortable using some of Git's more advanced features.
+Once people achieve some level of **Git enlightenment,** they tend to make statements of the form 'Git gets a lot easier once you realize X' -- but that doesn't do much for people staring up Git's steep learning curve.
 
-This website aims to provide two things:
+My goal with this site is to help you, Dear Reader, understand what those smug bastards are talking about.
 
- - a very gentle introduction to graph theory, and
- - a simple strategy for safely experimenting with Git operations,
 
-so that you can build comfort and confidence with this incredibly useful tool.
