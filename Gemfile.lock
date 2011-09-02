@@ -11,7 +11,9 @@ GEM
     logging (1.6.0)
       little-plugger (>= 1.1.2)
     loquacious (1.8.1)
+    minitest (2.5.1)
     rake (0.8.7)
+    rdiscount (1.6.8)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -33,4 +35,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitest
+  rdiscount
   webby
