@@ -1,0 +1,9 @@
+---
+filter: erb
+---
+
+<%=
+  sitemap = Sitemap.from_file('lib/sitemap.txt')
+  navlist = Sitemap::NavListBuilder.for(sitemap)
+  navlist.lines.join("\n")
+%>

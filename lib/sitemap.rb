@@ -58,6 +58,10 @@ class Sitemap
     eval(array_string)
   end
 
+  def self.from_file(filename)
+    from_text(File.read(File.expand_path(filename)))
+  end
+
   def self.from_text(text)
     new(parse_text(text))
   end
@@ -67,19 +71,66 @@ class Sitemap
     @sexp = sexp
   end
 
-  def facilitate_traversal_of(visitor)
-    traverse_sexp(visitor, sexp)
+  def ==(other)
+    self.sexp == other.sexp
   end
 
-  def traverse_sexp(visitor, sexp, ancestors = [])
+  def prev_and_next(item)
+    flat_list = sexp.flatten
+    idx = flat_list.index(item)
+    prev_item = flat_list[idx-1]; prev_item = nil if idx.zero?
+    next_item = flat_list[idx+1]
+    return prev_item, next_item
+  end
+
+  class Traverser
+    def self.for(sitemap)
+      new.tap { |t| t.traverse(sitemap) }
+    end
+
+    def traverse(sitemap)
+      sitemap.facilitate_traversal_of(self)
+    end
+    def begin_sublist(path)           ; end
+    def accept_node(ancestors, node)  ; end
+    def finalize_sublist(path)        ; end
+  end
+
+  def facilitate_traversal_of(traverser)
+    traverse_sexp(traverser, sexp)
+  end
+
+  def traverse_sexp(traverser, sexp, ancestors = [])
     prev_leaf = nil
+    traverser.begin_sublist ancestors
     sexp.each do |node|
       if node.kind_of? Array
-        traverse_sexp(visitor, node, (ancestors + [prev_leaf]).compact)
+        traverse_sexp traverser, node, (ancestors + [prev_leaf]).compact
       else
-        visitor.accept_node(ancestors, node)
+        traverser.accept_node(ancestors, node)
         prev_leaf = node
       end
+    end
+    traverser.finalize_sublist ancestors
+  end
+
+  class NavListBuilder < Sitemap::Traverser
+    attr_reader :lines
+    def initialize
+      @lines = []
+    end
+
+    def begin_sublist(path)
+      lines << '<ul>'
+    end
+
+    def accept_node(ancestors, node)
+      title, section_name = node, node.downcase.gsub(' ', '-')
+      lines << '<li><a href="/sections/%s.html">%s</a></li>' % [section_name, title]
+    end
+
+    def finalize_sublist(path)
+      lines << '</ul>'
     end
   end
 end

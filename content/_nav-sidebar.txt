@@ -2,10 +2,4 @@
 filter: erb
 ---
 
-<ul>
-  <li>Introduction</li>
-  <ul>
-    <li><%= page_link 'who-this-site-is-for' %></li>
-    <li><%= page_link 'what-this-site-will-try-to-teach-you' %></li>
-  </ul>
-</ul>
+<%= render :partial => '/sitemap' %>

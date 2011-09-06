@@ -1,6 +1,48 @@
 require File.join(File.dirname(__FILE__), *%w[test_helper])
 require File.join(File.dirname(__FILE__), *%w[.. sitemap])
 
+class Reprinter < Sitemap::Traverser
+  def out
+    @out ||= []
+  end
+
+  def accept_node(ancestors, node)
+    indent = ' ' * ancestors.length * Sitemap::TabSize
+    out << indent + node.to_s
+  end
+
+  def output
+    out.join("\n")
+  end
+end
+
+class SexpBuilder < Sitemap::Traverser
+  def initialize
+    @sexp = []
+  end
+
+  def begin_sublist(_)
+    @sexp << Sitemap::Lft
+  end
+
+  def accept_node(ancestors, node)
+    @sexp << node
+  end
+
+  def finalize_sublist(_)
+    @sexp << Sitemap::Rgt
+  end
+
+  def sexp_array
+    array_string = @sexp \
+      .map { |e| Sitemap::Brackets.include?(e) ? e.to_s : e.strip.inspect } \
+      .join(', ') \
+      .gsub('[, ', '[') \
+      .gsub(', ]', ']')
+    eval(array_string)
+  end
+end
+
 describe Sitemap do
   describe '.indentation_level' do
     it 'returns numeric values for strings' do
@@ -92,10 +134,18 @@ b
     end
   end
 
-  describe '#facilitate_traversal_of' do
+  it 'is == another Sitemap if their s-expressions are ==' do
+    s1 = Sitemap.from_text(SomewhatComplicatedList)
+    s2 = Sitemap.from_text(SomewhatComplicatedList)
+    assert_equal s1, s2
+  end
+
+  describe '#traverse_sexp' do
     it 'should send the #accept_node method for each top-level string' do
       sitemap = Sitemap.from_text("Foo\nBar\nBaz")
       visitor = MiniTest::Mock.new
+      def visitor.begin_sublist(*args); end
+      def visitor.finalize_sublist(*args); end
       visitor.expect :accept_node, nil, [[], 'Foo']
       visitor.expect :accept_node, nil, [[], 'Bar']
       visitor.expect :accept_node, nil, [[], 'Baz']
@@ -106,6 +156,8 @@ b
     it 'should send the #accept_node method for each leaf string, with an ancestors list for each' do
       sitemap = Sitemap.from_text(FooBarbarianList)
       visitor = MiniTest::Mock.new
+      def visitor.begin_sublist(*args); end
+      def visitor.finalize_sublist(*args); end
       visitor.expect :accept_node, nil, [[], 'Foo']
       visitor.expect :accept_node, nil, [[], 'Bar']
       visitor.expect :accept_node, nil, [['Bar'], 'Barbarian']
@@ -114,30 +166,35 @@ b
       visitor.verify
     end
 
-    class Reprinter
-      def out
-        @out ||= []
-      end
-
-      def traverse(sitemap)
-        sitemap.facilitate_traversal_of(self)
-      end
-
-      def accept_node(ancestors, node)
-        indent = '  ' * ancestors.length
-        out << indent + node.to_s
-      end
-
-      def output
-        out.join("\n")
-      end
-    end
-
     it 'has an example with this Reprinter class' do
       sitemap = Sitemap.from_text(ListThatJumpsBackTwoLevelsInOneLine)
       reprinter = Reprinter.new
       reprinter.traverse sitemap
       assert_equal ListThatJumpsBackTwoLevelsInOneLine, reprinter.output
     end
+
+    it 'allows stuff to be done before a node and after its children' do
+      sitemap = Sitemap.from_text(ListThatJumpsBackTwoLevelsInOneLine)
+      sexp_builder = SexpBuilder.new
+      sexp_builder.traverse sitemap
+      assert_equal ListThatJumpsBackTwoLevelsInOneLineSexp, sexp_builder.sexp_array
+    end
+  end
+
+  it 'can roundtrip an outline from text to sexp to text' do
+    sitemap = Sitemap.from_text(SomewhatComplicatedList)
+    reprinter = Reprinter.new
+    reprinter.traverse sitemap
+    second_sitemap = Sitemap.from_text(reprinter.output)
+    assert_equal sitemap, second_sitemap
+  end
+
+  it 'gives you the prev and next items for a given item in its sexp, regardless of nesting' do
+    sitemap = Sitemap.new(ListThatJumpsBackTwoLevelsInOneLineSexp)
+    assert_equal [nil,   'a1' ], sitemap.prev_and_next('a')
+    assert_equal ['a',   'a1a'], sitemap.prev_and_next('a1')
+    assert_equal ['a1',  'a1b'], sitemap.prev_and_next('a1a')
+    assert_equal ['a1a', 'b'  ], sitemap.prev_and_next('a1b')
+    assert_equal ['a1b', nil  ], sitemap.prev_and_next('b')
   end
 end
