@@ -29,12 +29,13 @@ filter:    erb
 <div class="container">
 
    <div class="column span-20 prepend-2 append-2 first last" id="header">
-     <p class="title"><%= ::SiteTitle %></p>
+     <p class="title"><a href='/' style="text-decoration: none;"><%= ::SiteTitle %></p></a>
      <hr>
    </div>
 
    <div class="column span-15 prepend-2 first">
       <%= @content %>
+      <div style="clear: all;"></div>
    </div>
 
    <%= render :partial => '/nav-sidebar' %>
