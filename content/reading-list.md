@@ -17,4 +17,5 @@ TODO:  link these up
   - Spolsky's "hg init" site, first page only
   - Schwern's "Git for ages 4 and up"
   - probably some other stuff I'm forgetting
+  - http://nfarina.com/post/9868516270/git-is-simpler
 
