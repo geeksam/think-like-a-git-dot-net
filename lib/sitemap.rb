@@ -1,8 +1,10 @@
 class Sitemap
-  TabSize = 2
-  Lft = :'['
-  Rgt = :']'
-  Brackets = [Lft, Rgt]
+  unless const_defined?(:TabSize)
+    TabSize = 2
+    Lft = :'['
+    Rgt = :']'
+    Brackets = [Lft, Rgt]
+  end
 
   def self.indentation_level(object)
     case object
