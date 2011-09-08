@@ -146,6 +146,7 @@ filter:    erb
 
 			<!-- Footer Copyright -->
       <!-- <p class="fr">Original template Copyright &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p> -->
+      <p>Text &copy; 2011 Sam Livingston-Gray</p>
 			<%= clearer %>
 
 		</div><!--wrapper-->
