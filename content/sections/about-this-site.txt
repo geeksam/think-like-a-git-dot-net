@@ -10,5 +10,5 @@ filter:
 
 This site is organized in a fairly standard outline view.
 
-It's written to be read from beginning to end, but if you're already familiar with some of the concepts, feel free to skip around using the <%= link_to_page 'Sitemap' %>.
+It's written to be read from beginning to end, but if you're already familiar with some of the concepts, feel free to skip around using the sidebar navigation.
 

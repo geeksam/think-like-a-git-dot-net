@@ -134,5 +134,13 @@ class Sitemap
     def finalize_sublist(path)
       lines << '</ul>'
     end
+
+    def to_html
+      lines.join("\n")
+    end
+  end
+
+  def nav_list
+    @nav_list ||= NavListBuilder.for(self)
   end
 end

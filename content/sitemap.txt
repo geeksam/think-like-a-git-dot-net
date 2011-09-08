@@ -8,4 +8,4 @@ filter:
 
 ## Site Map
 
-<%= render :partial => 'sitemap' %>
+<%= nav_list.to_html %>

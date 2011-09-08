@@ -7,6 +7,14 @@ module SiteHelper
   def clearer(content = nil)
     tag :div, content, :class => 'clear'
   end
+
+  def sitemap
+    @sitemap ||= Sitemap.from_file('lib/sitemap.txt')
+  end
+
+  def nav_list
+    sitemap.nav_list
+  end
 end
 
 Webby::Helpers.register(SiteHelper)

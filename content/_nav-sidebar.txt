@@ -2,4 +2,4 @@
 filter: erb
 ---
 
-<%= render :partial => '/sitemap' %>
+<%= nav_list.to_html %>
