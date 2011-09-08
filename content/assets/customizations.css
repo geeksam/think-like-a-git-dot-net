@@ -1,0 +1,8 @@
+.post .entry-content li {
+	text-indent: -1em;
+}
+
+#content p {
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
