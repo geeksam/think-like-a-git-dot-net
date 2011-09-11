@@ -15,6 +15,16 @@ module SiteHelper
   def nav_list
     sitemap.nav_list
   end
+
+  def linear_nav_links
+    prev_section, next_section = sitemap.prev_and_next(@page.title)
+    clearer + tag(:div, nil, :class => 'linear_nav_links') {
+      ''.tap { |s|
+        s << tag(:a, '&larr; ' + prev_section, :href => '#', :class => 'prev') if prev_section
+        s << tag(:a, next_section + ' &rarr;', :href => '#', :class => 'next') if next_section
+      }
+    }
+  end
 end
 
 Webby::Helpers.register(SiteHelper)

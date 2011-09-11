@@ -4,6 +4,7 @@ module TagHelper
     tag_attrs = options.map { |k, v| %Q(#{k}="#{v}") }.join(' ')
     start_tag = [tag_name, tag_attrs].reject { |e| e =~ /^\s*$/ }.join(' ')
     end_tag = tag_name
+    tag_body = yield if block_given?
     tag_body = (options[:format_string] % tag_body) if options[:format_string]
     %Q[<#{start_tag}>#{tag_body}</#{end_tag}>]
   end
