@@ -3,6 +3,13 @@ task :default => :build
 desc 'deploy the site to the webserver'
 task :deploy => [:build, 'deploy:rsync']
 
+namespace :sitemap do
+  desc 'generate sections from the sitemap'
+  task :make_it_so do
+    puts "Make it so, Number One."
+  end
+end
+
 task :test do
   Dir.glob(File.expand_path(File.join(File.dirname(__FILE__), *%w[test ** *_test.rb]))).each { |file| require file }
 end

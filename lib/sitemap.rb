@@ -1,3 +1,9 @@
+class String
+  def dasherize
+    strip.downcase.gsub(/[^a-z]+/, '-').gsub(/(^-|-$)/, '')
+  end
+end
+
 class Sitemap
   unless const_defined?(:TabSize)
     TabSize = 2
@@ -132,14 +138,13 @@ class Sitemap
     end
 
     def accept_node(ancestors, node)
-      title, section_name = node, node.downcase.gsub(' ', '-')
-      tag_body = '<a href="/sections/%s.html">%s</a>' % [section_name, title]
-      tag_body << '&nbsp;<span class="current-marker">&larr;HEAD</span>' if current_section?(section_name)
+      tag_body = '<a href="/sections/%s.html">%s</a>' % [node.dasherize, node]
+      tag_body << '&nbsp;<span class="current-marker">&larr;HEAD</span>' if current_section?(node)
       lines << '<li>%s</li>' % tag_body
     end
 
     def current_section?(section_name)
-      section_name == @options[:current_section]
+      section_name.dasherize == @options[:current_section]
     end
 
     def finalize_sublist(path)

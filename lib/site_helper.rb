@@ -13,15 +13,11 @@ module SiteHelper
   end
 
   def nav_list
-    sitemap.nav_list(:current_section => section_name(@page.title))
-  end
-
-  def section_name(section_title)
-    section_title.downcase.gsub(/ +/, '-')
+    sitemap.nav_list(:current_section => @page.title.dasherize)
   end
 
   def section_path(section_title)
-    '/sections/%s.html' % section_name(section_title)
+    '/sections/%s.html' % section_title.dasherize
   end
 
   def linear_nav_links
