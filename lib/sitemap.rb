@@ -126,7 +126,7 @@ class Sitemap
     traverser.finalize_sublist ancestors
   end
 
-  class NavListBuilder < Sitemap::Traverser
+  class NavListBuilder < Traverser
     attr_reader :lines
     def initialize(*_)
       super
@@ -158,5 +158,19 @@ class Sitemap
 
   def nav_list(options = {})
     @nav_list ||= NavListBuilder.for(self, options)
+  end
+
+  class SectionCreator < Traverser
+    def accept_node(_, node)
+      filename = filename_for(node)
+      return if File.exists?(filename)
+      cmd = "webby create:section sections/#{node.gsub(' ', '\ ')}"
+      puts cmd
+      `#{cmd}`
+    end
+
+    def filename_for(node)
+      'content/sections/%s.txt' % node.dasherize
+    end
   end
 end

@@ -4,9 +4,11 @@ desc 'deploy the site to the webserver'
 task :deploy => [:build, 'deploy:rsync']
 
 namespace :sitemap do
-  desc 'generate sections from the sitemap'
+  desc 'generate sections from the sitemap (note that this will launch $EDITOR. a lot.)'
   task :make_it_so do
-    puts "Make it so, Number One."
+    sitemap = Sitemap.from_file('lib/sitemap.txt')
+    creator = Sitemap::SectionCreator.new
+    creator.traverse(sitemap)
   end
 end
 
