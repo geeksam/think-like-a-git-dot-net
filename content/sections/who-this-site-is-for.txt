@@ -1,14 +1,13 @@
 ---
 title:      Who This Site Is For
 created_at: 2011-08-31 01:25:35.303685 -07:00
+layout:     section
 filter:
   - erb
   - markdown
 ---
 
-## Who This Site Is For
-
-"Advanced beginners" with Git.  You should know how to create a repository, and add and commit files to it.
+"Advanced beginners" with Git.  You should know how to create a repository, add and commit files to it, and you should probably have some idea of why you might want to use a branch.
 
 If you're still struggling with what version control software is for, this site may not be that useful to you.  **I encourage you to poke around,** but if you're not getting much out of it, check out my <%= page_link 'reading-list' %> for some pointers, and consider coming back to this site later.
 

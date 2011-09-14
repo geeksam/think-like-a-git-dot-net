@@ -1,0 +1,14 @@
+---
+extension: html
+layout: default   # render this layout inside another layout -- awesome.
+filter:
+  - erb
+  - markdown
+---
+
+
+## <%= @page.title %>
+
+<%= @content %>
+
+<%= linear_nav_links %>

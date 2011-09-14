@@ -1,14 +1,15 @@
 ---
 title:      About This Site
 created_at: 2011-09-05 15:37:56.742043 -07:00
+layout:     section
 filter:
   - erb
   - markdown
 ---
 
-## <%= @page.title %>
-
 This site is organized in a fairly standard outline view.
 
-It's written to be read from beginning to end, but if you're already familiar with some of the concepts, feel free to skip around using the sidebar navigation.
+Each section will have links at the bottom to the previous and next section, so you can read through the site from beginning to end.
+
+However, if you find that you're already familiar with some of the concepts in a given section, feel free to skip around using the sidebar navigation.
 

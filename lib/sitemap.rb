@@ -86,8 +86,12 @@ class Sitemap
   end
 
   class Traverser
-    def self.for(sitemap)
-      new.tap { |t| t.traverse(sitemap) }
+    def self.for(sitemap, options = {})
+      new(options).tap { |t| t.traverse(sitemap) }
+    end
+
+    def initialize(*args)
+      @options = args.pop if args.last.kind_of?(Hash)
     end
 
     def traverse(sitemap)
@@ -118,7 +122,8 @@ class Sitemap
 
   class NavListBuilder < Sitemap::Traverser
     attr_reader :lines
-    def initialize
+    def initialize(*_)
+      super
       @lines = []
     end
 
@@ -128,7 +133,13 @@ class Sitemap
 
     def accept_node(ancestors, node)
       title, section_name = node, node.downcase.gsub(' ', '-')
-      lines << '<li><a href="/sections/%s.html">%s</a></li>' % [section_name, title]
+      tag_body = '<a href="/sections/%s.html">%s</a>' % [section_name, title]
+      tag_body << '&nbsp;<span class="current-marker">&larr;HEAD</span>' if current_section?(section_name)
+      lines << '<li>%s</li>' % tag_body
+    end
+
+    def current_section?(section_name)
+      section_name == @options[:current_section]
     end
 
     def finalize_sublist(path)
@@ -140,7 +151,7 @@ class Sitemap
     end
   end
 
-  def nav_list
-    @nav_list ||= NavListBuilder.for(self)
+  def nav_list(options = {})
+    @nav_list ||= NavListBuilder.for(self, options)
   end
 end

@@ -1,3 +1,12 @@
+---
+extension: css
+filter:    erb
+layout: none
+---
+<%
+  @blue   = '#3F5C9A'
+  @orange = '#D08125'
+-%>
 .post .entry-content li {
 	text-indent: -1em;
 }
@@ -9,7 +18,7 @@
 
 .linear_nav_links {
   margin-top: 1em;
-  border-top: 1px solid #3f5c9a;
+  border-top: 1px solid <%= @blue %>;
   padding-top: 0.5em;
 }
 
@@ -21,5 +30,7 @@
   float: right;
 }
 
-
-
+li span.current-marker {
+  font-weight: bold;
+  color: <%= @orange %>;
+}
