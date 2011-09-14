@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__), *%w[test_helper])
-require File.join(File.dirname(__FILE__), *%w[.. sitemap])
+require File.join(File.dirname(__FILE__), *%w[.. lib sitemap])
 
 class Reprinter < Sitemap::Traverser
   def out
