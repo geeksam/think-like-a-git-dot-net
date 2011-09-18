@@ -20,12 +20,27 @@ module SiteHelper
     '/sections/%s.html' % section_title.dasherize
   end
 
+  def prev_section_link(text = nil, html_options = {})
+    prev_section, _ = sitemap.prev_and_next(@page.title)
+    return unless prev_section
+    text ||= prev_section
+    html_options = html_options.merge( :href => section_path(prev_section) )
+    tag(:a, text, html_options)
+  end
+  def next_section_link(text = nil, html_options = {})
+    _, next_section = sitemap.prev_and_next(@page.title)
+    return unless next_section
+    text ||= next_section
+    html_options = html_options.merge( :href => section_path(next_section) )
+    tag(:a, text, html_options)
+  end
+
   def linear_nav_links
     prev_section, next_section = sitemap.prev_and_next(@page.title)
     clearer + tag(:div, :class => 'linear_nav_links') {
       ''.tap { |s|
-        s << tag(:a, '&larr; ' + prev_section, :href => section_path(prev_section), :class => 'prev') if prev_section
-        s << tag(:a, next_section + ' &rarr;', :href => section_path(next_section), :class => 'next') if next_section
+        s << prev_section_link('&larr; ' + prev_section, :class => 'prev') if prev_section
+        s << next_section_link(next_section + ' &rarr;', :class => 'next') if next_section
       }
     }
   end
