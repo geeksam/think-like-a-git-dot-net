@@ -1,0 +1,14 @@
+---
+title:      "Example 4: Acid and Chainsaws"
+created_at: 2011-09-18 14:37:53.788794 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+This one departs somewhat from the script, but it's still well within the genre:
+
+> And then there’s <code class="inline">git rebase --interactive</code>, which is a bit like <br /> <code class="inline">git commit --amend</code> hopped up on acid and holding a chainsaw–completely insane and quite dangerous but capable of exposing entirely new states of mind."
+
+-Ryan Tomayko, <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a>, April 2008

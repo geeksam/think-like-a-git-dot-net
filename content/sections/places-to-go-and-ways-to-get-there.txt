@@ -1,0 +1,20 @@
+---
+title:      "Places To Go, and Ways to Get There"
+created_at: 2011-09-18 14:43:50.198576 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+Here are two versions of the Königsberg map.  On the left is a smaller version of the map you've already seen, and on the right is the version Euler used in his 1735 proof.
+
+<%= render :partial => 'sections/konigsberg-map-and-graph' %>
+
+Here's what I think is so mind-bendingly cool about this:  **Euler threw away all the information that didn't matter to the problem.**  
+
+If all you're concerned with is which bridges you cross, then for all intents and purposes, **the entire city can be boiled down to four abstract points in space**, and the **bridges are just lines that connect those points**.
+
+Which is why I say you can boil graph theory down to the study of **places to go, and ways to get there.**
+
+![Whoa](/assets/images2/whoa.png)

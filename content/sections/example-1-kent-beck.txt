@@ -1,0 +1,12 @@
+---
+title:      "Example 1: Kent Beck"
+created_at: 2011-09-18 14:04:53.138381 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+<img src="/assets/images2/kent_beck_tweet.jpg" class="no-shadow" />
+
+**This is a perfect example of the form.**  It sounds impressive, but unless you already know what the author is talking about, it doesn't really help.

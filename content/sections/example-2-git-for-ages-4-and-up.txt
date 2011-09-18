@@ -1,0 +1,18 @@
+---
+title:      "Example 2: Git for Ages 4 and Up"
+created_at: 2011-09-18 14:29:20.414214 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+In [Git for Ages 4 And Up](http://2010.osdc.com.au/proposal/196/git-ages-4-and) (OSDC, 2010), Michael Schwern uses Tinker Toys to teach the audience how Git works.
+
+It's a great talk, and if you have some time to watch the video, I highly recommend it.  But check out the very first sentence in the session description *(emphasis added)*:
+
+> ***Git makes so much more sense when you understand how it really works,*** because it's really a two trick pony.
+> <br /> <br />
+> Tinker Toys are the best illustration of a Git repository I've found. Side-by-side with issuing Git commands, we'll build a Git repository out of kid's toys showing what's going on behind the scenes. Mind bending concepts like remote branching, rebase and the staging area become child's play.
+> <br /> <br />
+> WARNING: CHOKING HAZARD - Small Parts. Not For Children Under 4 Years.
