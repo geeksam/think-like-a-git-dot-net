@@ -44,6 +44,14 @@ module SiteHelper
       }
     }
   end
+
+  def todo(message)
+    puts '*' * 80
+    puts '*' * 80
+    puts '** ' + message
+    puts '*' * 80
+    puts '*' * 80
+  end
 end
 
 Webby::Helpers.register(SiteHelper)
