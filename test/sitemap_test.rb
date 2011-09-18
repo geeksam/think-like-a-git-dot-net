@@ -68,6 +68,14 @@ Bar
 Baz
 
   EOF
+  GratuitousWhitespaceListWithCommentedItems = <<-EOF.strip
+Foo # this is foo
+# this line is all comments, baby
+Bar
+  Barbarian
+  # comments and indentation!
+Baz
+  EOF
   FooBarbarianSexp = ['Foo', 'Bar', ['Barbarian'], 'Baz']
   FooBarbarianList = <<-EOF.strip
 Foo
@@ -101,34 +109,74 @@ a
     a1b
 b
   EOF
+  WeirdAssErrorSexp = [
+    'About This Site',
+      ['Who This Site Is For',
+      'What This Site Will Try to Teach You',
+      'Why This Site?',
+      'About the Author'],
+    'Git Makes More Sense When You Understand X',
+      ['Example 1: Kent Beck',
+      'Example 2: Git for Ages 4 and Up',
+      'Example 3: Homeomorphic Endofunctors',
+      'Example 4: Acid and Chainsaws'],
+    'Graph Theory',
+      ['Seven Bridges of Königsberg',
+      'Nodes and Edges',
+      'Places To Go, and Ways to Get There',
+      'Undirected Graphs'],
+  ]
+  WeirdAssError = <<-EOF.strip
+About This Site
+  Who This Site Is For
+  What This Site Will Try to Teach You
+  Why This Site?
+  About the Author
+
+Git Makes More Sense When You Understand X
+  Example 1: Kent Beck
+  Example 2: Git for Ages 4 and Up
+  Example 3: Homeomorphic Endofunctors
+  Example 4: Acid and Chainsaws
+
+Graph Theory
+  Seven Bridges of Königsberg
+  Nodes and Edges
+  Places To Go, and Ways to Get There
+  Undirected Graphs
+  EOF
   #(end)
 
   describe '.parse_text' do
-    it 'should return a flat array when given a flat list' do
+    it 'returns a flat array when given a flat list' do
       expected = %w[Foo Bar Baz]
       actual = Sitemap.parse_text "Foo\nBar\nBaz"
       assert_equal %w[Foo Bar Baz], actual
     end
 
-    it 'should nest indented headings in an array' do
+    it 'nests indented headings in an array' do
       assert_equal FooBarbarianSexp, Sitemap.parse_text(FooBarbarianList)
     end
 
-    it 'should correctly parse a slightly more complicated example, with hanging indentation at the end' do
+    it 'correctly parses a slightly more complicated example, with hanging indentation at the end' do
       assert_equal SomewhatComplicatedSexp, Sitemap.parse_text(SomewhatComplicatedList)
     end
 
-    it 'should correctly parse a list that jumps back out more than one level of indentation at a time' do
+    it 'correctly parses a list that jumps back out more than one level of indentation at a time' do
       assert_equal ListThatJumpsBackTwoLevelsInOneLineSexp, Sitemap.parse_text(ListThatJumpsBackTwoLevelsInOneLine)
     end
 
-    it 'should ignore empty lines' do
+    it 'ignores empty lines' do
       assert_equal GratuitousWhitespaceSexp, Sitemap.parse_text(GratuitousWhitespaceList)
+    end
+    
+    it 'treats # as a comment character and ignores lines that consist entirely of comments and/or whitespace' do
+      assert_equal GratuitousWhitespaceSexp, Sitemap.parse_text(GratuitousWhitespaceListWithCommentedItems)
     end
   end
 
   describe '.from_text' do
-    it 'should return an instance' do
+    it 'returns an instance' do
       sitemap = Sitemap.from_text(FooBarbarianList)
       assert_equal FooBarbarianSexp, sitemap.sexp
     end
@@ -141,7 +189,7 @@ b
   end
 
   describe '#traverse_sexp' do
-    it 'should send the #accept_node method for each top-level string' do
+    it 'sends the #accept_node method for each top-level string' do
       sitemap = Sitemap.from_text("Foo\nBar\nBaz")
       visitor = MiniTest::Mock.new
       def visitor.begin_sublist(*args); end
@@ -153,7 +201,7 @@ b
       visitor.verify
     end
 
-    it 'should send the #accept_node method for each leaf string, with an ancestors list for each' do
+    it 'sends the #accept_node method for each leaf string, with an ancestors list for each' do
       sitemap = Sitemap.from_text(FooBarbarianList)
       visitor = MiniTest::Mock.new
       def visitor.begin_sublist(*args); end

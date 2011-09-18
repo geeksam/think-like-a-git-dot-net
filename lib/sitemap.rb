@@ -1,6 +1,6 @@
 class String
   def dasherize
-    strip.downcase.gsub(/[^a-z]+/, '-').gsub(/(^-|-$)/, '')
+    strip.downcase.gsub(/[^a-z0-9ö]+/, '-').gsub(/(^-|-$)/, '')
   end
 end
 
@@ -39,7 +39,9 @@ class Sitemap
     # This method has a giant security hole (to wit, #eval) and should never be used with untrusted input.
     #######################################
 
-    lines_in = text.split(/\n/).reject { |e| e =~ /^\s*$/ }
+    lines_in = text.split(/\n/)
+    lines_in.map! { |e| e.gsub(/#.*$/, '') }  # remove comments
+    lines_in.reject! { |e| e =~ /^\s*$/ }     # drop whitespace-only lines
     lines_out = [Lft]
     until lines_in.empty?
       a = lines_out.last; a_indent = indentation_level(a)
