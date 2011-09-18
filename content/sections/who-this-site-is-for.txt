@@ -11,4 +11,4 @@ filter:
 
 If you're still struggling with what version control software is for, this site may not be that useful to you.  **I encourage you to poke around,** but if you're not getting much out of it, check out my <%= page_link 'reading-list' %> for some pointers, and consider coming back to this site later.
 
-I'm not going to teach you the basics of adding and committing files.  I'm not going to tell you (well, not explicitly) how Git is different from Subversion.
+On the other hand, if you can already do a <code class="inline">git rebase --interactive</code> without breaking a sweat, you may not get that much out of the site.  I encourage you to look over the <%= page_link('reading-list') %>, and suggest any other links you've found that have helped you get to where you are now.
