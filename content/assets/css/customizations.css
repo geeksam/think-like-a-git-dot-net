@@ -34,3 +34,11 @@ li span.current-marker {
   font-weight: bold;
   color: <%= @orange %>;
 }
+
+code.inline {
+  display: inline !important;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 2px 5px;
+  border: 1px solid <%= @blue %>;
+}

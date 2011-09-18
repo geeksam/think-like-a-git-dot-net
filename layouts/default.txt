@@ -15,8 +15,8 @@ filter:    erb
   <title><%= [@page.title, ::SiteTitle].join(' // ') %></title>
 
 	<!-- CSS -->
-	<link type="text/css" rel="stylesheet" href="/assets/style.css" media="screen" />
-	<link type="text/css" rel="stylesheet" href="/assets/customizations.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/customizations.css" media="screen" />
 
 	<!-- Hooks -->
 	<link rel="index" title="Vectors" href="#" />
