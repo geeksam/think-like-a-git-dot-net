@@ -46,3 +46,12 @@ code.inline {
 img.no-shadow {
   box-shadow: none;
 }
+
+.pad-left {
+  margin-left: 15px;
+}
+
+.pad-right {
+  margin-right: 15px;
+}
+

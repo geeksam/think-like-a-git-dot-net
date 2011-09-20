@@ -13,8 +13,9 @@ Here are two versions of the Königsberg map.  On the left is a smaller version 
 
 Here's what I think is so mind-bendingly cool about this:  **Euler threw away all the information that didn't matter to the problem.**  
 
-If all you're concerned with is which bridges you cross, then for all intents and purposes, **the entire city can be boiled down to four abstract points in space**, and the **bridges are just lines that connect those points**.
+<div class="fr pad-left"><img src="/assets/images2/whoa.png" class="no-shadow" /></div>
 
-Which is why I say you can boil graph theory down to the study of **places to go, and ways to get there.**
+If all you're concerned with is which bridges you cross, then for all intents and purposes, **each land mass can be represented by a point**, and **each bridge is just a line between two points**.
 
-![Whoa](/assets/images2/whoa.png)
+Which is why I say you can think of graph theory as the study of **places to go, and ways to get there.**
+

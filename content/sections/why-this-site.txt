@@ -15,6 +15,6 @@ So, in April 2011, I tried to put together what I knew into an hour-long talk.
 
 This began life as a "Lunch and Learn" presentation to my coworkers.  Based on the positive feedback I got from that, I then gave the talk again at Portland BarCamp 2011, and again later at Cascadia RubyConf 2011.
 
-(There's video of that talk <a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">here</a>, but keep in mind that I actually had zero warning that I was going to talk that day -- the keynote speaker ran short, and the conference organizers asked if anybody there had had a talk proposal rejected, but had their slides ready to go.  I raised my hand, and three minutes later I was up on stage.)
+(There's video of that talk <a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">here</a>, but keep in mind that I actually had zero warning that I was going to talk that day&mdash;the keynote speaker ran short, and the conference organizers asked if anybody there had had a talk proposal rejected, but had their slides ready to go.  I raised my hand, and three minutes later I was up on stage.)
 
 Based on encouraging feedback from both of those talks, I wanted to turn the talk into a series of screencasts... but I thought writing it out would actually be a bit easier, and might be more accessible.  (I like screencasts for some things, but I also find it hard to set time aside to watch them.)  If you'd like to see screencasts based on this material, let me know.  My contact information is on the next page.

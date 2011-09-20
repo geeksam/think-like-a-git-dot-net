@@ -1,0 +1,25 @@
+---
+title:      "Cycles"
+created_at: 2011-09-19 21:40:05.892310 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+**You're almost there!**  There's just one more thing you need to know about graphs that will help you understand Git -- the concept of **reachability**.  If you're eager to jump ahead, <%= page_link('reachability', 'feel free') %>.
+
+<div class="fr wp-caption pad-left">
+  <img src="/assets/images2/directed-graph.png" class="no-shadow" />
+  <br /><strong>Directed Acyclic Graph</strong>
+</div>
+
+If you're still here, let's talk about cycles.  For purposes of working with Git, you can think of a cycle as **a route through a graph that lets you get back to where you started.**
+
+There's an example over to the right.  Trace it out&mdash;no matter where you start, you shouldn't be able to get to the same node twice.
+
+<%= clearer %>
+
+I mention this mostly because, when people talk about Git, they may say something like **"a Git repository is a directed acyclic graph,"** and I want you to know what that means.  **"Graph"** is obvious&mdash;I've been going on about graphs for pages and pages now.  **"Directed"** just means that an edge from A to B isn't the same as an edge from B to A.  And **"acyclic"** means "doesn't have cycles."
+
+<a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed acyclic graphs</a> are so interesting to computer scientists that they're often referred to as DAGs.  But if you're reading this page, I'm guessing you don't already have a background in computer science, so I'll shut up now and tell you the last thing you need to know.

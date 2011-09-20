@@ -87,7 +87,7 @@ class Sitemap
 
   def prev_and_next(item)
     flat_list = sexp.flatten
-    idx = flat_list.index(item)
+    idx = flat_list.map(&:dasherize).index(item.dasherize)
     prev_item = flat_list[idx-1]; prev_item = nil if idx.zero?
     next_item = flat_list[idx+1]
     return prev_item, next_item

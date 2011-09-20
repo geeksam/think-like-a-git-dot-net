@@ -1,0 +1,22 @@
+---
+title:      "Attaching Labels to Nodes"
+created_at: 2011-09-18 21:28:07.795710 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+While mathematicians may be perfectly content to consider graphs only according to their shapes, most programmers and computer scientists tend to use them to compute some kind of meaningful results.
+
+As such, it's often useful to label the nodes in a graph in some way.  For example, here in lovely Portland, Oregon, **we love us some <a href="http://trimet.org/">public transit</a>.**  We've got <a href="http://trimet.org/bus/index.htm">buses</a>, <a href="http://trimet.org/max/index.htm">light rail</a>, <a href="http://trimet.org/wes/index.htm">commuter rail</a>, <a href="http://trimet.org/streetcar/index.htm">streetcars</a>, and even an <a href="http://www.portlandtram.org/fares.htm">aerial tram</a>.
+
+Here's a quick overview of just our light rail system.  This doesn't show all the stops&mdash;pardon me, *nodes*&mdash;it's just the transfer points and end stations for each line.  The nodes have labels that make them mean something to humans, but as far as a computer is concerned, they could just be called "01100010".
+
+<div class="wp-caption">
+  <img src="/assets/images2/max-system-map.gif" class="no-shadow" />
+  <br /><strong>The 10,000-foot view</strong>
+  <% todo 'Think of something witty to put in this caption' %>
+</div>
+
+...and if, right about now, you're starting to open your mouth and say, "hey, why are those lines different colors?"  Then you, my friend, are on the right track.  (No pun intended.)

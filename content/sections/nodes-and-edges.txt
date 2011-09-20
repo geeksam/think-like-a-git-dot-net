@@ -7,7 +7,7 @@ filter:
   - markdown
 ---
 
-In the previous page, I said graph theory boils down to places to go, and ways to get there.  Let's have another look at the definition I used earlier.
+In the previous page, I said graph theory boils down to **places to go, and ways to get there.**  Let's have another look at the definition I used earlier.
 
 > A graph refers to a collection of **nodes** and a collection of **edges** that connect pairs of nodes.
 

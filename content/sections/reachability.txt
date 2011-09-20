@@ -1,0 +1,26 @@
+---
+title:      "Reachability"
+created_at: 2011-09-19 23:56:35.454060 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+**You can think of this graph as a set of three parallel universes** with time flowing from left to right, so that **A** is the beginning of recorded history.
+
+<div class="fl wp-caption pad-right">
+  <img src="/assets/images2/reachability-example.png" class="no-shadow" />
+  <br />To see an ASCII version of this, type
+  <br /><code class="inline">git rebase --help</code>
+</div>
+
+If you start from **E**, the history you'll see is **A,&nbsp;B,&nbsp;C,&nbsp;D,&nbsp;E**.
+
+If you start from **H**, the history you'll see is **A,&nbsp;B,&nbsp;F,&nbsp;G,&nbsp;H**.
+
+If you start from **K**, the history you'll see is **A,&nbsp;B,&nbsp;C,&nbsp;I,&nbsp;J,&nbsp;K**.
+
+But the really important thing about this is that no matter which node you start with, **some parts of the graph will be unreachable to you.**  That sounds kind of pessimistic, so I'll turn it around:  **Depending on where you start, you can reach parts of the graph that you couldn't get to otherwise.**
+
+This may not sound like much, but trust me for a little while longer&mdash;it's huge.

@@ -14,4 +14,9 @@ Graph Theory
   Seven Bridges of Königsberg
   Places To Go, and Ways to Get There
   Nodes and Edges
+  Attaching Labels to Nodes
+  Attaching Labels to Edges
+  Directed versus Undirected Graphs
+  Cycles
+  Reachability
 

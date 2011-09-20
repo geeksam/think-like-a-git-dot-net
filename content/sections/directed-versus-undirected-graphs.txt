@@ -1,0 +1,26 @@
+---
+title:      "Directed Versus Undirected Graphs"
+created_at: 2011-09-19 20:57:15.142459 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+<div class="fl wp-caption pad-right">
+  <img src="/assets/images2/undirected-graph.png" class="no-shadow" />
+  <br /><strong>Undirected graph</strong>
+  <br /><em>(no arrows)</em>
+</div>
+
+One of the key distinctions people make between graphs is whether they are **directed** or **undirected**.  I'll admit, when I talk about undirected graphs, I sometimes get a mental image of a subway system map just sitting there aimlessly on the couch while its parents just sigh and ask when it's going to take responsibility and do something with its life...
+
+<div class="fr wp-caption pad-left">
+  <img src="/assets/images2/directed-graph.png" class="no-shadow" />
+  <br /><strong>Directed graph</strong>
+  <br /><em>(note the arrows)</em>
+</div>
+
+...but that's just me.  Really, **all we're saying is whether the edges in a graph are bidirectional or not.**
+
+Most, but not all, graphs I've seen have only one kind of edge.  There are a few cases where you might want to use both&mdash;for example, a street map might have undirected edges for two-way streets and directed edges for downtown&mdash;but that's the only example I can think of off the top of my head.

@@ -9,8 +9,13 @@ filter:
 
 Here's a drawing of the city of Königsberg, Prussia in the early 18th century.
 
-<img src="/assets/images2/bridges_of_konigsberg.jpg" class="no-shadow" />
+<div class="wp-caption">
+  <img src="/assets/images2/bridges_of_konigsberg.jpg" class="no-shadow" />
+  <br /><strong>A lovely place for a stroll...</strong>
+</div>
 
 The city was set on both sides of the Pregel River *(shown in blue)*, and included two large islands which were connected to each other and the mainland by seven bridges *(shown in red)*.  Someone had posed the question of whether it was possible to walk through the city and **cross every bridge exactly once**.
 
 In 1735, a mathematician named <a href="http://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a> proved that such a route could not exist.  In doing so, he basically invented a field of mathematics, which we now call graph theory.
+
+*("Euler" is pronounced more or less like "oiler", by the way.)*
