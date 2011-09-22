@@ -20,3 +20,6 @@ Graph Theory
   Cycles
   Reachability
 
+Graphs and Git
+  Visualizing your Git Repository
+  

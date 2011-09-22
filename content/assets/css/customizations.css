@@ -55,3 +55,6 @@ img.no-shadow {
   margin-right: 15px;
 }
 
+caption {
+  background-color: #eee !important;
+}
