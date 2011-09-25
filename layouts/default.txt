@@ -39,7 +39,7 @@ filter:    erb
 
       <!-- Static Logo (Optional) -->
       <h1 class="title"><a href="/">Think Like (a) Git</a></h1>
-      <h3 class="subtitle">A Tutorial for the Perplexed</h3>
+      <h3 class="subtitle">A Guide for the Perplexed (and a work in progress)</h3>
 
 		</div><!--#wrapper-->
 	</div><!--#header-->
@@ -49,25 +49,16 @@ filter:    erb
 
 			<!-- Top Navigation Menu -->
 			<ul class="menu-nav-top">
-			  <li><a href="#">TODO: make nav work</a></li>
-			  <li><a href="#">...or maybe not</a></li>
-        <!--
-        <li><a href="page.html">About</a>
+			  <li><a href='/'>Home</a></li>
+			  <li><%= section_link('about-this-site', 'About') %></li>
+			  <li><%= section_link('git-makes-more-sense-when-you-understand-x', 'Making Sense') %></li>
+			  <li><%= section_link('graph-theory', 'Graph Theory') %></li>
+			  <li><%= section_link('graphs-and-git', 'Graphs and Git') %></li>
+        <!-- <li><a href="page.html">About</a>
           <ul>
             <li><a href="#">Brushes</a></li>
-            <li><a href="#">Styles</a>
-              <ul>
-                <li><a href="#">Brushes</a></li>
-                <li><a href="#">Styles</a></li>
-                <li><a href="#">Pallettes</a></li>
-                <li><a href="#">Textures</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Pallettes</a></li>
-            <li><a href="#">Textures</a></li>
           </ul>
-        </li>
-        -->
+        </li> -->
 			</ul>
 
 			<!-- Top Social Links -->
@@ -94,19 +85,8 @@ filter:    erb
         <li><a href="#">Coding</a>
           <ul>
             <li><a href="#">Brushes</a></li>
-            <li><a href="#">Styles</a>
-              <ul>
-                <li><a href="#">Brushes</a></li>
-                <li><a href="#">Styles</a></li>
-                <li><a href="#">Pallettes</a></li>
-                <li><a href="#">Textures</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Pallettes</a></li>
-            <li><a href="#">Textures</a></li>
           </ul>
-        </li>
-        -->
+        </li> -->
       </ul>
     </div>
   </div> -->
@@ -118,12 +98,12 @@ filter:    erb
       <div class="post page-content">
         <div class="entry-content">
           <!-- Primary content -->
-					<div class="three_fourth">
+					<div class="two_third">
             <%= @content %>
 					</div>
 
           <!-- Sidebar with site map -->
-          <div class="one_fourth last">
+          <div class="one_third last">
             <h5>Sitemap</h5>
             <%= nav_list.to_html %>
 					</div>

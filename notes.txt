@@ -1,0 +1,6 @@
+Add Choose Your Own Adventure as an example of a digraph (almost certainly cyclic)
+http://www.cyoa.com/
+http://www.seanmichaelragan.com/html/[2008-03-07]_Choose_Your_Own_Adventure_book_as_directed_graph.shtml
+
+http://programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git/
+

@@ -22,4 +22,15 @@ Graph Theory
 
 Graphs and Git
   Visualizing your Git Repository
-  
+  References
+  The Reference Reference
+  Making Sense of the Display
+  Garbage Collection
+
+Experimenting with Git
+  References Make Commits Reachable
+  My Humble Beginnings
+  Branches as Savepoints
+  Use Your Targeting Computer, Luke
+#  The Scout Pattern
+#  The Savepoint Pattern

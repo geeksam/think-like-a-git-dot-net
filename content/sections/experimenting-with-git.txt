@@ -1,0 +1,18 @@
+---
+title:      "Experimenting With Git"
+created_at: 2011-09-24 07:18:47.727253 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+I said something really important on the previous page.  It's so important I'll repeat it.
+
+<%= todo "make sure these quotes agree" %>
+
+In describing Git's garbage collection algorithm, I said, **"Starting from every branch and every tag**, Git walks back through the graph, building a list of every commit it can reach."  *(Emphasis added.)*
+
+It took me a really long time to piece this together, but everything I've written up to this point has been to provide support for this one thing.  If I had to "tl;dr" the point of this entire site, I can fit it into these four words:
+
+### References make commits reachable.

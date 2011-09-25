@@ -1,0 +1,19 @@
+---
+title:      "Making Sense of the Display"
+created_at: 2011-09-24 07:18:45.832518 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+Here's another look at that GitX screenshot, with a few annotations.
+
+<div class="wp-caption">
+  <img src="/assets/images2/gitx-visualization-annotated.png" class="no-shadow" />
+  <br /><strong>If you want a dummy repo to play around with, <a href="https://github.com/geeksam/do-re-mi">clone this one</a>.</strong>
+</div>
+
+The important thing to know about this, though, isn't what you see here.  It's what you **don't** see.  Every Git tool I've ever seen shares one thing in common:  **they hide commits from you**.
+
+Sounds like a conspiracy theory, right?  Not really.

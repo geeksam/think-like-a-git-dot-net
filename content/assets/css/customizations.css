@@ -35,12 +35,16 @@ li span.current-marker {
   color: <%= @orange %>;
 }
 
-code.inline {
-  display: inline !important;
+code {
   font-weight: bold;
   background-color: #eee;
   padding: 2px 5px;
   border: 1px solid <%= @blue %>;
+}
+
+code.inline {
+  display: inline !important;
+  white-space: nowrap;
 }
 
 img.no-shadow {

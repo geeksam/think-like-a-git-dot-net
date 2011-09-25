@@ -130,8 +130,9 @@ class Sitemap
 
   class NavListBuilder < Traverser
     attr_reader :lines
-    def initialize(*_)
+    def initialize(options = {})
       super
+      @options = options
       @lines = []
     end
 
@@ -145,8 +146,12 @@ class Sitemap
       lines << '<li>%s</li>' % tag_body
     end
 
+    def current_section_dasherized
+      @current_section_dasherized ||= @options[:current_section].to_s.dasherize
+    end
+
     def current_section?(section_name)
-      section_name.dasherize == @options[:current_section]
+      section_name.dasherize == current_section_dasherized
     end
 
     def finalize_sublist(path)

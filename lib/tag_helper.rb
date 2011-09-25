@@ -1,7 +1,7 @@
 module TagHelper
   def tag(tag_name, *body_and_options)
     tag_name = tag_name.to_s
-    options  = body_and_options.pop if body_and_options.last.is_a?(Hash)
+    options  = body_and_options.extract_options!
 
     tag_attrs = options.map { |k, v| %Q(#{k}="#{v}") }.join(' ')
     start_tag = [tag_name, tag_attrs].reject { |e| e =~ /^\s*$/ }.join(' ')

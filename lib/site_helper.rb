@@ -20,6 +20,14 @@ module SiteHelper
     '/sections/%s.html' % section_title.dasherize
   end
 
+  def section_link(*args)
+    html_options = args.extract_options!
+    section_name, text = *args
+    text ||= section_name
+    html_options = html_options.merge( :href => section_path(section_name) )
+    tag(:a, text, html_options)
+  end
+
   def prev_section_link(text = nil, html_options = {})
     prev_section, _ = sitemap.prev_and_next(@page.title)
     return unless prev_section

@@ -1,0 +1,22 @@
+---
+title:      "References Make Commits Reachable"
+created_at: 2011-09-24 20:18:44.375864 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+Let's unpack that sentence.
+
+###### References...
+
+...whether they are local branches, remote branches, or tags *(see <%= section_link('the-reference-reference', 'here') %>)*...
+
+###### ...make commits...
+
+...which are nodes in a graph *(see <%= section_link('graphs-and-git', 'here') %>)*...
+
+###### ...reachable.
+
+...so that you can get back to them *(see <%= section_link('reachability', 'here') %>)*, and Git won't delete them when it decides it's time for spring cleaning *(see <%= section_link('garbage-collection', 'here') %>)*.
