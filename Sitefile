@@ -3,6 +3,11 @@ task :default => :build
 desc 'deploy the site to the webserver'
 task :deploy => [:build, 'deploy:rsync']
 
+SITE.user       = 'geeksam'
+SITE.host       = 'think-like-a-git.net'
+SITE.remote_dir = '/home/geeksam/think-like-a-git.net/'
+
+
 def rerun_task(task_name)
   Rake::Task[task_name].reenable
   Rake::Task[task_name].invoke
