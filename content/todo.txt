@@ -9,5 +9,10 @@ filter:
 ## TODO
 
 * Add reading list
+* Write section on rebase, similar to existing one on merge
+* Find and attribute sources for all images
 * Add comments (disqus, perhaps?)
-* find and attribute sources for all images
+* Promote
+  * twitter
+  * pdxruby
+  * HN?

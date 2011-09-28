@@ -6,4 +6,8 @@ filter:
   - markdown
 ---
 
+<% if false -%>
+<!-- Add new items at the top -->
+<% end -%>
+* **2011-09-28:** add a few todo items
 * **2011-09-28:** just about ready to launch.  Added CC license, fixed top nav, added content and edited what was already there.
