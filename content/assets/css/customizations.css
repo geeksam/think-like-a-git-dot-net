@@ -11,9 +11,23 @@ layout: none
 	text-indent: -1em;
 }
 
+.post .entry-content ul {
+  list-style-type: disc;
+  padding-left: 2px;
+}
+
 #content p {
   font-size: 1.2em;
   line-height: 1.75em;
+}
+
+ol.full-size, ul.full-size {
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+
+ol.full-size ul, ul.full-size ol {
+  font-size: 1em;
 }
 
 .linear_nav_links {
@@ -38,8 +52,10 @@ li span.current-marker {
 code {
   font-weight: bold;
   background-color: #eee;
+  margin: 5px 0px;
   padding: 2px 5px;
   border: 1px solid <%= @blue %>;
+  text-indent: 0;
 }
 
 code.inline {
@@ -61,4 +77,22 @@ img.no-shadow {
 
 caption {
   background-color: #eee !important;
+}
+
+.post .entry-content ol ul {
+  margin-top: 5px;
+}
+
+.post .entry-content ol ul {
+  margin-left: 3px;
+}
+
+.post .entry-content ol ul li {
+  list-style-type: none;
+  text-indent: 0;
+}
+
+.post .entry-content ol ul ol li {
+  list-style-type: lower-roman;
+  text-indent: -1em;
 }

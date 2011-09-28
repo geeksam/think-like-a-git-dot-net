@@ -32,5 +32,9 @@ Experimenting with Git
   My Humble Beginnings
   Branches as Savepoints
   Use Your Targeting Computer, Luke
-#  The Scout Pattern
-#  The Savepoint Pattern
+#  The Dummy Repository: do-re-mi
+
+Testing Out Merges
+  The Scout Pattern
+  The Savepoint Pattern
+  Black Belt Merging

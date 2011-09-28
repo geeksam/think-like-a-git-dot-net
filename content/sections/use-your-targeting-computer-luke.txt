@@ -7,21 +7,17 @@ filter:
   - markdown
 ---
 
-I'll show a few examples of using this strategy soon, but first, another word about Git visualizers.
-
-<div class="fr wp-caption pad-left">
-  <img src="/assets/images2/memes-hipster-luke-targeting-computers.jpg" class="no-shadow" />
-  <br /><strong>Don't be a coding hipster. Just don't.</strong>
-</div>
-
-I realize there's a certain macho mystique around being able to just open a terminal window, hammer out ten or twelve crazy commands in a row, and never have to refer to anything... but that's not how I work.  (At least, not most of the time.)
-
 I use GitX in almost every coding session.  GitX behaves like a web browser in one very important way:  **it won't immediately reflect changes to your repository**&mdash;you have to hit **Cmd+R** to tell it to **(R)**efresh its view.
 
-You can use this to your advantage.  Here's how:  **when you've done something on the command line,** switch back to your visualizer, but **don't refresh right away.**  Instead, try to predict how what you did will change its view.  *(You can even try drawing out the graph on an index card.)*  Then, refresh the visualizer.  **Did it change in the way you expected?**
+<div class="fr wp-caption pad-left">
+  <a href="http://store.xkcd.com/xkcd/#StandBackScience"><img src="/assets/images2/xkcd-try-science.png" class="no-shadow" /></a>
+  <br /><strong>It's a great shirt. You know you want one.</strong>
+</div>
+
+You can use this to your advantage.  Here's how:  **when you've done something on the command line,** switch back to your visualizer, but **don't refresh right away.**  Instead, try to predict how what you did will change its view.  *(You can even try drawing out the graph on an index card.)*  Then, refresh the visualizer and ask yourself:  **did it change in the way you expected?**
 
 **If the answer is YES:**  Congratulations!  You just learned something!
 
 **If the answer is NO:**  Congratulations!  You're about to learn something!
 
-Repeat several thousand times, and eventually you won't need to refer to the visualizer as often.
+Repeat this process several thousand times, and eventually you won't need to refer to the visualizer as often.  *(For those of you who like bad sci-fi movies, think of it as less "Use the force, Luke" and more **"Usul no longer needs the weirding module."**)*
