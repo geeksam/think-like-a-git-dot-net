@@ -39,7 +39,7 @@ filter:    erb
 
       <!-- Static Logo (Optional) -->
       <h1 class="title"><a href="/">Think Like (a) Git</a></h1>
-      <h3 class="subtitle">A Guide for the Perplexed (and a work in progress)</h3>
+      <h3 class="subtitle">A Guide for the Perplexed</h3>
 
 		</div><!--#wrapper-->
 	</div><!--#header-->
@@ -50,25 +50,22 @@ filter:    erb
 			<!-- Top Navigation Menu -->
 			<ul class="menu-nav-top">
 			  <li><a href='/'>Home</a></li>
+			  <li><%= page_link('tldr', 'TL;DR') %></li>
 			  <li><%= section_link('about-this-site', 'About') %></li>
-			  <li><%= section_link('git-makes-more-sense-when-you-understand-x', 'Making Sense') %></li>
-			  <li><%= section_link('graph-theory', 'Graph Theory') %></li>
-			  <li><%= section_link('graphs-and-git', 'Graphs and Git') %></li>
-        <!-- <li><a href="page.html">About</a>
-          <ul>
-            <li><a href="#">Brushes</a></li>
-          </ul>
-        </li> -->
+        <!-- <li><%= section_link('graph-theory', 'Graph Theory') %></li>
+        <li><%= section_link('graphs-and-git', '...and Git') %></li>
+        <li><%= section_link('experimenting-with-git', 'Experimenting') %></li>
+        <li><%= section_link('testing-out-merges', 'Merges') %></li> -->
+			  <li><%= page_link('changelog') %></li>
+			  <li><%= page_link('todo') %></li>
 			</ul>
 
 			<!-- Top Social Links -->
-      <!-- <ul class="social-links">
-        <li><a href="#" title="Feed" class="w-tooltip"><img src="/assets/images/icon_rss.png" alt="Feed" /></a></li>
-        <li><a href="#" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
-        <li><a href="http://twitter.com/aaronlynch" title="Twitter" class="w-tooltip"><img src="/assets/images/icon_twitter.png" alt="Twitter" /></a></li>
-        <li><a href="http://dribbble.com/aaronlynch" title="Dribbble" class="w-tooltip"><img src="/assets/images/icon_dribbble.png" alt="Dribbble" /></a></li>
-        <li><a href="#" title="Facebook" class="w-tooltip"><img src="/assets/images/icon_facebook.png" alt="Facebook" /></a></li>
-      </ul> -->
+      <ul class="social-links">
+        <li><%= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
+        <li><a href="mailto:geeksam@gmail.com" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
+        <li><a href="http://twitter.com/geeksam" title="Twitter" class="w-tooltip"><img src="/assets/images/icon_twitter.png" alt="Twitter" /></a></li>
+      </ul>
 
 		</div><!--#wrapper-->
 	</div><!--#nav-top-->
@@ -76,20 +73,18 @@ filter:    erb
 
 <% if false %>
 	<!-- Main Navigation Menu -->
-  <!-- <div id="main-menu">
+  <div id="main-menu">
     <div class="wrapper">
       <ul>
         <li><a href="#">foo</a></li>
-        <li><a href="#">bar</a></li>
-        <li><a href="#">baz</a></li>
         <li><a href="#">Coding</a>
           <ul>
             <li><a href="#">Brushes</a></li>
           </ul>
-        </li> -->
+        </li>
       </ul>
     </div>
-  </div> -->
+  </div>
 <% end %>
 
 	<div class="wrapper">
@@ -116,17 +111,20 @@ filter:    erb
 
 	<div id="footer" class="container">
 		<div class="wrapper">
-
-			<!-- Footer Menu -->
-			<ul id="menu-footer-menu" class="fl">
-			  <li><a href="#">Foo</a></li>
-			  <li><a href="#">Bar</a></li>
-			  <li><a href="#">Baz</a></li>
-			</ul>
+      <% if false %>
+  			<!-- Footer Menu -->
+        <ul id="menu-footer-menu" class="fl">
+          <li><a href="#">Foo</a></li>
+        </ul>
+        <%= clearer %>
+      <% end %>
 
 			<!-- Footer Copyright -->
-      <!-- <p class="fr">Original template Copyright &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p> -->
-      <p>Text &copy; 2011 Sam Livingston-Gray</p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a><br />
+        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Think Like (a) Git</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://think-like-a-git.net" property="cc:attributionName" rel="cc:attributionURL">Sam Livingston-Gray</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+      </p>
+      <p><br />Original template &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p>
 			<%= clearer %>
 
 		</div><!--wrapper-->
