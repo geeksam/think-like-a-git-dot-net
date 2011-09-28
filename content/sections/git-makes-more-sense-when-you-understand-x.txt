@@ -7,10 +7,10 @@ filter:
   - markdown
 ---
 
-As I mentioned in <%= page_link('why-this-site') %>, I once tried to help a friend learn Git by saying something that&mdash;he later told me&mdash;wasn't all that helpful.  After he said that, I started noticing this pattern:
+As I mentioned in <%= page_link('why-this-site') %>, I once tried to help a friend learn Git by saying something that&mdash;he later told me&mdash;wasn't all that helpful.  After getting that feedback, I started noticing this pattern:
 
 **People tend to say things like "Git makes more sense when you understand [...]".**
 
 So I did a quick Google search for that phrase in April 2011, and it turned up over **8 million results**.  (Here,&nbsp;<a href="http://www.google.com/search?q=git+makes+more+sense+when+you+understand">try it yourself</a>.)
 
-I've chosen a few examples to talk about briefly.
+I've chosen a few examples of this pattern to talk about briefly.

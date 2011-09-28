@@ -7,7 +7,9 @@ filter:
   - markdown
 ---
 
-**You're almost there!**  There's just one more thing you need to know about graphs that will help you understand Git -- the concept of **reachability**.  If you're eager to jump ahead, <%= page_link('reachability', 'feel free') %>.
+**You're almost there!**  There's just one more thing you need to know about graphs that will help you understand Git -- the concept of **reachability**.
+
+**This page isn't about that**&mdash;it's purely optional.  If you're eager to jump ahead, <%= page_link('reachability', 'feel free') %>.
 
 <div class="fr wp-caption pad-left">
   <img src="/assets/images2/directed-graph.png" class="no-shadow" />

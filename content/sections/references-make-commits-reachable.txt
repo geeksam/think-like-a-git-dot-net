@@ -20,3 +20,5 @@ Let's unpack that sentence.
 ###### ...reachable.
 
 ...so that you can get back to them *(see <%= section_link('reachability', 'here') %>)*, and Git won't delete them when it decides it's time for spring cleaning *(see <%= section_link('garbage-collection', 'here') %>)*.
+
+It took me a really long time to piece this together for myself.  I'm writing this site so that you don't have to waste the time I did.

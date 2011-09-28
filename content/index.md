@@ -7,6 +7,8 @@ filter:
 ---
 
 <%= todo 'REMOVE robots.txt when ready to launch!' %>
+<%= todo 'Add a tl;dr page for HNers' %>
+<%= todo 'fix nav and footer' %>
 
 # Git shouldn't be so hard to learn.
 

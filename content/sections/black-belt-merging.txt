@@ -11,11 +11,11 @@ Once you're comfortable with <%= section_link('the Savepoint pattern') %>, you m
 
 Merge commits always wind up with a branch label pointing at them, and one of the branch's parent commits will be the commit that that branch label was just moved from.
 
-It may take you a few times to parse that sentence.  (Sorry about that.)  What it means is that the commit you started on&mdash;the one you would've marked with a savepoint branch&mdash;**will always be reachable.**
+It may take you a few tries to parse that sentence.  The upshot is that the commit you started on&mdash;the one you would've marked with a savepoint branch&mdash;**will always be reachable.**
 
-Here's the thing:  **Git doesn't care what you call your branches.**  Remember, branches are just a 40-byte file on disk that points to the commit's SHA-1 hash, which is what Git really uses for all of its work.  The branch is just there for us puny humans to have some convenient, memorable name attached to part of the graph.
+Here's the thing:  **Git doesn't care what you call your branches.**  Remember, branches are just a 40-byte file on disk that points to the commit's SHA-1 hash, which is what Git really uses for all of its work.  The branch is just there for us puny humans to have some convenient, memorable name pointing to part of the graph.
 
-At the end of <%= section_link('the Savepoint pattern') %>, the command you type to reset your branch to the savepoint is <code class="inline">git reset --hard savepoint</code>.  If you look at the documentation that comes up when you type <code class="inline">git reset -h</code>, you'll see that the final argument it takes is called <code class="inline">&lt;commit&gt;</code>.  Older versions of the documentation called this <code class="inline">&lt;commit-ish&gt;</code>, which was a convenient reminder that you could use anything that Git can turn into a SHA-1 hash.
+At the end of <%= section_link('the Savepoint pattern') %>, the command you type to reset your branch to the savepoint is <code class="inline">git reset --hard savepoint</code> (where "savepoint" is a branch name).  If you look at the documentation that comes up when you type <code class="inline">git reset -h</code>, you'll see that the final argument it takes is called <code class="inline">&lt;commit&gt;</code>.  Older versions of the documentation called this <code class="inline">&lt;commit-ish&gt;</code>, which was a convenient reminder that you could use anything that Git can turn into a SHA-1 hash.
 
 Things Git is happy to accept in a <code class="inline">&lt;commit&gt;</code> argument include (but are probably not limited to):
 
@@ -31,4 +31,8 @@ So, at the end of <%= section_link('the Savepoint pattern') %>, if you wanted to
 
 <code>git reset --hard 1234abcd</code>
 
-...and Git will know exactly what to do.
+...and **Git would behave exactly the same** as if you'd remembered to create a branch in the first place.
+
+<div class="wp-caption" style="text-align: left; padding: 5px;">
+  That bit about "if you'd remembered to" reminds me:  one of the single most helpful bits of commentary I ever read about Git was Ryan Tomayko's <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a>.  (Yes, that's the same thing I linked to in <%= section_link('example-4-lsd-and-chainsaws', 'LSD and chainsaws') %>.)
+</div>

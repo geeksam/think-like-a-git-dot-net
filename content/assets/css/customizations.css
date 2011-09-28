@@ -16,6 +16,10 @@ layout: none
   padding-left: 2px;
 }
 
+abbr {
+  border-bottom: 1px dotted <%= @blue %>;
+}
+
 #content p {
   font-size: 1.2em;
   line-height: 1.75em;

@@ -7,7 +7,7 @@ filter:
   - markdown
 ---
 
-This one departs somewhat from the script, but it's still well within the genre:
+This one isn't strictly of the same pattern, but I think it still captures the overall theme that Git is powerful and strange, and must be meditated upon to achieve enlightenment:
 
 > And then there’s <code class="inline">git rebase --interactive</code>, which is a bit like <br /> <code class="inline">git commit --amend</code> hopped up on acid and holding a chainsaw–completely insane and quite dangerous but capable of exposing entirely new states of mind."
 

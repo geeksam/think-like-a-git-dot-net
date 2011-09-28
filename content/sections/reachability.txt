@@ -7,7 +7,7 @@ filter:
   - markdown
 ---
 
-**You can think of this graph as a set of three parallel universes** with time flowing from left to right, so that **A** is the beginning of recorded history.
+**You can think of this graph as a set of three parallel universes** with time flowing from left to right, so that **A** is the beginning of recorded history.  *(The arrow represents the "follows" or "is subsequent to" relationship, so you might say that "B follows A".)*
 
 <div class="fl wp-caption pad-right">
   <img src="/assets/images2/reachability-example.png" class="no-shadow" />

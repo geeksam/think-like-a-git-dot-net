@@ -13,6 +13,11 @@ I've put together two slight variations on the same operation.  Both techniques 
 
 You might prefer one or the other based on how uncertain you are&mdash;about either your Git skills, or the specific merge you're about to try.
 
-Use <%= section_link('the Scout pattern') %> if you're still unclear on exactly what <code class="inline">git merge</code> does, or if you think it's likely that you'll decide to back out of the merge.
-
-Use <%= section_link 'the Savepoint pattern' %> if you're pretty sure what you want to do, but just want to leave yourself an undo button in case things get too messy.
+<ul class="full-size">
+  <li>
+    Use <%= section_link('the Scout pattern') %> if you're still unclear on exactly what <code class="inline">git merge</code> does, or if you think it's likely that you'll decide to back out of the merge.
+  </li>
+  <li>
+    Use <%= section_link 'the Savepoint pattern' %> if you're pretty sure what you want to do, but just want to leave yourself an undo button in case things get too messy.
+  </li>
+</ul>

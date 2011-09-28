@@ -17,7 +17,7 @@ Graph Theory
   Attaching Labels to Nodes
   Attaching Labels to Edges
   Directed versus Undirected Graphs
-  Cycles
+#  Cycles
   Reachability
 
 Graphs and Git

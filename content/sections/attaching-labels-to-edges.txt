@@ -9,7 +9,7 @@ filter:
 
 Just as we can label the nodes in a graph, we can also attach information to the edges.  This might include:
 
-<ul>
+<ul class="full-size">
   <li><strong>Names</strong>&mdash;for example, "12th Avenue".</li>
   <li><strong>Numbers (also called "weights")</strong>&mdash;like distances or speeds.</li>
   <li><strong>Types</strong>&mdash;to denote relationships, like "friend" or "coworker" or "parent of".</li>
