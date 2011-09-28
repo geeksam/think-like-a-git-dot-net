@@ -9,8 +9,6 @@ filter:
 
 I said something really important on the previous page.  It's so important I'll repeat it.
 
-<%= todo "make sure these quotes agree" %>
-
 In describing Git's garbage collection algorithm, I said, **"Starting from every branch and every tag**, Git walks back through the graph, building a list of every commit it can reach."  *(Emphasis added.)*
 
 Everything I've written up to this point has been to provide the background for you to **understand this one thing.**  If I had ten seconds to tell you The Secret Of Git, the entire point of this site, I can fit it into these four words:

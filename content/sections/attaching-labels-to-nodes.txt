@@ -15,8 +15,7 @@ Here's a quick overview of just our light rail system.  This doesn't show all th
 
 <div class="wp-caption">
   <img src="/assets/images2/max-system-map.gif" class="no-shadow" />
-  <br /><strong>The 10,000-foot view</strong>
-  <% todo 'Think of something witty to put in this caption' %>
+  <br /><strong>Portland's light rail: the 10,000-foot view</strong>
 </div>
 
 ...and if, right about now, you're starting to open your mouth and say, "hey, why are those lines different colors?"  Then you, my friend, are on the right track.  (No pun intended.)

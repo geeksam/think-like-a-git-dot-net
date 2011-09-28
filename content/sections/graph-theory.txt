@@ -7,9 +7,7 @@ filter:
   - markdown
 ---
 
-<% todo 'fill in link' %>
-
-**[If you're already comfortable with graph theory, skip ahead to the next major section.]**
+**[If you're already comfortable with graph theory, skip ahead to <%= section_link('Reachability') %>.]**
 
 For a rather math-intensive introduction to graph theory, <a href="http://en.wikipedia.org/wiki/Graph_theory">see Wikipedia</a>.  Here's a very short version of the definition they use there:
 
