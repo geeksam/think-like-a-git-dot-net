@@ -6,10 +6,6 @@ filter:
   - markdown
 ---
 
-<%= todo 'REMOVE robots.txt when ready to launch!' %>
-<%= todo 'Add a tl;dr page for HNers' %>
-<%= todo 'fix nav and footer' %>
-
 # Git shouldn't be so hard to learn.
 
 When you're just getting started, something as straightforward as a merge can be terrifying. It can take a long time to really become comfortable using some of Git's more advanced features.  *(It took me a year or two.)*

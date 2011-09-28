@@ -1,0 +1,13 @@
+---
+title:      TODO
+created_at: 2011-09-28 01:29:15.795418 -07:00
+filter:
+  - erb
+  - markdown
+---
+
+## TODO
+
+* Add reading list
+* Add comments (disqus, perhaps?)
+* find and attribute sources for all images
