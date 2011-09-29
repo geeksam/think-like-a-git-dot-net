@@ -100,3 +100,11 @@ caption {
   list-style-type: lower-roman;
   text-indent: -1em;
 }
+
+.reading-note {
+  font-size: 0.8em;
+  font-style: italic;
+  text-indent: 0;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}

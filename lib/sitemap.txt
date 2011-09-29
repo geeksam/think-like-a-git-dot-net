@@ -17,7 +17,6 @@ Graph Theory
   Attaching Labels to Nodes
   Attaching Labels to Edges
   Directed versus Undirected Graphs
-#  Cycles
   Reachability
 
 Graphs and Git
@@ -32,7 +31,6 @@ Experimenting with Git
   My Humble Beginnings
   Branches as Savepoints
   Use Your Targeting Computer, Luke
-#  The Dummy Repository: do-re-mi
 
 Testing Out Merges
   The Scout Pattern
