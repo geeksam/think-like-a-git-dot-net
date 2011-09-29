@@ -8,11 +8,15 @@ filter:
 
 ## TODO
 
+* per @jseifer:
+  * Fix broken link to Seven Bridges of Konigsberg *(what, unicode filenames are different between Mac and Linux?  Who'da thunk?)*
+  * Add http://progit.org/ to reading list
+  * Consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
 * Write section on rebase, similar to existing one on merge
 * Find and attribute sources for all images
 * Add comments (disqus, perhaps?)
 * Promote
   * twitter
-  * pdxruby
+  * pdxruby, el rug, ...?
   * rubyshow
   * HN?
