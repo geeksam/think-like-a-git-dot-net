@@ -25,6 +25,13 @@ filter:
   </li>
 
   <li>
+    <a href="http://progit.org/">Pro Git</a>, blog and book by Scott Chacon
+    <div class="reading-note">
+      I have to admit that I haven't actually read this one&mdash;it was suggested by <a href="http://jasonseifer.com/">Jason Seifer</a>.  Looks like an interesting blog, and as I've said elsewhere on the site, Scott Chacon's knowledge of Git is... impressive.
+    </div>
+  </li>
+
+  <li>
     <a href="http://peepcode.com/products/git">Peepcode screencast on Git</a> ($12)
     <div class="reading-note">
       I found this helpful when I was completely new to Git.  Haven't revisited it in a few years.

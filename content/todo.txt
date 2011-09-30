@@ -8,10 +8,8 @@ filter:
 
 ## TODO
 
-* per @jseifer:
-  * Fix broken link to Seven Bridges of Konigsberg *(what, unicode filenames are different between Mac and Linux?  Who'da thunk?)*
-  * Add http://progit.org/ to reading list
-  * Consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
+* per @jseifer, consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
+* per @peterc, consolidate some smaller pages?  Or, offer three reading options:  ADD, normal, and epic?
 * Write section on rebase, similar to existing one on merge
 * Find and attribute sources for all images
 * Add comments (disqus, perhaps?)
