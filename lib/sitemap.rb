@@ -1,6 +1,6 @@
 class String
   def dasherize
-    strip.downcase.gsub(/[^a-z0-9ö]+/, '-').gsub(/(^-|-$)/, '')
+    strip.downcase.gsub('ö', 'o').gsub(/[^a-z0-9]+/, '-').gsub(/(^-|-$)/, '')
   end
 end
 
