@@ -1,5 +1,5 @@
 ---
-title:      Reading List
+title:      Resources
 created_at: 2011-08-31 00:39:58.996830 -07:00
 filter:
   - erb
