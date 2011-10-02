@@ -10,6 +10,7 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-10-01:** Cleaned up header formatting, added <%= page_link('epic') %>, minor edits, added <%= section_link('the end') %>.
 * **2011-09-28:** Linked up the reading list.
-* **2011-09-28:** add a few todo items
-* **2011-09-28:** just about ready to launch.  Added CC license, fixed top nav, added content and edited what was already there.
+* **2011-09-28:** Added a few todo items.
+* **2011-09-28:** Just about ready to launch.  Added CC license, fixed top nav, added content, moderate edits.
