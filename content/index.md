@@ -6,7 +6,7 @@ filter:
   - markdown
 ---
 
-# Git shouldn't be so hard to learn.
+<h1>Git shouldn't be so hard to learn.</h1>
 
 When you're just getting started, something as straightforward as a merge can be terrifying. It can take a long time to really become comfortable using some of Git's more advanced features.  *(It took me a year or two.)*
 

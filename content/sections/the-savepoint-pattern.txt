@@ -25,7 +25,7 @@ Here's a quick overview of the steps in this recipe:
 
 (Unless the last video game you ever played was Super Mario Brothers, it should be obvious why I call this one the Savepoint pattern.)
 
-###### The long version
+<h3>The long version</h3>
 
 You're on the ***master*** branch and you want the changes from the ***spiffy_new_feature*** branch to be incorporated into ***master.***  You're reasonably confident that you'll want to keep the changes, but you want to be able to abort it if, for example, this feature has unintended side effects.
 

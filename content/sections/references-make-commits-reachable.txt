@@ -9,15 +9,15 @@ filter:
 
 Let's unpack that sentence.
 
-###### References...
+<h3>References...</h3>
 
 ...whether they are local branches, remote branches, or tags *(see <%= section_link('the-reference-reference', 'here') %>)*...
 
-###### ...make commits...
+<h3>...make commits...</h3>
 
 ...which are nodes in a graph *(see <%= section_link('graphs-and-git', 'here') %>)*...
 
-###### ...reachable.
+<h3>...reachable.</h3>
 
 ...so that you can get back to them *(see <%= section_link('reachability', 'here') %>)*, and Git won't delete them when it decides it's time for spring cleaning *(see <%= section_link('garbage-collection', 'here') %>)*.
 

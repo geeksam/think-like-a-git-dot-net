@@ -6,7 +6,7 @@ filter:
   - markdown
 ---
 
-## <abbr title="Too Long; Didn't Read">TL;DR</abbr>
+<h1><abbr title="Too Long; Didn't Read">TL;DR</abbr></h1>
 
 <ul class="full-size">
   <li>Git is an incredibly powerful tool, but it can be hard to learn.</li>
@@ -15,9 +15,12 @@ filter:
   <li>Because <strong><%= section_link('references make commits reachable') %>.</strong> <br /><em>(Only got time to read one more page?  Make it that one.)</em></li>
   <li>Once you understand that, you won't waste so much time backing up your entire repository, <%= section_link('my-humble-beginnings', 'like I did') %>.</li>
   <li><%= section_link('use-your-targeting-computer-luke', 'I like GitX') %>, and you can use it (or another visualizer) to bootstrap your knowledge of Git.</li>
+  <li>I've got a few recipes for <%= section_link('testing out merges') %> that give you an "undo" option.</li>
 </ul>
 
-### Alternate Media
+<h1>Alternate Media</h1>
+
+If lots of text isn't your thing, you can check out the material I based this site on:
 
 <ul class="full-size">
   <li><a href="http://think-like-a-git.heroku.com/">HTML slideshow</a></li>

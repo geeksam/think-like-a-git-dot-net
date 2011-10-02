@@ -9,6 +9,6 @@ filter:
 
 <img src="/assets/images2/homeomorphic_endofunctors.jpg" class="no-shadow" />
 
-## Don't worry.  It's a joke.
+<h3>Don't worry.  It's a joke.</h3>
 
 (At least, I'm pretty sure it's a joke.)

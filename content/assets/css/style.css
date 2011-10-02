@@ -812,23 +812,28 @@ a:hover {
 	}
 
 .post .entry-content h2 {
-	font-size: 44px;
-	}
-
-.post .entry-content h3 {
-	font-size: 40px;
-	}
-
-.post .entry-content h4 {
+/*  font-size: 44px;*/
 	font-size: 36px;
 	}
 
+.post .entry-content h3 {
+/*  font-size: 40px;*/
+	font-size: 24px;
+	}
+
+.post .entry-content h4 {
+/*  font-size: 36px;*/
+	font-size: 18px;
+	}
+
 .post .entry-content h5 {
-	font-size: 32px;
+/*  font-size: 32px;*/
+	font-size: 16px;
 	}
 
 .post .entry-content h6 {
-	font-size: 28px;
+/*  font-size: 28px;*/
+	font-size: 14px;
 	}
 
 .post .border {
