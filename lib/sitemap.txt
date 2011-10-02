@@ -36,3 +36,5 @@ Testing Out Merges
   The Scout Pattern
   The Savepoint Pattern
   Black Belt Merging
+
+The End
