@@ -16,17 +16,17 @@ Graph Theory
   Nodes and Edges
   Attaching Labels to Nodes
   Attaching Labels to Edges
-  Directed versus Undirected Graphs
+  Directed Versus Undirected Graphs
   Reachability
 
 Graphs and Git
-  Visualizing your Git Repository
+  Visualizing Your Git Repository
   References
   The Reference Reference
   Making Sense of the Display
   Garbage Collection
 
-Experimenting with Git
+Experimenting With Git
   References Make Commits Reachable
   My Humble Beginnings
   Branches as Savepoints

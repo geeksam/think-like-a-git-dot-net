@@ -1,0 +1,20 @@
+---
+title:          Epic
+created_at:     2011-10-01 21:14:16.393629 -07:00
+nav_list_links: "#%s"
+filter:
+  - erb
+  - markdown
+---
+
+***[Now reading the site in EPIC MODE:  all the content in one big page.]***
+
+<%  sitemap.sexp.flatten.each do |title|
+      depth = sitemap.depth(title)
+      page = @pages.find(:title => title)
+      raise "No page for #{title}" if page.nil?
+%>
+  <a name="<%= title.dasherize %>"></a>
+  <%= tag 'h%s' % depth, title %>
+  <%= render(page, :guard => true) %>
+<%  end %>

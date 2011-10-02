@@ -93,6 +93,11 @@ class Sitemap
     return prev_item, next_item
   end
 
+  def depth(item)
+    @depths ||= DepthCalculator.for(self).depths
+    @depths[item]
+  end
+
   class Traverser
     def self.for(sitemap, options = {})
       new(options).tap { |t| t.traverse(sitemap) }
@@ -108,6 +113,17 @@ class Sitemap
     def begin_sublist(path)           ; end
     def accept_node(ancestors, node)  ; end
     def finalize_sublist(path)        ; end
+  end
+
+  class DepthCalculator < Traverser
+    attr_reader :depths
+    def initialize(*args)
+      super
+      @depths = {}
+    end
+    def accept_node(ancestors, node)
+      @depths[node] = ancestors.length + 1
+    end
   end
 
   def facilitate_traversal_of(traverser)
@@ -141,7 +157,8 @@ class Sitemap
     end
 
     def accept_node(ancestors, node)
-      tag_body = '<a href="/sections/%s.html">%s</a>' % [node.dasherize, node]
+      link_path = @options[:link_path_template] % node.dasherize
+      tag_body = '<a href="%s">%s</a>' % [link_path, node]
       tag_body << '&nbsp;<span class="current-marker">&larr;HEAD</span>' if current_section?(node)
       lines << '<li>%s</li>' % tag_body
     end

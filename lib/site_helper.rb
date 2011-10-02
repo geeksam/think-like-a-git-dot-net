@@ -12,8 +12,12 @@ module SiteHelper
     @sitemap ||= Sitemap.from_file('lib/sitemap.txt')
   end
 
-  def nav_list
-    sitemap.nav_list(:current_section => @page.title.dasherize)
+  def nav_list(options = {})
+    options.merge!({
+      :current_section => @page.title.dasherize,
+      :link_path_template => @page.nav_list_links || '/sections/%s.html',
+    })
+    sitemap.nav_list(options)
   end
 
   def section_path(section_title)
