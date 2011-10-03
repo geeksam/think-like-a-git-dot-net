@@ -10,7 +10,6 @@ filter:
 
 * Write section on rebase, similar to existing one on merge
 * Find and attribute sources for all images
-* fix non-local img src for CC license
 * Promote
   * twitter
   * pdxruby, el rug, ...?
