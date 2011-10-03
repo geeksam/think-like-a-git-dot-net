@@ -51,10 +51,14 @@ filter:    erb
 			<ul class="menu-nav-top">
 			  <li><a href='/'>Home</a></li>
 			  <li><%= page_link('tldr', 'TL;DR') %></li>
-			  <li><%= section_link('about-this-site', 'Start Reading') %></li>
-			  <li><%= page_link('epic', 'EPIC MODE') %></li>
+			  <li><a>Read In...</a>
+			    <ul>
+  			    <li><%= section_link('about-this-site', 'AD/HD mode') %></li>
+    			  <li><%= page_link('epic', 'EPIC MODE') %></li>
+			    </ul>
+			  </li>
 			  <li><%= page_link('resources') %></li>
-		    <li><a>Meta</a>
+		    <li><a>Meta...</a>
   			  <ul>
     			  <li><%= page_link('changelog') %></li>
     			  <li><%= page_link('todo') %></li>
