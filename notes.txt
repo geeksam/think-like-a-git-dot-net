@@ -4,3 +4,20 @@ http://www.seanmichaelragan.com/html/[2008-03-07]_Choose_Your_Own_Adventure_book
 
 http://programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git/
 
+
+
+Rebase flowchart:
+
+Commits on other branch that aren't on this branch?
+- no:  done.
+- yes:
+  Apply next commit.
+  Merge conflict?
+  - no: goto beginning.
+  - yes:
+    can we resolve them automatically?
+    - yes: do it and goto beginning.
+    - no:
+      Spit out warning to user and wait for next 'git rebase' command.
+      Got 'git rebase' command.  Which one?
+        - 

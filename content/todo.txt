@@ -8,7 +8,7 @@ filter:
 
 <h1>TODO</h1>
 
-* Write section on rebase, similar to existing one on merge
+* Continue section on rebase, adding a simple recipe, explaining --abort, and talking about interactive rebasing
 * Talk a bit about git reset, probably linking to http://progit.org/2011/07/11/reset.html
 * Find and attribute sources for all images
 * Promote

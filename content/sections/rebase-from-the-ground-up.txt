@@ -1,0 +1,14 @@
+---
+title:      "Rebase From the Ground Up"
+created_at: 2011-10-02 23:51:29.003703 -07:00
+layout:     section
+filter:
+  - erb
+  - markdown
+---
+
+Git's <code class="inline">rebase</code> command was one of those things that it took me forever to figure out.  This was partly because I just had a lot to learn about managing branches in general, but it was also partly because it seemed like the only time people bothered to write about rebase was to say <%= section_link('example-4-lsd-and-chainsaws', 'how incredibly weird and dangerous it was') %>.
+
+This is a damn shame, because **rebase is the single most useful command I use in Git**.  More importantly, **it's actually pretty easy to understand once you get the hang of it.**
+
+If you'll bear with me, I think it's much easier to explain rebase in the context of another Git command:  <code class="inline">git cherry-pick</code>.

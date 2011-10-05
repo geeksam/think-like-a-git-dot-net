@@ -37,4 +37,9 @@ Testing Out Merges
   The Savepoint Pattern
   Black Belt Merging
 
+Rebase From the Ground Up
+  Cherry-Picking Explained
+  Using 'git cherry-pick' to Simulate 'git rebase'
+  A Helpful Mnemonic for 'git rebase' Arguments
+
 The End
