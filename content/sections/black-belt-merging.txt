@@ -34,5 +34,5 @@ So, at the end of <%= section_link('the Savepoint pattern') %>, if you wanted to
 ...and **Git would behave exactly the same** as if you'd remembered to create a branch in the first place.
 
 <div class="wp-caption" style="text-align: left; padding: 5px;">
-  That bit about "if you'd remembered to" reminds me:  one of the single most helpful bits of commentary I ever read about Git was Ryan Tomayko's <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a>.  (Yes, that's the same thing I linked to in <%= section_link('example-4-lsd-and-chainsaws', 'LSD and chainsaws') %>.)
+  That bit about "if you'd remembered to" reminds me:  one of the single most helpful bits of commentary I ever read about Git was Ryan Tomayko's <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a>.  (Yes, that's the same thing I linked to in <%= section_link('example-4-lsd-and-chainsaws', 'LSD and Chainsaws') %>.)
 </div>
