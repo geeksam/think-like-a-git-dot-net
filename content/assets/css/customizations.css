@@ -108,3 +108,11 @@ caption {
   line-height: 1.3em;
   margin-bottom: 10px;
 }
+
+.banner .cta {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d08125;
+  text-align: right;
+}

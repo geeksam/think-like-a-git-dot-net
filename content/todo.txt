@@ -15,6 +15,7 @@ filter:
   * twitter
   * pdxruby.org, lrug.org, ...?
   * rubyshow
-  * HN?
+  * HN
+    * use CTA in layout
 * per @jseifer, consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
 * maybe add per-page comments, maybe (though not sure how this would work in epic mode)
