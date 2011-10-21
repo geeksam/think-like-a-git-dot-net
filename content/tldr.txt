@@ -16,6 +16,7 @@ filter:
   <li>Once you understand that, you won't waste so much time backing up your entire repository, <%= section_link('my-humble-beginnings', 'like I did') %>.</li>
   <li><%= section_link('use-your-targeting-computer-luke', 'I like GitX') %>, and you can use it (or another visualizer) to bootstrap your knowledge of Git.</li>
   <li>I've got a few recipes for <%= section_link('testing out merges') %> that give you an "undo" option.</li>
+  <li>And I've attempted to explain <%= section_link('rebase-from-the-ground-up', 'rebase') %> as simply as I can.</li>
 </ul>
 
 <h1>Alternate Media</h1>
@@ -24,5 +25,5 @@ If lots of text isn't your thing, you can check out the material I based this si
 
 <ul class="full-size">
   <li><a href="http://think-like-a-git.heroku.com/">HTML slideshow</a></li>
-  <li><a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">Confreaks video</a> from Cascadia RubyConf, July 2011 (note that I gave the talk with zero preparation, so it's a bit unpolished)</li>
+  <li><a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">Confreaks video</a> from Cascadia RubyConf, July 2011.  (I gave the talk with zero advance notice, so it's a bit unpolished.)</li>
 </ul>

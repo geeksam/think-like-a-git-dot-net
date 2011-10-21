@@ -13,8 +13,8 @@ filter:
 * Find and attribute sources for all images
 * Promote
   * twitter
-  * pdxruby, el rug, ...?
+  * pdxruby.org, lrug.org, ...?
   * rubyshow
   * HN?
 * per @jseifer, consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
-* maybe add comments, maybe
+* maybe add per-page comments, maybe (though not sure how this would work in epic mode)
