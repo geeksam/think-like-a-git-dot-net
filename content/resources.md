@@ -19,6 +19,13 @@ filter:
   </li>
 
   <li>
+    <a href="http://hginit.com/00.html">Subversion Re-Education</a> page on a Mercurial tutorial site by Joel&nbsp;Spolsky
+    <div class="reading-note">
+      Mercurial is a different distributed version control system, but this one page is incredibly useful if you're coming to Git from Subversion or another centralized system.
+    </div>
+  </li>
+
+  <li>
     <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a> 2008 blog post by Ryan&nbsp;Tomayko
     <div class="reading-note">
       One of the best pieces I've ever read about Git.  Explains a lot, especially what the index is.
@@ -26,16 +33,9 @@ filter:
   </li>
 
   <li>
-    <a href="http://progit.org/">Pro Git</a>, occasional blog and 2009 book by Scott&nbsp;Chacon
+    <a href="http://nfarina.com/post/9868516270/git-is-simpler">Git is Simpler Than You Think</a>, 2011 blog post by Nick&nbsp;Farina
     <div class="reading-note">
-      I have to admit that I haven't actually read this one&mdash;it was suggested by <a href="http://jasonseifer.com/">Jason Seifer</a>.  Looks like an interesting blog, and as I've said elsewhere on the site, Scott Chacon's knowledge of Git is... impressive.  <strong>(Note:  free blog promoting for-pay book, so I'm listing it in the free section.)</strong>
-    </div>
-  </li>
-
-  <li>
-    <a href="http://hginit.com/00.html">Subversion Re-Education</a> page on a Mercurial tutorial site by Joel&nbsp;Spolsky
-    <div class="reading-note">
-      Mercurial is a different distributed version control system, but this one page is incredibly useful if you're coming to Git from Subversion or another centralized system.
+      Chatty blog post with lots of entertaining pictures.  You'll hardly notice you're learning stuff.
     </div>
   </li>
 
@@ -47,9 +47,9 @@ filter:
   </li>
 
   <li>
-    <a href="http://nfarina.com/post/9868516270/git-is-simpler">Git is Simpler Than You Think</a>, 2011 blog post by Nick&nbsp;Farina
+    <a href="http://progit.org/">Pro Git</a>, occasional blog and 2009 book by Scott&nbsp;Chacon
     <div class="reading-note">
-      Chatty blog post with lots of entertaining pictures.  You'll hardly notice you're learning stuff.
+      I have to admit that I haven't actually read this one&mdash;it was suggested by <a href="http://jasonseifer.com/">Jason Seifer</a>.  Looks like an interesting blog, and as I've said elsewhere on the site, Scott Chacon's knowledge of Git is... impressive.  <strong>(Note:  free blog promoting for-pay book, so I'm listing it in the free section.)</strong>
     </div>
   </li>
 </ul>

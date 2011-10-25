@@ -9,6 +9,6 @@ filter:
 
 This site is organized in a fairly linear fashion, with two variants.
 
-In AD/HD mode, each section will have links at the bottom to the previous and next section, so you can read through the site from beginning to end.  If you find that you're already familiar with some of the concepts in a given section, you can use the sidebar navigation to skip to specific pages.
+In <%= section_link('about-this-site', 'AD/HD mode') %>, each section will have links at the bottom to the previous and next section, so you can read through the site from beginning to end.  If you find that you're already familiar with some of the concepts in a given section, you can use the sidebar navigation to skip to specific pages.
 
-In EPIC MODE, you get the whole enchilada on one page, and the sidebar navigation will jump you to headings within the page.
+In <%= page_link('epic', 'EPIC MODE') %>, you get the whole enchilada on one page, and the sidebar navigation will jump you to headings within the page.

@@ -25,5 +25,5 @@ If lots of text isn't your thing, you can check out the material I based this si
 
 <ul class="full-size">
   <li><a href="http://think-like-a-git.heroku.com/">HTML slideshow</a></li>
-  <li><a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">Confreaks video</a> from Cascadia RubyConf, July 2011.  (I gave the talk with zero advance notice, so it's a bit unpolished.)</li>
+  <li>A 25-minute <a href="http://confreaks.net/videos/612-cascadiaruby2011-think-like-a-git">Confreaks video</a> from <a href="http://cascadiarubyconf.com/">Cascadia RubyConf</a>, July 2011.  (I gave the talk with zero advance notice, so it's a bit unpolished.)</li>
 </ul>
