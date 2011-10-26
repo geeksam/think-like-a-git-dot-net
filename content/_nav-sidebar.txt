@@ -1,5 +1,0 @@
----
-filter: erb
----
-
-<%= nav_list.to_html %>
