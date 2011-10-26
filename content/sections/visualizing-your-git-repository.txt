@@ -9,7 +9,7 @@ filter:
 
 About half of my interactions with Git take place on the command line.  But **when I want to understand what's going on, I use a visual Git tool.**  On the Mac, the best thing I've found is **<a href="http://gitx.frim.nl/">GitX</a>**.  On other systems, **gitk** should be available; you can search the web to find something that works for you.
 
-The main point of using a visualizer is to **help you make sense of your branch history.**  For example, to list all commits in your repository at the command line, you could do <code class="inline">git log --pretty=oneline --abbrev-commit --branches=*</code>&mdash;which will get you this:
+The main point of using a visualizer is to **help you make sense of your branch history.**  For example, to list all commits in your repository at the command line, you could do <code class="inline">git log --pretty=oneline --abbrev-commit --branches=*</code>&mdash;which will get you this flattened view:
 
 <div class="wp-caption">
   <img src="/assets/images2/textual-git-log.png" class="no-shadow" />
@@ -17,9 +17,21 @@ The main point of using a visualizer is to **help you make sense of your branch 
 </div>
 <%= clearer %>
 
-Or, you can use GitX, which will show you this *slightly more useful* view:
+Or, you can add <code class="inline">--graph</code> to that command, which will show you a *slightly more useful* view:
+
+<code>git log --pretty=oneline --abbrev-commit --branches=* --graph</code>
+
+<div class="wp-caption">
+  <img src="/assets/images2/textual-git-graph.png" class="no-shadow" />
+  <br /><strong>Much better!</strong>
+</div>
+<%= clearer %>
+
+***(Thanks to <%= twitter_user('mjdominus') %> and <%= twitter_user('JRGarcia') %> for reminding me about the <code class="inline">--graph</code> option!)***
+
+Or, you can use GitX for the same graph view plus branch and tag labels:
 
 <div class="wp-caption">
   <img src="/assets/images2/gitx-visualization.png" class="no-shadow" />
-  <br /><strong>Could you tell there were branches from the terminal output?  Me either.</strong>
+  <br /><strong>I like the purdy colors.</strong>
 </div>

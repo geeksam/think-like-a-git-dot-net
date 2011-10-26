@@ -64,6 +64,10 @@ module SiteHelper
     puts '*' * 80
     puts '*' * 80
   end
+
+  def twitter_user(handle)
+    tag :a, '@' + handle.to_s, :href => "https://twitter.com/#!/#{handle}"
+  end
 end
 
 Webby::Helpers.register(SiteHelper)

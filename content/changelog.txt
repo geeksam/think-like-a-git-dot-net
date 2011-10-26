@@ -10,6 +10,8 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-10-26:** Updated <%= section_link('visualizing-your-git-repository') %> based on Twitter feedback.
+* **2011-10-26:** <a href="http://shipitsquirrel.github.com/"><s>Ship</s> Launch it!</a>
 * **2011-10-25:** Link up AD/HD and epic modes in intro section, tweak resources.
 * **2011-10-20:** Finished up section on rebase.
 * **2011-10-01:** Cleaned up header formatting, added <%= page_link('epic') %>, minor edits, added <%= section_link('the end') %>.
