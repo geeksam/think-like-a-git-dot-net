@@ -29,7 +29,19 @@ Or, you can add <code class="inline">--graph</code> to that command, which will 
 
 ***(Thanks to <%= twitter_user('mjdominus') %> and <%= twitter_user('JRGarcia') %> for reminding me about the <code class="inline">--graph</code> option!)***
 
-Or, you can use GitX for the same graph view plus branch and tag labels:
+If you want to see branch and tag labels, add <code class="inline">--decorate</code>:
+
+<code>git log --pretty=oneline --abbrev-commit --branches=* --graph --decorate</code>
+
+<div class="wp-caption">
+  <img src="/assets/images2/textual-git-graph-with-labels.png" class="no-shadow" />
+  <br /><strong>I'm going to need a wider design template if this goes on...</strong>
+</div>
+<%= clearer %>
+
+***(Thanks again to <%= twitter_user('JRGarcia') %> for the <code class="inline">--decorate</code> tip!)***
+
+Or, you can use GitX to see all of the above in a cleaner graphical view:
 
 <div class="wp-caption">
   <img src="/assets/images2/gitx-visualization.png" class="no-shadow" />
