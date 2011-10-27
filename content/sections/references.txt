@@ -17,6 +17,6 @@ References come in several flavors:  **local branch,** **remote branch,** and **
 
 On disk, a ***local branch reference*** consists entirely of a file in your project's .git/refs/heads directory.  This file contains the 40-byte identifier of the commit that the reference points to... and that's it.  **The entire file is 40 bytes.**
 
-You might have heard people talk about how Git allows "cheap branching."  This is (part of) what they mean.  Creating a branch in GitX just means writing 40 bytes to disk, which is why <code class="inline">git branch foo</code> is so freaking fast.
+You might have heard people talk about how Git allows "cheap branching."  This is (part of) what they mean.  Creating a branch in Git just means writing 40 bytes to disk, which is why <code class="inline">git branch foo</code> is so freaking fast.
 
 What's ***really*** interesting about references, though, is how they behave.  So, let's move on.
