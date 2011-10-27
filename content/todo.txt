@@ -9,13 +9,8 @@ filter:
 <h1>TODO</h1>
 
 * Continue section on rebase, adding a simple recipe, explaining --abort, and talking about interactive rebasing
+  * also explaining why one would want to use it (hat tip to Cameron Thomas on the pdxruby list for this)
 * Talk a bit about git reset, probably linking to http://progit.org/2011/07/11/reset.html
 * Find and attribute sources for all images
-* Promote
-  * twitter
-  * pdxruby.org, lrug.org, ...?
-  * rubyshow
-  * HN
-    * use CTA in layout
 * per @jseifer, consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*
-* maybe add per-page comments, maybe (though not sure how this would work in epic mode)
+* maybe add per-page comments, *maybe* (not sure how this would work in epic mode)
