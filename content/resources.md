@@ -47,6 +47,13 @@ filter:
   </li>
 
   <li>
+    <a href="http://gitimmersion.com/">Git Immersion</a> by EdgeCase Consulting
+    <div class="reading-note">
+      This one was suggested by reader Mark Scholtz.  I haven't gone through it myself, but at first glance this looks like an amazingly detailed, well supported step-by-step tutorial that starts from the very basics and goes on through some very advanced topics.  Thanks, Mark!
+    </div>
+  </li>
+
+  <li>
     <a href="http://progit.org/">Pro Git</a>, occasional blog and 2009 book by Scott&nbsp;Chacon
     <div class="reading-note">
       I have to admit that I haven't actually read this one&mdash;it was suggested by <a href="http://jasonseifer.com/">Jason Seifer</a>.  Looks like an interesting blog, and as I've said elsewhere on the site, Scott Chacon's knowledge of Git is... impressive.  <strong>(Note:  free blog promoting for-pay book, so I'm listing it in the free section.)</strong>

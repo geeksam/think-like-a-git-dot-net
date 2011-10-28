@@ -10,6 +10,7 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-10-28:** Add Git Immersion to resources page. (Thanks, Matt!)
 * **2011-10-26:** Updated <%= section_link('visualizing-your-git-repository') %> based on Twitter feedback.
 * **2011-10-26:** <a href="http://shipitsquirrel.github.com/"><s>Ship</s> Launch it!</a>
 * **2011-10-25:** Link up AD/HD and epic modes in intro section, tweak resources.
