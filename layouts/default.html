@@ -9,32 +9,33 @@ filter:    erb
 
 <head profile="http://gmpg.org/xfn/11">
 
-	<!-- Meta & Title -->
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <!-- Meta & Title -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="author" content="Sam Livingston-Gray" />
   <title><%= [@page.title, ::SiteTitle].join(' // ') %></title>
 
-	<!-- CSS -->
-	<link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen" />
-	<link type="text/css" rel="stylesheet" href="/assets/css/customizations.css" media="screen" />
 
-	<!-- Hooks -->
-	<link rel="index" title="Vectors" href="#" />
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="/assets/css/customizations.css" media="screen" />
 
-	<!-- Javascript -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.tools.min.js"></script>
-	<script type="text/javascript" src="/assets/js/superfish.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.tipTip.min.js"></script>
-	<script type="text/javascript" src="/assets/js/custom.js"></script>
+  <!-- Hooks -->
+  <link rel="index" title="Vectors" href="#" />
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/js/superfish.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.tipTip.min.js"></script>
+  <script type="text/javascript" src="/assets/js/custom.js"></script>
 
 </head>
 
 <body>
-	<div id="header">
-		<div class="wrapper">
+  <div id="header">
+    <div class="wrapper">
 
-			<!-- Image Based Logo -->
+      <!-- Image Based Logo -->
       <!-- <h1><a href="index.html"><img src="/assets/images/logo.png" alt="Think Like (a) Git" /></a></h1> -->
 
       <!-- Static Logo (Optional) -->
@@ -49,28 +50,28 @@ filter:    erb
       </div>
 <% end %>
 
-		</div><!--#wrapper-->
-	</div><!--#header-->
+    </div><!--#wrapper-->
+  </div><!--#header-->
 
-	<div id="nav-top">
-		<div class="wrapper">
+  <div id="nav-top">
+    <div class="wrapper">
 
-			<!-- Top Navigation Menu -->
-			<ul class="menu-nav-top">
-			  <li><a href='/'>Home</a></li>
-			  <li><%= page_link('tldr', 'TL;DR') %></li>
-			  <li><a>Read In...</a>
-			    <ul>
-  			    <li><%= section_link('about-this-site', 'AD/HD mode') %></li>
-    			  <li><%= page_link('epic', 'EPIC MODE') %></li>
-			    </ul>
-			  </li>
-			  <li><%= page_link('resources') %></li>
-			  <li><%= page_link('changelog') %></li>
-			  <li><%= page_link('todo') %></li>
-			</ul>
+      <!-- Top Navigation Menu -->
+      <ul class="menu-nav-top">
+        <li><a href='/'>Home</a></li>
+        <li><%= page_link('tldr', 'TL;DR') %></li>
+        <li><a>Read In...</a>
+          <ul>
+            <li><%= section_link('about-this-site', 'AD/HD mode') %></li>
+            <li><%= page_link('epic', 'EPIC MODE') %></li>
+          </ul>
+        </li>
+        <li><%= page_link('resources') %></li>
+        <li><%= page_link('changelog') %></li>
+        <li><%= page_link('todo') %></li>
+      </ul>
 
-			<!-- Top Social Links -->
+      <!-- Top Social Links -->
       <ul class="social-links">
         <li><a href="http://news.ycombinator.com/item?id=3158482">HN</a></li>
         <li><a href="mailto:geeksam@gmail.com" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
@@ -79,12 +80,12 @@ filter:    erb
         <li><%= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
       </ul>
 
-		</div><!--#wrapper-->
-	</div><!--#nav-top-->
+    </div><!--#wrapper-->
+  </div><!--#nav-top-->
 
 
 <% if false %>
-	<!-- Main Navigation Menu -->
+  <!-- Main Navigation Menu -->
   <div id="main-menu">
     <div class="wrapper">
       <ul>
@@ -99,47 +100,47 @@ filter:    erb
   </div>
 <% end %>
 
-	<div class="wrapper">
-		<div id="content" class="grid12 last">
+  <div class="wrapper">
+    <div id="content" class="grid12 last">
 
       <div class="post page-content">
         <div class="entry-content">
           <!-- Primary content -->
-					<div class="two_third">
+          <div class="two_third">
             <%= @content %>
-					</div>
+          </div>
 
           <!-- Sidebar with site map -->
           <div class="one_third last">
             <%= nav_list.to_html %>
-					</div>
+          </div>
         </div>
       </div>
-		</div><!--#content-->
+    </div><!--#content-->
 
-		<%= clearer %>
-	</div><!--wrapper-->
+    <%= clearer %>
+  </div><!--wrapper-->
 
-	<div id="footer" class="container">
-		<div class="wrapper">
+  <div id="footer" class="container">
+    <div class="wrapper">
       <% if false %>
-  			<!-- Footer Menu -->
+        <!-- Footer Menu -->
         <ul id="menu-footer-menu" class="fl">
           <li><a href="#">Foo</a></li>
         </ul>
         <%= clearer %>
       <% end %>
 
-			<!-- Footer Copyright -->
+      <!-- Footer Copyright -->
       <p>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/images2/cc-license-80x15.png" /></a><br />
         <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Think Like (a) Git</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://think-like-a-git.net" property="cc:attributionName" rel="cc:attributionURL">Sam Livingston-Gray</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
       </p>
       <p><br />Original template &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p>
-			<%= clearer %>
+      <%= clearer %>
 
-		</div><!--wrapper-->
-	</div><!--footer-->
+    </div><!--wrapper-->
+  </div><!--footer-->
 
 </body>
 </html>
