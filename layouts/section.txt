@@ -6,9 +6,29 @@ filter:
   - markdown
 ---
 
-
 <h2><%= @page.title %></h2>
 
 <%= @content %>
 
 <%= linear_nav_links %>
+
+<script type="text/javascript" charset="utf-8">
+  function action_for_key(e) {
+    switch (e.keyCode) {
+      case 78:  // 'n'
+        return 'next';
+      case 80:  // 'p'
+        return 'prev';
+    }
+  }
+
+  $(document).ready(function() {
+    $(document).keydown(function (e) {
+      var action = action_for_key(e);
+      if (action == 'next' || action == 'prev') {
+        var link = $('link[rel="'+action+'"]');
+        window.location.href = link[0].href;
+      }
+    });
+  });
+</script>
