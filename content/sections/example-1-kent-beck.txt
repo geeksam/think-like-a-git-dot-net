@@ -10,3 +10,7 @@ filter:
 <img src="/assets/images2/kent_beck_tweet.jpg" class="no-shadow" />
 
 **This is a perfect example of the form.**  It sounds impressive, but unless you already know what the author is talking about, it doesn't really help.
+
+<div class="wp-caption" style="text-align: left; padding: 5px;">
+  I like this tweet for another reason.  I've purchased and read several of Kent's books, and had assumed that he already knew everything there was to know.  When I saw this, and realized that I'd understood something before him, I was quite surprised. And then I was amused at having been surprised.
+</div>
