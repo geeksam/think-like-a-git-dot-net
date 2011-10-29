@@ -10,6 +10,7 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-10-28:** Added &lt;link rel="next" /&gt; (suggestion from <%= twitter_user('mcepl') %>)
 * **2011-10-28:** Fix nav links in epic mode.
 * **2011-10-28:** Add Git Immersion to resources page. (Thanks, Matt!)
 * **2011-10-26:** Updated <%= section_link('visualizing-your-git-repository') %> based on Twitter feedback.

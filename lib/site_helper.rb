@@ -40,15 +40,17 @@ module SiteHelper
     prev_section, _ = sitemap.prev_and_next(@page.title)
     return unless prev_section
     text ||= prev_section
-    html_options = html_options.merge( :href => section_path(prev_section) )
-    tag(:a, text, html_options)
+    href = section_path(prev_section)
+    html_options = html_options.merge(:href => href)
+    tag(:a, text, html_options) + tag(:link, :rel => 'prev', :href => href)
   end
   def next_section_link(text = nil, html_options = {})
     _, next_section = sitemap.prev_and_next(@page.title)
     return unless next_section
     text ||= next_section
-    html_options = html_options.merge( :href => section_path(next_section) )
-    tag(:a, text, html_options)
+    href = section_path(next_section)
+    html_options = html_options.merge(:href => href)
+    tag(:a, text, html_options) + tag(:link, :rel => 'next', :href => href)
   end
 
   def linear_nav_links
