@@ -21,7 +21,11 @@ module SiteHelper
   end
 
   def section_path(section_title)
-    '/sections/%s.html' % section_title.dasherize
+    if @page.epic
+      '#%s' % section_title.dasherize
+    else
+      '/sections/%s.html' % section_title.dasherize
+    end
   end
 
   def section_link(*args)

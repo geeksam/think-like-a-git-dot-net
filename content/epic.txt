@@ -1,5 +1,6 @@
 ---
-title:          Epic
+title:          Epic Mode
+epic:           true
 created_at:     2011-10-01 21:14:16.393629 -07:00
 nav_list_links: "#%s"
 filter:
