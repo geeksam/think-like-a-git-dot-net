@@ -49,7 +49,7 @@ filter:
   <li>
     <a href="http://gitimmersion.com/">Git Immersion</a> by EdgeCase Consulting
     <div class="reading-note">
-      This one was suggested by reader Mark Scholtz.  I haven't gone through it myself, but at first glance this looks like an amazingly detailed, well supported step-by-step tutorial that starts from the very basics and goes on through some very advanced topics.  Thanks, Mark!
+      This one was suggested by reader <a href="http://markscholtz.com/">Mark Scholtz</a>.  I haven't gone through it myself, but at first glance this looks like an amazingly detailed, well supported step-by-step tutorial that starts from the very basics and goes on through some very advanced topics.  Thanks, Mark!
     </div>
   </li>
 
