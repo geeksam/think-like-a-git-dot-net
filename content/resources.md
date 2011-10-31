@@ -8,6 +8,26 @@ filter:
 
 <h1><%= @page.title %></h1>
 
+<h2>Software</h2>
+
+<ul class="full-size">
+
+  <li>
+    <a href="http://gitx.laullon.com/">GitX (L)</a>
+    <div class="reading-note">
+      The <a href="https://github.com/pieter/gitx/wiki/">original version of GitX</a> stalled out at v0.7.1 (though I've continued happily using it), and the GitHub readme now refers you to this version instead.  Looks like it's added some nice features; I'll have to check it out! (I've heard good things about the <a href="https://github.com/brotherbard/gitx">brotherbard fork</a>, but that also appears to have stalled.) Thanks to <%= twitter_user('hugocf') %> for cluing me in!
+    </div>
+  </li>
+
+  <li>
+    <a href="http://jonas.nitro.dk/tig/">Tig: text-mode interface for git</a> by <a href="http://jonasfonseca.com/">Jonas Fonseca</a>
+    <div class="reading-note">
+      Also suggested by <a href="http://markscholtz.com/">Mark Scholtz</a>, this is a text-mode UI that gives you pretty (but still text-based) views of many of the same things that GitX does.  I personally don't have a lot of use for this, but for those of you who really really love your CLI (or your screen readers!), this might fit your working style a bit better.
+    </div>
+  </li>
+
+</ul>
+
 <h2>Free Stuff About Git</h2>
 
 <ul class="full-size">
