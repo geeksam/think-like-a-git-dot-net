@@ -188,7 +188,7 @@ class Sitemap
     def accept_node(_, node)
       filename = filename_for(node)
       return if File.exists?(filename)
-      cmd = "webby create:section sections/#{node.gsub(' ', '\ ')}"
+      cmd = "webby create:page sections/#{node.gsub(' ', '\ ')}"
       puts cmd
       `#{cmd}`
     end
