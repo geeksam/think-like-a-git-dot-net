@@ -43,13 +43,12 @@ filter:    erb
       <h1 class="title"><a href="/">Think Like (a) Git</a></h1>
       <h3 class="subtitle">A Guide for the Perplexed</h3>
 
-<% if false %>
       <div class="banner">
         <div class="cta">
-          stuff and things
+          Follow <%= twitter_user('thinklikeagit') %>
+          <br />for site updates!
         </div>
       </div>
-<% end %>
 
     </div><!--#wrapper-->
   </div><!--#header-->
@@ -74,10 +73,8 @@ filter:    erb
 
       <!-- Top Social Links -->
       <ul class="social-links">
-        <li><a href="http://news.ycombinator.com/item?id=3158482">HN</a></li>
         <li><a href="mailto:geeksam@gmail.com" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
         <li><a href="http://twitter.com/geeksam" title="Twitter" class="w-tooltip"><img src="/assets/images/icon_twitter.png" alt="Twitter" /></a></li>
-        <li><a>Feedback</a></li>
         <li><%= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
       </ul>
 
