@@ -10,6 +10,7 @@ filter:
 
 * Continue section on rebase, adding a simple recipe, explaining --abort, and talking about interactive rebasing
   * also explaining why one would want to use it (hat tip to Cameron Thomas on the pdxruby list for this)
+* Cover push and pull
 * Talk a bit about git reset, probably linking to http://progit.org/2011/07/11/reset.html
 * Find and attribute sources for all images
 * per @jseifer, consider explaining the stash *(jason says in reachability/savepoint section, but it probably deserves its own page)*

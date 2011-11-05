@@ -11,4 +11,10 @@ Git's <code class="inline">rebase</code> command was one of those things that it
 
 This is a damn shame, because **rebase is the single most useful command I use in Git**.  More importantly, **it's actually pretty easy to understand once you get the hang of it.**
 
-If you'll bear with me, I think it's much easier to explain rebase in the context of another Git command:  <code class="inline">git cherry-pick</code>.
+<h3>Danger, Will Robinson!</h3>
+
+I've tried to demystify rebase in this section, and I do plan to write up a strategy for experimenting with rebase, just as I have with merge.  However, I recently realized that I forgot to mention something very important about rebase:  **it is generally considered rude to rewrite history in public!**  I hope to write more on this soon.
+
+<h3>End of Public Service Announcement.</h3>
+
+With that said, I'm going to take a brief digression, because I think it's much easier to explain rebase in the context of another Git command:  <code class="inline">git cherry-pick</code>.
