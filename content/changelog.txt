@@ -10,6 +10,7 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-11-08:** Add link to writeup of my dev team's workflow to resource page as well as rebase intro.
 * **2011-10-31:** Add resource links to GitX (L) and Tig.
 * **2011-10-29:** Can now navigate between sections using (N)ext and (P)revious keyboard shortcuts.  Added commentary about Kent Beck's tweet.
 * **2011-10-28:** Added &lt;link rel="next" /&gt; (suggestion from <%= twitter_user('mcepl') %>)

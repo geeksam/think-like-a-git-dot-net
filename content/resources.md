@@ -79,6 +79,13 @@ filter:
       I have to admit that I haven't actually read this one&mdash;it was suggested by <a href="http://jasonseifer.com/">Jason Seifer</a>.  Looks like an interesting blog, and as I've said elsewhere on the site, Scott Chacon's knowledge of Git is... impressive.  <strong>(Note:  free blog promoting for-pay book, so I'm listing it in the free section.)</strong>
     </div>
   </li>
+
+  <li>
+    <a href="http://johnwilger.com/2011/01/production-release-workflow-with-git.html">Production Release Workflow With Git</a>, a blog post by John&nbsp;Wilger
+    <div class="reading-note">
+      In January 2011, my manager wrote up this description of the rebase-oriented workflow we'd been using on our team for (then) several months.  We've since discovered some subtle problems with this approach and are moving toward a <a href="http://continuousdelivery.com/">continuous delivery</a> setup.  While I might not recommend this workflow now, it's an interesting example of how rewrites to shared history (generally considered extremely disruptive) can work quite well as long as the entire team expects them and has the skills to cope with issues when they arise (which is not as often as you might think).
+    </div>
+  </li>
 </ul>
 
 <h2>Stuff About Git You Should Pay For</h2>

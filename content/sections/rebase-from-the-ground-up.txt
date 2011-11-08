@@ -15,6 +15,11 @@ This is a damn shame, because **rebase is the single most useful command I use i
 
 I've tried to demystify rebase in this section, and I do plan to write up a strategy for experimenting with rebase, just as I have with merge.  However, I recently realized that I forgot to mention something very important about rebase:  **it is generally considered rude to rewrite history in public!**  I hope to write more on this soon.
 
+<div class="wp-caption" style="text-align: left; padding: 5px;">
+<strong>NOTE:</strong> Many of the questions I've received so far have had to do with rebase.  I have a lot more to say on this topic, but finding the time to sit down and write has been rather difficult.  For now, <a href="http://johnwilger.com/2011/01/production-release-workflow-with-git.html">this writeup of the workflow my team has been using for over a year</a> may help shed some light.
+</div>
+<br />
+
 <h3>End of Public Service Announcement.</h3>
 
 With that said, I'm going to take a brief digression, because I think it's much easier to explain rebase in the context of another Git command:  <code class="inline">git cherry-pick</code>.
