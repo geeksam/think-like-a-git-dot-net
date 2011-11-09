@@ -21,10 +21,11 @@ module SiteHelper
   end
 
   def section_path(section_title)
+    path = sitemap.section_path(section_title)
     if @page.epic
-      '#%s' % section_title.dasherize
+      '#%s' % path
     else
-      '/sections/%s.html' % section_title.dasherize
+      '/sections/%s.html' % path
     end
   end
 

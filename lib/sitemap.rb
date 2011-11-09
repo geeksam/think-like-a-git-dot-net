@@ -2,6 +2,10 @@ class String
   def dasherize
     strip.downcase.gsub('ö', 'o').gsub(/[^a-z0-9]+/, '-').gsub(/(^-|-$)/, '')
   end
+
+  def blank?
+    self =~ /^\s*$/
+  end
 end
 
 class Sitemap
@@ -10,6 +14,9 @@ class Sitemap
     Lft = :'['
     Rgt = :']'
     Brackets = [Lft, Rgt]
+    SectionsPath = 'content/sections'
+  end
+  class Traverser
   end
 
   def self.indentation_level(object)
@@ -98,103 +105,11 @@ class Sitemap
     @depths[item]
   end
 
-  class Traverser
-    def self.for(sitemap, options = {})
-      new(options).tap { |t| t.traverse(sitemap) }
-    end
-
-    def initialize(*args)
-      @options = args.pop if args.last.kind_of?(Hash)
-    end
-
-    def traverse(sitemap)
-      sitemap.facilitate_traversal_of(self)
-    end
-    def begin_sublist(path)           ; end
-    def accept_node(ancestors, node)  ; end
-    def finalize_sublist(path)        ; end
-  end
-
-  class DepthCalculator < Traverser
-    attr_reader :depths
-    def initialize(*args)
-      super
-      @depths = {}
-    end
-    def accept_node(ancestors, node)
-      @depths[node] = ancestors.length + 1
-    end
-  end
-
-  def facilitate_traversal_of(traverser)
-    traverse_sexp(traverser, sexp)
-  end
-
-  def traverse_sexp(traverser, sexp, ancestors = [])
-    prev_leaf = nil
-    traverser.begin_sublist ancestors
-    sexp.each do |node|
-      if node.kind_of? Array
-        traverse_sexp traverser, node, (ancestors + [prev_leaf]).compact
-      else
-        traverser.accept_node(ancestors, node)
-        prev_leaf = node
-      end
-    end
-    traverser.finalize_sublist ancestors
-  end
-
-  class NavListBuilder < Traverser
-    attr_reader :lines
-    def initialize(options = {})
-      super
-      @options = options
-      @lines = []
-    end
-
-    def begin_sublist(path)
-      lines << '<ul>'
-    end
-
-    def accept_node(ancestors, node)
-      link_path = @options[:link_path_template] % node.dasherize
-      tag_body = '<a href="%s">%s</a>' % [link_path, node]
-      tag_body << '&nbsp;<span class="current-marker">&larr;HEAD</span>' if current_section?(node)
-      lines << '<li>%s</li>' % tag_body
-    end
-
-    def current_section_dasherized
-      @current_section_dasherized ||= @options[:current_section].to_s.dasherize
-    end
-
-    def current_section?(section_name)
-      section_name.dasherize == current_section_dasherized
-    end
-
-    def finalize_sublist(path)
-      lines << '</ul>'
-    end
-
-    def to_html
-      lines.join("\n")
-    end
-  end
-
-  def nav_list(options = {})
-    @nav_list ||= NavListBuilder.for(self, options)
-  end
-
-  class SectionCreator < Traverser
-    def accept_node(_, node)
-      filename = filename_for(node)
-      return if File.exists?(filename)
-      cmd = "webby create:page sections/#{node.gsub(' ', '\ ')}"
-      puts cmd
-      `#{cmd}`
-    end
-
-    def filename_for(node)
-      'content/sections/%s.txt' % node.dasherize
-    end
+  def section_path(section_title)
+    @section_path_map ||= Sitemap::PathMapBuilder.for(self).paths
+    @section_path_map[section_title.dasherize]
   end
 end
+
+# Require all the various child classes of this one
+Dir.glob(File.expand_path(File.join(File.dirname(__FILE__), *%w[sitemap **.rb]))).each { |e| require e }
