@@ -83,6 +83,10 @@ class Sitemap
     new(parse_text(text))
   end
 
+  def self.slug(*components)
+    components.flatten.reject(&:blank?).map(&:dasherize).join('/')
+  end
+
   attr_reader :sexp
   def initialize(sexp)
     @sexp = sexp

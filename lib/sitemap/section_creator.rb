@@ -1,15 +1,16 @@
 class Sitemap
   class SectionCreator < Traverser
-    def accept_node(_, node)
-      filename = filename_for(node)
+    def accept_node(ancestors, node)
+      slug = Sitemap.slug(ancestors, node)
+      filename = filename_for(slug)
       return if File.exists?(filename)
-      cmd = "webby create:page sections/#{node.gsub(' ', '\ ')}"
+      cmd = "webby create:page sections/#{slug}"
       puts cmd
       `#{cmd}`
     end
 
-    def filename_for(node)
-      'content/sections/%s.txt' % node.dasherize
+    def filename_for(slug)
+      'content/sections/%s.txt' % slug
     end
   end
 end

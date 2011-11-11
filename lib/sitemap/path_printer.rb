@@ -1,4 +1,5 @@
 class Sitemap
+  # This was a one-off I wrote to move sections into subdirs.  Probably doesn't need to be maintained.
   class PathPrinter < Traverser
     def initialize(*args)
       super

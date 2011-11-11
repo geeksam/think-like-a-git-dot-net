@@ -8,7 +8,7 @@ class Sitemap
     
     def accept_node(ancestors, node)
       base = node.dasherize
-      rel_path = (ancestors.map(&:dasherize) + [base]).join('/')
+      rel_path = Sitemap.slug(ancestors, node)
       @paths[base] = rel_path
     end
   end
