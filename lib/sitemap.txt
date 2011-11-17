@@ -9,6 +9,7 @@ Git Makes More Sense When You Understand X
   Example 2: Git for Ages 4 and Up
   Example 3: Homeomorphic Endofunctors
   Example 4: LSD and Chainsaws
+  The Internet Talks Back!
 
 Graph Theory
   Seven Bridges of Königsberg
