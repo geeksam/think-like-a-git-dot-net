@@ -1,0 +1,63 @@
+---
+title:      HALP!
+created_at: 2011-11-20 14:03:05.966864 -08:00
+filter:
+  - erb
+  - markdown
+---
+
+<%= todo('link HALP! page up in the nav somewhere') %>
+
+<h1>HALP!</h1>
+
+If you've just lost some work in Git, and you're trying to recover your lost commits, this page is for you.  Maybe you tried a rebase, or got lost in a bunch of merge conflicts, and Git didn't do what you thought it was going to do, and now you can't see the commit that holds your last several hours worth of work.
+
+<h2>Don't Panic.</h2>
+
+Odds are, you didn't do anything exotic.  Your commit is probably still sitting there on disk, but you just can't see it.
+
+<h2>Figure out where you are right now</h2>
+
+**I'm going to assume you're on a branch.**  You can confirm this by typing <code class="inline">git status</code> in your repo.  The very first line should say "On branch master" (or "On branch very-important-branch" or whatever the name of the branch you're on is).  **If not, please make a backup of your directory before proceeding and try to get some expert help**!  I can't cover all the possibilities in a document like this, and I'd hate to lead you further astray at this point.
+
+If the second line **doesn't** say "nothing to commit (working directory clean)", you have some unsaved changes.  You might be able to save them by using 'git stash', or you might want to copy some files out somewhere else if you're really paranoid.  Or, you just may not care...
+
+**If you were in the middle of a rebase and something weird happened,** you may be able to just type <code class="inline">git rebase --abort</code> and get back to a known-good state.  First, though, just try scrolling back in your history; Git will print a message telling you what to do every time it stops during a rebase.
+
+**If you tried a merge and got stuck resolving nasty merge conflicts,** <code class="inline">git status</code> may include a message like "Unmerged paths:" followed by a list of files.  If you just want to back out of the merge, you can probably use <code class="inline">git reset</code> to get back.  If you're *really* sure you don't need any of the current working state (i.e., you started the merge from a clean working state), <code class="inline">git reset --hard</code> may be what you want.
+
+**If you did a merge and it appears to have worked successfully, but now you want to undo it,** just use <code class="inline">git reset --hard</code> to point your branch back at the commit it was on right before you did the merge.  (You should be able to see this in the output from <code class="inline">git log</code>, or your visualizer, but if not, read on.)
+
+<h2>Finding your lost commit</h2>
+
+Whatever branch you're on, here's the good news:  Git keeps track of every commit that that branch has ever pointed to.  It does this in what's called the 'reflog' *(that's short for "reference log")* for your branch, which lives in the following plain-text file:  **[repository-root]/.git/logs/refs/heads/[branch-name]**.  The reflog for the **master** branch is in **.git/logs/refs/heads/master**, and the reflog for **very-important-branch** is in **.git/logs/refs/heads/very-important-branch**, and so on.
+
+So. Take a deep breath, go to the root of your repository at the command line, and type this:  <code class="inline">cat .git/logs/refs/heads/master</code>
+
+You should see a bunch of lines of the form:
+
+[old SHA1] [new SHA1] [Author] [Timestamp] [Commit message]
+
+The newest lines are at the bottom.  From here, you should be able to find the line containing the commit message for the commit that you'd really really like to get back.  The second column in that line is the SHA1 that you want.  **Highlight that sucker and copy it to your clipboard.**
+
+<h2>Getting your work back</h2>
+
+This is going to be a bit anticlimactic, but here's what you do:
+
+<code>
+  git checkout deadbeef    # where 'deadbeef' is the SHA1 you just found and copied
+  git branch i_want_this_code_back
+</code>
+
+If you're using a visualizer like GitX or gitk, switch back over to it and refresh its view.  (You may also need to tell it to display all local branches.)  Or, do <code class="inline">git log --pretty=oneline --abbrev-commit --branches=* --graph --decorate</code> if you're old school.  Your commit should be visible again, with an 'i_want_this_code_back' branch next to it.
+
+<h2>Wrapping up</h2>
+
+I hope this has been helpful.  Either way, please drop me a line via email or Twitter and let me know if there are ways I can improve this guide.
+
+Once your heart rate slows down a bit, you may want to take a look around this site.  The whole thing shouldn't take more than an hour to read through, but if you're in a hurry, check out the <%= page_link('tldr') %> page.
+
+Elsewhere on the Internets, check out <a href="http://programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git/">The Illustrated Guide to Recovering Lost Commits With Git</a> when you have half an hour to work through the examples.
+
+Happy hacking!
+-Sam
