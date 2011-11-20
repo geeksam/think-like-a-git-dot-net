@@ -10,13 +10,15 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
+* **2011-11-20:** Add Google Analytics, so I can see what you people are up to!  Update resources page with commentary on GitX forks.
+* **2011-11-17:** Immortalize hilarious tweet with new <%= section_link('The Internet Talks Back') %> section.
 * **2011-11-08:** Add link to writeup of my dev team's workflow to resource page as well as rebase intro.
 * **2011-10-31:** Add resource links to GitX (L) and Tig.
 * **2011-10-29:** Can now navigate between sections using (N)ext and (P)revious keyboard shortcuts.  Added commentary about Kent Beck's tweet.
 * **2011-10-28:** Added &lt;link rel="next" /&gt; (suggestion from <%= twitter_user('mcepl') %>)
 * **2011-10-28:** Fix nav links in epic mode.
 * **2011-10-28:** Add Git Immersion to resources page. (Thanks, Matt!)
-* **2011-10-26:** Updated <%= section_link('visualizing-your-git-repository') %> based on Twitter feedback.
+* **2011-10-26:** Updated <%= section_link('Visualizing Your Git Repository') %> based on Twitter feedback.
 * **2011-10-26:** <a href="http://shipitsquirrel.github.com/"><s>Ship</s> Launch it!</a>
 * **2011-10-25:** Link up AD/HD and epic modes in intro section, tweak resources.
 * **2011-10-20:** Finished up section on rebase.

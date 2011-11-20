@@ -13,9 +13,16 @@ filter:
 <ul class="full-size">
 
   <li>
+    <a href="https://github.com/pieter/gitx/wiki/">GitX (original version)</a>
+    <div class="reading-note">
+      Development of this stalled out at 0.7.1, and the README now points at the GitX (L) fork, linked below.  I still use this one because it's super fast, and I'm comfortable doing branch manipulation on the command line.
+    </div>
+  </li>
+
+  <li>
     <a href="http://gitx.laullon.com/">GitX (L)</a>
     <div class="reading-note">
-      The <a href="https://github.com/pieter/gitx/wiki/">original version of GitX</a> stalled out at v0.7.1 (though I've continued happily using it), and the GitHub readme now refers you to this version instead.  Looks like it's added some nice features; I'll have to check it out! (I've heard good things about the <a href="https://github.com/brotherbard/gitx">brotherbard fork</a>, but that also appears to have stalled.) Thanks to <%= twitter_user('hugocf') %> for cluing me in!
+      This fork has added some nice features.  However, it appears to be considerably slower when accessing a repo with several years of commits, so I'm sticking with the original project for now.  (I've heard good things about the <a href="https://github.com/brotherbard/gitx">brotherbard fork</a>, but development on that also appears to have stalled.) Thanks to <%= twitter_user('hugocf') %> for directing me to this fork.
     </div>
   </li>
 
