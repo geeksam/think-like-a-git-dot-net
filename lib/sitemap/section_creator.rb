@@ -4,7 +4,7 @@ class Sitemap
       slug = Sitemap.slug(ancestors, node)
       filename = filename_for(slug)
       return if File.exists?(filename)
-      cmd = "webby create:page sections/#{slug}"
+      cmd = "webby create:section sections/#{slug}"
       puts cmd
       `#{cmd}`
     end

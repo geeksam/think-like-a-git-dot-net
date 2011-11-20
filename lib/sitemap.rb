@@ -101,6 +101,7 @@ class Sitemap
     idx = flat_list.map(&:dasherize).index(item.dasherize)
     prev_item = flat_list[idx-1]; prev_item = nil if idx.zero?
     next_item = flat_list[idx+1]
+# TODO: raise an error if page is under /sections but doesn't use the section template
     return prev_item, next_item
   end
 
