@@ -10,7 +10,7 @@ filter:
 <!-- Add new items at the top -->
 <% end -%>
 
-* **2011-11-20:** Add Google Analytics, so I can see what you people are up to!  Update resources page with commentary on GitX forks.
+* **2011-11-20:** Add Google Analytics, so I can see what you people are up to!  Update resources page with commentary on GitX forks and link to "the illustrated guide to recovering lost commits with Git".
 * **2011-11-17:** Immortalize hilarious tweet with new <%= section_link('The Internet Talks Back') %> section.
 * **2011-11-08:** Add link to writeup of my dev team's workflow to resource page as well as rebase intro.
 * **2011-10-31:** Add resource links to GitX (L) and Tig.

@@ -74,6 +74,13 @@ filter:
   </li>
 
   <li>
+    <a href="http://programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git/">The Illustrated Guide to Recovering Lost Commits With Git</a>, 2008 blog post by Mathieu Martin
+    <div class="reading-note">
+      Sometimes the best way to learn how to fix something is to break it on purpose.  Arlo Belshee once told me that when he joins a new team, he likes to force them into a failure mode as quickly as he can, just so he can build trust in their collective ability to recover from it.  In that spirit, Mathieu walks you through "losing" work in Git, and then shows you how to get it back again.  Great stuff.
+    </div>
+  </li>
+
+  <li>
     <a href="http://gitimmersion.com/">Git Immersion</a> by EdgeCase Consulting
     <div class="reading-note">
       This one was suggested by reader <a href="http://markscholtz.com/">Mark Scholtz</a>.  I haven't gone through it myself, but at first glance this looks like an amazingly detailed, well supported step-by-step tutorial that starts from the very basics and goes on through some very advanced topics.  Thanks, Mark!
