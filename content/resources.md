@@ -95,7 +95,7 @@ filter:
   </li>
 
   <li>
-    <a href="http://johnwilger.com/2011/01/production-release-workflow-with-git.html">Production Release Workflow With Git</a>, a blog post by John&nbsp;Wilger
+    <a href="http://johnwilger.com/blog/2011/01/08/production-release-workflow-with-git/">Production Release Workflow With Git</a>, a blog post by John&nbsp;Wilger
     <div class="reading-note">
       In January 2011, my manager wrote up this description of the rebase-oriented workflow we'd been using on our team for (then) several months.  We've since discovered some subtle problems with this approach and are moving toward a <a href="http://continuousdelivery.com/">continuous delivery</a> setup.  While I might not recommend this workflow now, it's an interesting example of how rewrites to shared history (generally considered extremely disruptive) can work quite well as long as the entire team expects them and has the skills to cope with issues when they arise (which is not as often as you might think).
     </div>
