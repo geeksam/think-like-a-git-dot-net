@@ -6,8 +6,6 @@ filter:
   - markdown
 ---
 
-<%= todo('link HALP! page up in the nav somewhere') %>
-
 <h1>HALP!</h1>
 
 If you've just lost some work in Git, and you're trying to recover your lost commits, this page is for you.  Maybe you tried a rebase, or got lost in a bunch of merge conflicts, and Git didn't do what you thought it was going to do, and now you can't see the commit that holds your last several hours worth of work.
