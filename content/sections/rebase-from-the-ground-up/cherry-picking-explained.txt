@@ -13,7 +13,7 @@ Git's own online help has a great, if characteristically terse, description of w
 
 I've already mentioned (back on the page about <%= section_link('garbage collection') %>) that a Git commit's ID is a hash of both its contents and its history.  So, even if you have two commits that introduce the exact same change, if they point to different parent commits, they'll have different IDs.
 
-What <code class="inline">git cherry-pick</code> does, basically, is take a commit from somewhere else, and "play it back" wherever you are right now.  By virtue of giving the same code a different parent, Git will necessarily build a new commit with a different ID.
+What <code class="inline">git cherry-pick</code> does, basically, is take a commit from somewhere else, and "play it back" wherever you are right now.  Because this introduces the same change with a different parent, Git builds a new commit with a different ID.
 
 Let's go back to this example from the <%= section_link('reachability') %> section:
 

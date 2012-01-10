@@ -28,9 +28,9 @@ Now, I could type this sequence of commands:
 In order, these commands:
 
 <ul class="full-size">
-  <li>make sure we're at <strong>H</strong>,</li>
+  <li>make sure we're at <strong>H</strong> <em>(because 'foo' points to it)</em>,</li>
   <li>create <strong>and check out</strong> a temporary branch called "newbar", also pointing at <strong>H</strong>,</li>
-  <li>apply the changes from <strong>C</strong>, <strong>D</strong>, and <strong>E</strong>, creating new commits <strong>C'</strong>, <strong>D'</strong>, and <strong>E'</strong>, and point the "newbar" branch at <strong>E'</strong>.</li>
+  <li>apply the changes from <strong>C</strong>, <strong>D</strong>, and <strong>E</strong>, creating new commits <strong>C'</strong>, <strong>D'</strong>, and <strong>E'</strong>, and update the "newbar" branch so it points at <strong>E'</strong>.</li>
 </ul>
 
 Which would give me a repository that looked like this:

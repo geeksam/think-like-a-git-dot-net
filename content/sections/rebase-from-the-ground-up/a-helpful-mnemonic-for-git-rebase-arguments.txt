@@ -31,5 +31,3 @@ The documentation for the rebase command lists a lot of different ways you can i
 Here's how I think of it:  in English, we read **from left to right**.  On most charts that show the change in something over time, time is shown on the x-axis of the graph, with time increasing **from left to right**.  When you issue commands to the shell, you can put several of them on one line, and they'll be executed in order **from left to right**.
 
 So when I use <code class="inline">git rebase</code>, I *(almost)* always give it two arguments:  the name of the place I want to start from, and the name of the place I want to end up.  Or, to put it another way, I tell rebase the sequence of events I want it to create, **from left to right**:  <code class="inline">git rebase first_this then_this</code>
-
-If you've got some other mnemonic that works for you, I'd love to hear about it.
