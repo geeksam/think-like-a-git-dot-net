@@ -12,25 +12,10 @@ filter:
 
 <%= linear_nav_links %>
 
+<!-- keyboard prev/next navigation -->
+<script type="text/javascript" src="/assets/js/section.js"></script>
 <script type="text/javascript" charset="utf-8">
-  function action_for_key(e) {
-    switch (e.keyCode) {
-      case 74:  // 'j'
-      case 78:  // 'n'
-        return 'next';
-      case 75:  // 'k'
-      case 80:  // 'p'
-        return 'prev';
-    }
-  }
-
   $(document).ready(function() {
-    $(document).keydown(function (e) {
-      var action = action_for_key(e);
-      if (action == 'next' || action == 'prev') {
-        var link = $('link[rel="'+action+'"]');
-        window.location.href = link[0].href;
-      }
-    });
+    $(document).keydown(nav_hotkey);
   });
 </script>
