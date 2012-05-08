@@ -43,7 +43,15 @@ If you want to see branch and tag labels, add <code class="inline">--decorate</c
 
 ***(Thanks again to <%= twitter_user('JRGarcia') %> for the <code class="inline">--decorate</code> tip!)***
 
-Or, you can use GitX to see all of the above in a cleaner graphical view:
+You can also add <code class="inline">--color</code> to pretty up the display a bit more *(sorry, no time to take a screenshot as I add this)*:
+
+<code>git log --oneline --abbrev-commit --branches=* --graph --decorate --color</code>
+
+And, in fact, I have a shell alias that does all of this:
+
+<code>alias gg='git log --oneline --abbrev-commit --branches=* --graph --decorate --color'</code>
+
+But mostly, I just use GitX, which shows all of the same information in a cleaner graphical view:
 
 <div class="wp-caption">
   <img src="/assets/images2/gitx-visualization.png" class="no-shadow" />
