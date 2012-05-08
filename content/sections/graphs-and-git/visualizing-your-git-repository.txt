@@ -9,9 +9,9 @@ filter:
 
 About half of my interactions with Git take place on the command line.  But **when I want to understand what's going on, I use a visual Git tool.**  On the Mac, the best thing I've found is **<a href="http://gitx.frim.nl/">GitX</a>**.  On other systems, **gitk** should be available; you can search the web to find something that works for you.
 
-The main point of using a visualizer is to **help you make sense of your branch history.**  For example, to list all commits in your repository at the command line, you could do <code class="inline">git log --oneline --abbrev-commit --branches=*</code>&mdash;which will get you this flattened view:
+The main point of using a visualizer is to **help you make sense of your branch history.**  For example, to list all commits in your repository at the command line, you could do <code class="inline">git log --oneline --abbrev-commit --all</code>&mdash;which will get you this flattened view:
 
-***(Thanks to <%= twitter_user('cflipse') %> at work for pointing out that <code class="inline">--pretty=oneline</code> could be shortened to <code class="inline">--oneline</code>!)***
+***(Thanks to <%= twitter_user('cflipse') %> at work for pointing out that <code class="inline">--pretty=oneline --branches=*</code> could be shortened to <code class="inline">--oneline --all</code>!)***
 
 <div class="wp-caption">
   <img src="/assets/images2/textual-git-log.png" class="no-shadow" />
@@ -21,7 +21,7 @@ The main point of using a visualizer is to **help you make sense of your branch 
 
 Or, you can add <code class="inline">--graph</code> to that command, which will show you a *slightly more useful* view:
 
-<code>git log --oneline --abbrev-commit --branches=* --graph</code>
+<code>git log --oneline --abbrev-commit --all --graph</code>
 
 <div class="wp-caption">
   <img src="/assets/images2/textual-git-graph.png" class="no-shadow" />
@@ -33,7 +33,7 @@ Or, you can add <code class="inline">--graph</code> to that command, which will 
 
 If you want to see branch and tag labels, add <code class="inline">--decorate</code>:
 
-<code>git log --oneline --abbrev-commit --branches=* --graph --decorate</code>
+<code>git log --oneline --abbrev-commit --all --graph --decorate</code>
 
 <div class="wp-caption">
   <img src="/assets/images2/textual-git-graph-with-labels.png" class="no-shadow" />
@@ -45,11 +45,11 @@ If you want to see branch and tag labels, add <code class="inline">--decorate</c
 
 You can also add <code class="inline">--color</code> to pretty up the display a bit more *(sorry, no time to take a screenshot as I add this)*:
 
-<code>git log --oneline --abbrev-commit --branches=* --graph --decorate --color</code>
+<code>git log --oneline --abbrev-commit --all --graph --decorate --color</code>
 
 And, in fact, I have a shell alias that does all of this:
 
-<code>alias gg='git log --oneline --abbrev-commit --branches=* --graph --decorate --color'</code>
+<code>alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'</code>
 
 But mostly, I just use GitX, which shows all of the same information in a cleaner graphical view:
 
