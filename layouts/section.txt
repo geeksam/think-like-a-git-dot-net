@@ -15,10 +15,10 @@ filter:
 <script type="text/javascript" charset="utf-8">
   function action_for_key(e) {
     switch (e.keyCode) {
-      case 75:  // 'k'
+      case 74:  // 'j'
       case 78:  // 'n'
         return 'next';
-      case 74:  // 'j'
+      case 75:  // 'k'
       case 80:  // 'p'
         return 'prev';
     }
