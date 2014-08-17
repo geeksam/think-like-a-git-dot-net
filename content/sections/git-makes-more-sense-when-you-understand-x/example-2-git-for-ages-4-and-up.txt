@@ -7,7 +7,7 @@ filter:
   - markdown
 ---
 
-In [Git for Ages 4 And Up](http://2010.osdc.com.au/proposal/196/git-ages-4-and) (OSDC, 2010), Michael Schwern uses Tinker Toys to teach the audience how Git works.
+In [Git for Ages 4 And Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) (YouTube, 2013), Michael Schwern uses Tinker Toys to teach the audience how Git works.
 
 It's a brilliant talk by a brilliant developer, and if you have some time to watch the video, I highly recommend it.  But check out the very first sentence in the session description *(emphasis added)*:
 
