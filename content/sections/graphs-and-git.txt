@@ -21,5 +21,5 @@ Most of the time when you interact with Git, you're working with commits in one 
 **A Git commit is a node in a graph**, and nodes can point to other nodes that came before them.
 
 <div class="wp-caption" style="text-align: left; padding: 5px;">
-  By the way:  if you want to learn way more about this than any sane human should ever know, I highly recommend Scott Chacon's <a href="http://peepcode.com/products/git-internals-pdf">"Git Internals" PDF</a>.  Or, for that matter, any of Scott Chacon's talks.  Scott's knowledge of Git is... impressive.
+  By the way:  if you want to learn way more about this than any sane human should ever know, I highly recommend Scott Chacon's <a href="https://github.com/pluralsight/git-internals-pdf/raw/master/drafts/peepcode-git.pdf">"Git Internals" PDF</a>.  Or, for that matter, any of Scott Chacon's talks.  Scott's knowledge of Git is... impressive.
 </div>
