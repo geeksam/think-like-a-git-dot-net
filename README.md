@@ -5,3 +5,5 @@ Once I wrote and launched the site, I've been extremely lax about coming back an
 We'll see...
 
 -Sam 2012-05-04
+
+UPDATE 2015-10-01:  ...yeah, not so much.  Sometime in the past few years, the 'webby' gem that I originally used to write the site stopped working on my machine.  It might be nice to port the site to Middleman, but that's a fair bit of work that I never seem to find the time to do.
