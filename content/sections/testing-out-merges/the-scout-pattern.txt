@@ -66,7 +66,7 @@ You're on the ***master*** branch and you want the changes from the ***spiffy_ne
         For example:
         <ol>
           <li>After a merge, you should see a new commit.</li>
-          <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into master".</li>
+          <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into test_merge".</li>
           <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>master</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
         </ol>
       </li>

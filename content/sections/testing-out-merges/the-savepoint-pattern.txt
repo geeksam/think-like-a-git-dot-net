@@ -65,7 +65,7 @@ You're on the ***master*** branch and you want the changes from the ***spiffy_ne
         <ol>
           <li>After a merge, you should see a new commit.</li>
           <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into master".</li>
-          <li>Your <em><strong>master</strong></em> branch label should have moved to this new commit, while the <em><strong>spiffy_new_feature</strong></em> branch label should still be in the same place.</li>
+          <li>Your <em><strong>master</strong></em> branch label should have moved to this new commit, while the <em><strong>savepoint</strong></em> and <strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
         </ol>
       </li>
     </ul>
