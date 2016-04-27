@@ -12,7 +12,7 @@ Here's a quick overview of the steps in this recipe:
 <ol class="full-size">
   <li>Make sure you're on the right branch and that you have a clean working state.</li>
   <li>Create a new branch (I often name it <em>test_merge</em>) and switch to it.</li>
-  <li>Do the merge.</li>
+  <li>Do the merge from the branch you want changes from.</li>
   <li>Switch to your visualizer and predict how its view will change when you refresh it.</li>
   <li>Refresh your visualizer and see whether your prediction was correct.</li>
   <li>Are you happy with the result?
@@ -27,14 +27,14 @@ I call this the Scout pattern:  you're unsure what the terrain ahead is like, so
 
 <h3>The long version</h3>
 
-You're on the ***master*** branch and you want the changes from the ***spiffy_new_feature*** branch to be incorporated into ***master.***  You're not sure if this will be a good idea, so you want to try out the merge, but be able to abort it if things don't go smoothly.
+You're on the ***master*** branch and you want the changes from the ***spiffy_new_feature*** branch - that already has great new changes elsewhere - to be incorporated into ***master.***  You're not sure if this merge will be a good idea or will work cleanly, so you want to try out the merge, but be able to abort it if things don't go smoothly.
 
 <ol>
   <li>
     <strong>Make sure you're on the right branch and that you have a clean working state.</strong>
     <ul>
       <li>
-        Whatever visualizer you're using, figure out how it shows you where your current branch is.  Or, at the command line, type <code class="inline">git status</code> and you should see something like this:
+        Whatever visualizer you're using, figure out how it shows you where your current branch is.  Or, at the command line, type <code class="inline">git status</code> and you should see something like this, confirming you're on ***master***:
         <code>
           # On branch master <br />
           nothing to commit (working directory clean)
@@ -51,10 +51,10 @@ You're on the ***master*** branch and you want the changes from the ***spiffy_ne
     </ul>
   </li>
   <li>
-    <strong>Do the merge.</strong>
+    <strong>Do the merge from ***spiffy_new_feature***.</strong>
     <ul>
       <li>
-        Type <code class="inline">git merge spiffy_new_feature</code>.  If you're lucky, there won't be any merge conflicts you can't resolve.
+        Type <code class="inline">git merge spiffy_new_feature</code>.  If you're lucky, there won't be any merge conflicts you can't resolve easily.
       </li>
       <li><strong>If you want to abort the merge</strong> at this point, type <code class="inline">git reset --hard</code>.</li>
     </ul>
@@ -67,7 +67,7 @@ You're on the ***master*** branch and you want the changes from the ***spiffy_ne
         <ol>
           <li>After a merge, you should see a new commit.</li>
           <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into master".</li>
-          <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>master</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
+          <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>master</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.  That means your local working state has the best of both worlds.</li>
         </ol>
       </li>
     </ul>
