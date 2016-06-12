@@ -1,0 +1,118 @@
+---
+extension: css
+filter:    erb
+layout: none
+---
+<%
+  @blue   = '#3F5C9A'
+  @orange = '#D08125'
+-%>
+.post .entry-content li {
+	text-indent: -1em;
+}
+
+.post .entry-content ul {
+  list-style-type: disc;
+  padding-left: 2px;
+}
+
+abbr {
+  border-bottom: 1px dotted <%= @blue %>;
+}
+
+#content p {
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+
+ol.full-size, ul.full-size {
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+
+ol.full-size ul, ul.full-size ol {
+  font-size: 1em;
+}
+
+.linear_nav_links {
+  margin-top: 1em;
+  border-top: 1px solid <%= @blue %>;
+  padding-top: 0.5em;
+}
+
+.prev {
+  float: left;
+}
+
+.next {
+  float: right;
+}
+
+li span.current-marker {
+  font-weight: bold;
+  color: <%= @orange %>;
+}
+
+code {
+  font-weight: bold;
+  background-color: #eee;
+  margin: 5px 0px;
+  padding: 2px 5px;
+  border: 1px solid <%= @blue %>;
+  text-indent: 0;
+}
+
+code.inline {
+  display: inline !important;
+  white-space: nowrap;
+}
+
+img.no-shadow {
+  box-shadow: none;
+}
+
+.pad-left {
+  margin-left: 15px;
+}
+
+.pad-right {
+  margin-right: 15px;
+}
+
+caption {
+  background-color: #eee !important;
+}
+
+.post .entry-content ol ul {
+  margin-top: 5px;
+}
+
+.post .entry-content ol ul {
+  margin-left: 3px;
+}
+
+.post .entry-content ol ul li {
+  list-style-type: none;
+  text-indent: 0;
+}
+
+.post .entry-content ol ul ol li {
+  list-style-type: lower-roman;
+  text-indent: -1em;
+}
+
+.reading-note {
+  font-size: 0.8em;
+  font-style: italic;
+  text-indent: 0;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+
+.banner .cta {
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d08125;
+  text-align: right;
+}

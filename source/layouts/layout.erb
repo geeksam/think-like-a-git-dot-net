@@ -1,20 +1,168 @@
-<!doctype html>
-<html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<head profile="http://gmpg.org/xfn/11">
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
-  </head>
+  <!-- Meta & Title -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Sam Livingston-Gray" />
+  <title>PLACEHOLDER TITLE<%#= [@page.title, ::SiteTitle].join(' // ') %></title>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
-  </body>
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="/assets/css/customizations.css" media="screen" />
+
+  <!-- (why was this here?) -->
+  <!-- Hooks -->
+  <!-- <link rel="index" title="Vectors" href="#" /> -->
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.tools.min.js"></script>
+  <script type="text/javascript" src="/assets/js/superfish.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.tipTip.min.js"></script>
+  <script type="text/javascript" src="/assets/js/custom.js"></script>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27154496-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</head>
+
+<body>
+  <div id="header">
+    <div class="wrapper">
+
+      <!-- Image Based Logo -->
+      <!-- <h1><a href="index.html"><img src="/assets/images/logo.png" alt="Think Like (a) Git" /></a></h1> -->
+
+      <!-- Static Logo (Optional) -->
+      <h1 class="title"><a href="/">Think Like (a) Git</a></h1>
+      <h3 class="subtitle">A Guide for the Perplexed</h3>
+
+    </div><!--#wrapper-->
+  </div><!--#header-->
+
+  <div id="nav-top">
+    <div class="wrapper">
+
+      <!-- Top Navigation Menu -->
+      <ul class="menu-nav-top">
+        <li><a href='/'>Home</a></li>
+        <li><%#= page_link('tldr', 'TL;DR') %></li>
+        <li><a>Read In...</a>
+          <ul>
+            <li><%#= section_link('about-this-site', 'AD/HD mode') %></li>
+            <li><%#= page_link('epic', 'EPIC MODE') %></li>
+          </ul>
+        </li>
+        <li><%#= page_link('resources') %></li>
+        <li><%#= page_link('halp') %></li>
+        <li><%#= page_link('changelog') %></li>
+        <li><%#= page_link('todo') %></li>
+      </ul>
+
+      <!-- Top Social Links -->
+      <ul class="social-links">
+        <li><a href="mailto:geeksam@gmail.com" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
+        <li><a href="http://twitter.com/geeksam" title="Twitter" class="w-tooltip"><img src="/assets/images/icon_twitter.png" alt="Twitter" /></a></li>
+        <li><%#= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
+      </ul>
+
+    </div><!--#wrapper-->
+  </div><!--#nav-top-->
+
+  <div class="wrapper">
+    <div id="content" class="grid12 last">
+
+      <div class="post page-content">
+        <div class="entry-content">
+          <!-- Primary content -->
+          <div class="two_third">
+            <%= yield %>
+          </div>
+
+          <!-- Sidebar with site map -->
+          <div class="one_third last">
+            <%#= nav_list.to_html %>
+          </div>
+        </div>
+      </div>
+    </div><!--#content-->
+
+    <%#= clearer %>
+  </div><!--wrapper-->
+
+
+  <div id="footer" class="container">
+    <div class="wrapper">
+
+      <!-- Footer Copyright -->
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/images2/cc-license-80x15.png" /></a><br />
+        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Think Like (a) Git</span> copyright &copy; 2011-2016 <a xmlns:cc="http://creativecommons.org/ns#" href="http://think-like-a-git.net" property="cc:attributionName" rel="cc:attributionURL">Sam Livingston-Gray</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+      </p>
+      <p><br />Original template &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p>
+      <%#= clearer %>
+
+    </div><!--wrapper-->
+  </div><!--footer-->
+
+
+</body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html> -->
+<!-- <html> -->
+<!--   <head> -->
+<!--     <meta content="IE=edge" http&#45;equiv="X&#45;UA&#45;Compatible"> -->
+<!--     <meta charset="utf&#45;8"> -->
+<!--     <meta content="width=device&#45;width,initial&#45;scale=1.0,minimum&#45;scale=1.0,maximum&#45;scale=1.0,user&#45;scalable=no" name="viewport"> -->
+<!--  -->
+<!--     <!&#45;&#45; Use title if it's in the page YAML frontmatter &#45;&#45;> -->
+<!--     <title><%#= current_page.data.title || "Middleman" %></title> -->
+<!--  -->
+<!--     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> -->
+<!--  -->
+<!--     <%#= stylesheet_link_tag :site %> -->
+<!--     <%#= javascript_include_tag :all %> -->
+<!--   </head> -->
+<!--  -->
+<!--   <body class="<%#= page_classes %>"> -->
+<!--     <%#= yield %> -->
+<!--   </body> -->
+<!-- </html> -->
