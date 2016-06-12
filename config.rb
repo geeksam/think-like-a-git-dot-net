@@ -23,11 +23,19 @@ page '/*.txt', layout: false
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def section_link(section_name, text = nil, opts = {})
+    # TODO: actually link to section
+    text ||= section_name
+    content_tag( :a, opts ) {
+      content_tag( :strong ) { text.upcase }
+    }
+  end
+
+  def clearer(content = nil)
+    content_tag( :div, :class => 'clear' ) { content.to_s }
+  end
+end
 
 # Build-specific configuration
 configure :build do

@@ -7,7 +7,7 @@
   <!-- Meta & Title -->
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="author" content="Sam Livingston-Gray" />
-  <title>PLACEHOLDER TITLE<%#= [@page.title, ::SiteTitle].join(' // ') %></title>
+  <title><%= current_page.data.title %> // Think Like (a) Git</title>
 
   <!-- CSS -->
   <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen" />
@@ -62,7 +62,7 @@
         <li><%#= page_link('tldr', 'TL;DR') %></li>
         <li><a>Read In...</a>
           <ul>
-            <li><%#= section_link('about-this-site', 'AD/HD mode') %></li>
+            <li><%= section_link('about-this-site', 'AD/HD mode') %></li>
             <li><%#= page_link('epic', 'EPIC MODE') %></li>
           </ul>
         </li>
@@ -76,7 +76,7 @@
       <ul class="social-links">
         <li><a href="mailto:geeksam@gmail.com" title="Email" class="w-tooltip"><img src="/assets/images/icon_email.png" alt="Email" /></a></li>
         <li><a href="http://twitter.com/geeksam" title="Twitter" class="w-tooltip"><img src="/assets/images/icon_twitter.png" alt="Twitter" /></a></li>
-        <li><%#= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
+        <li><%= section_link('about-the-author', '?', :title => 'About the Author', :class => 'w-tooltip') %></li>
       </ul>
 
     </div><!--#wrapper-->
@@ -100,7 +100,7 @@
       </div>
     </div><!--#content-->
 
-    <%#= clearer %>
+    <%= clearer %>
   </div><!--wrapper-->
 
 
@@ -113,7 +113,7 @@
         <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Think Like (a) Git</span> copyright &copy; 2011-2016 <a xmlns:cc="http://creativecommons.org/ns#" href="http://think-like-a-git.net" property="cc:attributionName" rel="cc:attributionURL">Sam Livingston-Gray</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
       </p>
       <p><br />Original template &copy; 2011 <span>&middot;</span> Vectors Community Theme <span>&middot;</span> All Rights Reserved</p>
-      <%#= clearer %>
+      <%= clearer %>
 
     </div><!--wrapper-->
   </div><!--footer-->
