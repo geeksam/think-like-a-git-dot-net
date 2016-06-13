@@ -32,6 +32,19 @@ helpers do
     }
   end
 
+  def page_link(filename, link_text = nil)
+    qualified_filename = "/#{filename}.html"
+    page = sitemap.find_resource_by_path(qualified_filename)
+    link_text ||= page.data[:title]
+    link_to link_text, qualified_filename
+  end
+
+  def twitter_user(username)
+    content_tag( :a, :href => "https://twitter.com/#{username}" ) {
+      '@' + username.to_s
+    }
+  end
+
   def clearer(content = nil)
     content_tag( :div, :class => 'clear' ) { content.to_s }
   end
