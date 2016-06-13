@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <h2><%= current_page.data.title %></h2>
+
+  <%= yield %>
+
+  <%#= linear_nav_links %>
+
+  <!-- keyboard prev/next navigation -->
+  <script type="text/javascript" src="/assets/js/section.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $(document).keydown(nav_hotkey);
+    });
+  </script>
+<% end %>
