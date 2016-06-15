@@ -1,0 +1,13 @@
+---
+title:      "Branches as Savepoints"
+created_at: 2011-09-24 21:40:26.937823 -07:00
+layout:     section
+---
+
+<p>Because a Git branch is just a 40-byte file on disk, <strong>it takes orders of magnitude more time for you to tell the computer to create a branch</strong> (by typing <code class="inline">git branch foo</code>) <strong>than for your computer to actually do it.</strong></p>
+
+<p>And because branches are references, and <em>(say it with me now)</em> <%= section_link('references make commits reachable') %>, <strong>creating a branch is a way to "nail down" part of the graph</strong> that you might want to come back to later.</p>
+
+<p>And because neither <code class="inline">git merge</code> nor <code class="inline">git rebase</code> will change your existing commits (<%= section_link('garbage-collection', 'remember') %>, a commit's ID is a hash of its contents <em><strong>and its history</strong></em>), you can create a temporary branch any time you want to try something you're even just a little bit unsure about.</p>
+
+<p>In other words, <strong>creating a branch is like saving your game before you battle the boss.</strong></p>

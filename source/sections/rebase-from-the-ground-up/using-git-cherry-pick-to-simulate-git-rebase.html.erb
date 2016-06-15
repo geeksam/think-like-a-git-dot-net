@@ -1,0 +1,65 @@
+---
+title:      "Using 'git cherry-pick' to Simulate 'git rebase'"
+created_at: 2011-10-03 00:30:43.669450 -07:00
+layout:     section
+---
+
+<p>Once you have <code class="inline">git cherry-pick</code> down, you can start off by thinking of <code class="inline">git rebase</code> as being a faster way to cherry-pick all of the commits in a given branch at once, rather than having to type out their IDs separately.</p>
+
+<p><em>(That's only the very beginning of what rebase can do, but I'll write the rest of this section another time.)</em></p>
+
+<p>Let's go back to our trusty example, but this time add some branches...</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/before-rebase.png" class="no-shadow" />
+</div>
+
+<p>Now, I could type this sequence of commands:</p>
+
+<code>
+  git checkout foo<br />
+  git checkout -b newbar<br />
+  git cherry-pick C D E
+</code>
+
+<p>In order, these commands:</p>
+
+<ul class="full-size">
+  <li>make sure we're at <strong>H</strong> <em>(because 'foo' points to it)</em>,</li>
+  <li>create <strong>and check out</strong> a temporary branch called "newbar", also pointing at <strong>H</strong>,</li>
+  <li>apply the changes from <strong>C</strong>, <strong>D</strong>, and <strong>E</strong>, creating new commits <strong>C'</strong>, <strong>D'</strong>, and <strong>E'</strong>, and update the "newbar" branch so it points at <strong>E'</strong>.</li>
+</ul>
+
+<p>Which would give me a repository that looked like this:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/cherry-pick-qua-rebase-example-midpoint.png" class="no-shadow" />
+</div>
+
+<p>Then, I could type this:</p>
+
+<code>
+  git checkout bar <br />
+  git reset --hard newbar <br />
+  git branch -d newbar
+</code>
+
+<p>Which would:</p>
+
+<ul class="full-size">
+  <li>Switch to the branch called "bar",</li>
+  <li>Forcibly move the "bar" branch pointer so that it pointed to the same place as the "newbar" branch (and, thanks to the --hard flag, update my working directory to match the new location), and</li>
+  <li>Delete the temporary "newbar" branch.</li>
+</ul>
+
+<p>And leave my repository looking like this <em>(note that the original <strong>D</strong> and <strong>E</strong> nodes are no longer reachable, because no branch points to them)</em>:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/cherry-pick-qua-rebase-example-endpoint.png" class="no-shadow" />
+</div>
+
+<p><strong>Or,</strong> I could have accomplished all that by typing this instead:</p>
+
+<code>git rebase foo bar</code>
+
+<p>In other words, 'git rebase' (in this form) is a shortcut that lets you pick up entire sections of a repository and move them somewhere else.</p>

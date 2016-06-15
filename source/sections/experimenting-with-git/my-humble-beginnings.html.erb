@@ -1,0 +1,21 @@
+---
+title:      "My Humble Beginnings"
+created_at: 2011-09-24 20:24:19.067759 -07:00
+layout:     section
+---
+
+<p>When I first started using Git, I was really paranoid about losing code.  The only <abbr title="Version Control System">VCS</abbr> I'd used before that was Subversion, where branching is this arcane thing that causes all kinds of trouble.  So I didn't have a lot of practice with merging -- let alone rebasing, which everyone said was really dangerous.  (Remember <%= section_link('example-4-lsd-and-chainsaws', 'LSD and chainsaws') %>?)</p>
+
+<p>So, before I tried something I was a little uncertain about, <strong>I would back up <em>the entire directory.</em></strong></p>
+
+<code>
+  $ cd ..<br />
+  $ cp -r work backup_work<br />
+  $ cd work
+</code>
+
+<p>Then I'd do the merge, or rebase, or whatever it was that I thought was tricky.  If it looked like it worked, I'd continue on; if not, I'd delete the working directory, rename the old one, and try something else.</p>
+
+<p>I don't have records, but I'm pretty sure <strong>I did this for at least my first year of working with Git.</strong></p>
+
+<p>When I finally realized that <%= section_link('references make commits reachable') %>, I (a) felt very dumb for all those times I backed up the repository, and (b) developed a much faster strategy for getting my repository back to a known state.</p>

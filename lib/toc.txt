@@ -1,0 +1,47 @@
+About This Site
+  Who This Site Is For
+  What This Site Will Try to Teach You
+  Why This Site?
+  About the Author
+
+Git Makes More Sense When You Understand X
+  Example 1: Kent Beck
+  Example 2: Git for Ages 4 and Up
+  Example 3: Homeomorphic Endofunctors
+  Example 4: LSD and Chainsaws
+  The Internet Talks Back!
+
+Graph Theory
+  Seven Bridges of Königsberg
+  Places To Go, and Ways to Get There
+  Nodes and Edges
+  Attaching Labels to Nodes
+  Attaching Labels to Edges
+  Directed Versus Undirected Graphs
+  Reachability
+
+Graphs and Git
+  Visualizing Your Git Repository
+  References
+  The Reference Reference
+  Making Sense of the Display
+  Garbage Collection
+
+Experimenting With Git
+  References Make Commits Reachable
+  My Humble Beginnings
+  Branches as Savepoints
+  Use Your Targeting Computer, Luke
+
+Testing Out Merges
+  The Scout Pattern
+  The Savepoint Pattern
+  Black Belt Merging
+
+Rebase From the Ground Up
+  Cherry-Picking Explained
+  Using 'git cherry-pick' to Simulate 'git rebase'
+  A Helpful Mnemonic for 'git rebase' Arguments
+
+The End
+

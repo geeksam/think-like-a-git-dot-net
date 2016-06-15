@@ -1,0 +1,56 @@
+---
+title:      "Visualizing Your Git Repository"
+created_at: 2011-09-21 21:14:59.747250 -07:00
+layout:     section
+---
+
+<p>About half of my interactions with Git take place on the command line.  But <strong>when I want to understand what's going on, I use a visual Git tool.</strong>  I still use <strong><a href="https://rowanj.github.io/gitx/">GitX</a></strong>, but in the years since I first wrote this site, several other tools have been released.  Use whatever works for you.</p>
+
+<p>The main point of using a visualizer is to <strong>help you make sense of your branch history.</strong>  For example, to list all commits in your repository at the command line, you could do <code class="inline">git log --oneline --abbrev-commit --all</code>&mdash;which will get you this flattened view:</p>
+
+<p><em><strong>(Thanks to <%= twitter_user('cflipse') %> for pointing out that <code class="inline">--pretty=oneline --branches=*</code> could be shortened to <code class="inline">--oneline --all</code>!)</strong></em></p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/textual-git-log.png" class="no-shadow" />
+  <br /><strong>Clear as mud, right?</strong>
+</div>
+<%= clearer %>
+
+<p>Or, you can add <code class="inline">--graph</code> to that command, which will show you a <em>slightly more useful</em> view:</p>
+
+<code>git log --oneline --abbrev-commit --all --graph</code>
+
+<div class="wp-caption">
+  <img src="/assets/images2/textual-git-graph.png" class="no-shadow" />
+  <br /><strong>Much better!</strong>
+</div>
+<%= clearer %>
+
+<p><em><strong>(Thanks to <%= twitter_user('mjdominus') %> and <%= twitter_user('JRGarcia') %> for reminding me about the <code class="inline">--graph</code> option!)</strong></em></p>
+
+<p>If you want to see branch and tag labels, add <code class="inline">--decorate</code>:</p>
+
+<code>git log --oneline --abbrev-commit --all --graph --decorate</code>
+
+<div class="wp-caption">
+  <img src="/assets/images2/textual-git-graph-with-labels.png" class="no-shadow" />
+  <br /><strong>I'm going to need a wider design template if this goes on...</strong>
+</div>
+<%= clearer %>
+
+<p><em><strong>(Thanks again to <%= twitter_user('JRGarcia') %> for the <code class="inline">--decorate</code> tip!)</strong></em></p>
+
+<p>You can also add <code class="inline">--color</code> to pretty up the display a bit more <em>(sorry, no time to take a screenshot as I add this)</em>:</p>
+
+<code>git log --oneline --abbrev-commit --all --graph --decorate --color</code>
+
+<p>And, in fact, I have a shell alias that does all of this:</p>
+
+<code>alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'</code>
+
+<p>But mostly, I just use GitX, which shows all of the same information in a cleaner graphical view:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/gitx-visualization.png" class="no-shadow" />
+  <br /><strong>I like the purdy colors.</strong>
+</div>

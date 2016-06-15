@@ -1,0 +1,65 @@
+---
+title:      "Cherry-Picking Explained"
+created_at: 2011-10-03 00:00:04.156973 -07:00
+layout:     section
+---
+
+<p>Git's own online help has a great, if characteristically terse, description of what the command does:</p>
+
+<blockquote>
+  <p>Given one or more existing commits, apply the change each one introduces, recording a new commit for each.</p>
+</blockquote>
+
+<p>I've already mentioned (back on the page about <%= section_link('garbage collection') %>) that a Git commit's ID is a hash of both its contents and its history.  So, even if you have two commits that introduce the exact same change, if they point to different parent commits, they'll have different IDs.</p>
+
+<p>What <code class="inline">git cherry-pick</code> does, basically, is take a commit from somewhere else, and "play it back" wherever you are right now.  Because this introduces the same change with a different parent, Git builds a new commit with a different ID.</p>
+
+<p>Let's go back to this example from the <%= section_link('reachability') %> section:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/reachability-example.png" class="no-shadow" />
+</div>
+
+<p>If you were at node H in this graph, and you typed <code class="inline">git cherry-pick E</code> *(yes, you'd actually type part or all of the SHA for the commit, but for simplicity's sake, I'll just use the labels that are already here)*, you'd wind up with a copy of commit E&mdash;let's call it "E prime" or **E'**&mdash;that pointed to **H** as its parent, like so:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/cherry-pick-example-1.png" class="no-shadow" />
+</div>
+
+<p>Or, if you typed something like <code class="inline">git cherry-pick C D E</code>, you'd wind up with this when you were done:</p>
+
+<div class="wp-caption">
+  <img src="/assets/images2/cherry-pick-example-2.png" class="no-shadow" />
+</div>
+
+<p>The important thing to notice here is that Git has copied changes made in one place, and replayed them somewhere else.</p>
+
+<p>Here's a quick slideshow that steps through the process:</p>
+
+<!-- Making up for my lack of Javascript skills with Ruby instead -->
+<div class="wp-caption">
+  <% (1..7).each do |i| -%>
+    <div id="cherry-pick-slideshow-slide-<%= i %>" class="cherry-pick-slideshow-slide" style="text-align: left;">
+      <img src="/assets/images2/cherry-pick-slideshow/cherry-pick-step-<%= i %>.png" class="no-shadow" />
+      <div style="text-align: center;">
+        Step <%= i %>
+        <br />
+        <button <%= 'disabled' if i == 1 %> onclick="show_slide('cherry-pick-slideshow', 1);">&larr;&larr;</button>
+        <button <%= 'disabled' if i == 1 %> onclick="show_slide('cherry-pick-slideshow', <%= i.pred %>);">&larr;</button>
+        <button <%= 'disabled' if i == 7 %> onclick="show_slide('cherry-pick-slideshow', <%= i.succ %>);">&rarr;</button>
+        <button <%= 'disabled' if i == 7 %> onclick="show_slide('cherry-pick-slideshow', 7);">&rarr;&rarr;</button>
+      </div>
+    </div>
+  <% end -%>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+  function show_slide(slideshow, index) {
+    $('.'+slideshow+'-slide').hide();
+    $('#'+slideshow+'-slide-' + index).show();
+  }
+  $(document).ready(function() {
+    show_slide('cherry-pick-slideshow', 1);
+  })
+</script>

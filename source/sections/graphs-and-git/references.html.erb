@@ -1,0 +1,19 @@
+---
+title:      "References"
+created_at: 2011-09-23 21:13:54.286590 -07:00
+layout:     section
+---
+
+<p>You may have noticed the <em>very colorful</em> labels in the GitX screenshot on the previous page. (If not, go back and have another peek. I'll wait.)  Those labels are GitX's way of showing <strong>references.</strong></p>
+
+<p>I don't want to spend too much time talking about what each color means, because that particular representation is specific to GitX and you might be using something else.  But however your visualizer represents them, you need to know what they are.  <em>(Can I get a drumroll, please?)</em></p>
+
+<p><strong>References are pointers to commits.</strong></p>
+
+<p>References come in several flavors:  <strong>local branch,</strong> <strong>remote branch,</strong> and <strong>tag.</strong></p>
+
+<p>On disk, a <em><strong>local branch reference</strong></em> consists entirely of a file in your project's .git/refs/heads directory.  This file contains the 40-byte identifier of the commit that the reference points to... and that's it.  <strong>The entire file is 40 bytes.</strong></p>
+
+<p>You might have heard people talk about how Git allows "cheap branching."  This is (part of) what they mean.  Creating a branch in Git just means writing 40 bytes to disk, which is why <code class="inline">git branch foo</code> is so freaking fast.</p>
+
+<p>What's <em><strong>really</strong></em> interesting about references, though, is how they behave.  So, let's move on.</p>

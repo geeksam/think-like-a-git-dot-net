@@ -1,0 +1,87 @@
+---
+title:      "The Savepoint Pattern"
+created_at: 2011-09-27 21:01:02.151809 -07:00
+layout:     section
+---
+
+<p>Here's a quick overview of the steps in this recipe:</p>
+
+<ol class="full-size">
+  <li>Make sure you're on the right branch and that you have a clean working state.</li>
+  <li>Create a new branch to use as a savepoint, but don't switch to it.</li>
+  <li>Do the merge.</li>
+  <li>Switch to your visualizer and predict how its view will change when you refresh it.</li>
+  <li>Refresh your visualizer and see whether your prediction was correct.</li>
+  <li>Are you happy with the result?
+    <ul>
+      <li>If YES: Delete the savepoint.</li>
+      <li>If NO: Reset your branch to the savepoint.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>(Unless the last video game you ever played was Super Mario Brothers, it should be obvious why I call this one the Savepoint pattern.)</p>
+
+<h3>The long version</h3>
+
+<p>You're on the <em><strong>master</strong></em> branch and you want the changes from the <em><strong>spiffy_new_feature</strong></em> branch to be incorporated into <em><strong>master.</strong></em>  You're reasonably confident that you'll want to keep the changes, but you want to be able to abort it if, for example, this feature has unintended side effects.</p>
+
+<ol>
+  <li>
+    <strong>Make sure you're on the right branch and that you have a clean working state.</strong>
+    <li>
+      Whatever visualizer you're using, figure out how it shows you where your current branch is.  Or, at the command line, type <code class="inline">git status</code> and you should see something like this:
+      <code>
+        # On branch master <br />
+        nothing to commit (working directory clean)
+      </code>
+    </li>
+  </li>
+  <li>
+    <strong>Create a new branch to use as a savepoint, but don't switch to it.</strong>
+    <ul>
+      <li>
+        Type <code class="inline">git branch savepoint</code>.  Now, if you type <code class="inline">git status</code> again, you should still see a message that you're on the <em><strong>master</strong></em> branch.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Do the merge.</strong>
+    <ul>
+      <li>
+        Type <code class="inline">git merge spiffy_new_feature</code>.  If you're lucky, there won't be any merge conflicts you can't resolve.
+      </li>
+      <li><strong>If you want to abort the merge</strong> at this point, just type <code class="inline">git reset --hard</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Switch to your visualizer and predict how its view will change when you refresh it.</strong>
+    <ul>
+      <li>
+        For example:
+        <ol>
+          <li>After a merge, you should see a new commit.</li>
+          <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into master".</li>
+          <li>Your <em><strong>master</strong></em> branch label should have moved to this new commit, while the <em><strong>spiffy_new_feature</strong></em> branch label should still be in the same place.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Refresh your visualizer and see whether your prediction was correct.</strong>
+  </li>
+  <li>
+    Are you happy with the result?
+    <ul>
+      <li>
+        <strong>If YES:</strong> Delete the savepoint.
+        <code>git branch -d savepoint</code>
+      </li>
+      <li>
+        <strong>If NO:</strong> Reset your branch to the savepoint.
+        <code>git reset --hard savepoint</code>
+        If you want to clean up, you can now delete the savepoint with <code class="inline">git branch -d savepoint</code>.
+      </li>
+    </ul>
+  </li>
+</ol>

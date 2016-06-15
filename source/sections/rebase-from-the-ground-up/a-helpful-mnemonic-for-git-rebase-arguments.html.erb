@@ -1,0 +1,30 @@
+---
+title:      "A Helpful Mnemonic for 'git rebase' Arguments"
+created_at: 2011-10-03 00:58:22.703160 -07:00
+layout:     section
+---
+
+<p>To summarize the previous section, this:</p>
+
+<code>
+  git checkout foo<br />
+  git checkout -b newbar<br />
+  git cherry-pick C D E <br />
+  git checkout bar <br />
+  git reset --hard newbar <br />
+  git branch -d newbar
+</code>
+
+<p>is equivalent to this:</p>
+
+<code>
+  git rebase foo bar
+</code>
+
+<p>When you do a rebase, you are <em><strong>rewriting history.</strong></em>  You are, in effect, saying to Git, "Hey, you know those things that happened over there on that completely different timeline?  I want you to pretend that they happened here instead."</p>
+
+<p>The documentation for the rebase command lists a lot of different ways you can invoke it.  Frankly, I'm still not sure what some of them do, and I have a hard time parsing out the different parentheses and brackets to figure out exactly how you'd use, for example, <code class="inline">--onto</code>.</p>
+
+<p>Here's how I think of it:  in English, we read <strong>from left to right</strong>.  On most charts that show the change in something over time, time is shown on the x-axis of the graph, with time increasing <strong>from left to right</strong>.  When you issue commands to the shell, you can put several of them on one line, and they'll be executed in order <strong>from left to right</strong>.</p>
+
+<p>So when I use <code class="inline">git rebase</code>, I <em>(almost)</em> always give it two arguments:  the name of the place I want to start from, and the name of the place I want to end up.  Or, to put it another way, I tell rebase the sequence of events I want it to create, <strong>from left to right</strong>:  <code class="inline">git rebase first_this then_this</code></p>

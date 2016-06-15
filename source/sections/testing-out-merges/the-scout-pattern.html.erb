@@ -1,0 +1,88 @@
+---
+title:      "The Scout Pattern"
+created_at: 2011-09-27 21:01:00.325396 -07:00
+layout:     section
+---
+
+<p>Here's a quick overview of the steps in this recipe:</p>
+
+<ol class="full-size">
+  <li>Make sure you're on the right branch and that you have a clean working state.</li>
+  <li>Create a new branch (I often name it <em>test_merge</em>) and switch to it.</li>
+  <li>Do the merge.</li>
+  <li>Switch to your visualizer and predict how its view will change when you refresh it.</li>
+  <li>Refresh your visualizer and see whether your prediction was correct.</li>
+  <li>Are you happy with the result?
+    <ul>
+      <li>If YES: Move your real branch forward to where the <em>test_merge</em> branch is.</li>
+      <li>If NO: Delete the <em>test_merge</em> branch.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>I call this the Scout pattern:  you're unsure what the terrain ahead is like, so you send a scouting party ahead to check it out.  If they radio back that everything's okay, you'll move ahead and join them.  If not, well, it was just a small scouting party and we'll tell the families that they died with honor...</p>
+
+<h3>The long version</h3>
+
+<p>You're on the <em><strong>master</strong></em> branch and you want the changes from the <em><strong>spiffy_new_feature</strong></em> branch to be incorporated into <em><strong>master.</strong></em>  You're not sure if this will be a good idea, so you want to try out the merge, but be able to abort it if things don't go smoothly.</p>
+
+<ol>
+  <li>
+    <strong>Make sure you're on the right branch and that you have a clean working state.</strong>
+    <ul>
+      <li>
+        Whatever visualizer you're using, figure out how it shows you where your current branch is.  Or, at the command line, type <code class="inline">git status</code> and you should see something like this:
+        <code>
+          # On branch master <br />
+          nothing to commit (working directory clean)
+        </code>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Create a new branch and switch to it.</strong>
+    <ul>
+      <li>
+        Type <code class="inline">git checkout -b test_merge</code>.  Now, if you type <code class="inline">git status</code> again, you should see a message that you're on the <em><strong>test_merge</strong></em> branch.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Do the merge.</strong>
+    <ul>
+      <li>
+        Type <code class="inline">git merge spiffy_new_feature</code>.  If you're lucky, there won't be any merge conflicts you can't resolve.
+      </li>
+      <li><strong>If you want to abort the merge</strong> at this point, type <code class="inline">git reset --hard</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Switch to your visualizer and predict how its view will change when you refresh it.</strong>
+    <ul>
+      <li>
+        For example:
+        <ol>
+          <li>After a merge, you should see a new commit.</li>
+          <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into master".</li>
+          <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>master</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Refresh your visualizer and see whether your prediction was correct.</strong>
+  </li>
+  <li>
+    <strong>Are you happy with the result?</strong>
+    <ul>
+      <li>
+        <strong>If YES:</strong> Move the <em>master</em> branch forward to where the <em>test_merge</em> branch is with:
+        <code>git checkout master <br />git merge test_merge</code>
+      </li>
+      <li>
+        <strong>If NO:</strong> Drop the <em>test_merge</em> branch with:
+        <code>git checkout master <br />git branch -D test_merge</code>
+      </li>
+    </ul>
+  </li>
+</ol>

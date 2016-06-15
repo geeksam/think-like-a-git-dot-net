@@ -1,0 +1,35 @@
+---
+title:      "Black Belt Merging"
+created_at: 2011-09-27 21:33:06.109206 -07:00
+layout:     section
+---
+
+<p>Once you're comfortable with <%= section_link('the Savepoint pattern') %>, you might get tired of creating the savepoint branch, only to have to remember to delete it every time.  If so, I have good news for you:  you don't actually need to use a branch as a savepoint for merges.</p>
+
+<p>Merge commits always wind up with a branch label pointing at them, and one of the branch's parent commits will be the commit that that branch label was just moved from.</p>
+
+<p>It may take you a few tries to parse that sentence.  The upshot is that the commit you started on&mdash;the one you would've marked with a savepoint branch&mdash;<strong>will always be reachable.</strong></p>
+
+<p>Here's the thing:  <strong>Git doesn't care what you call your branches.</strong>  Remember, branches are just a 40-byte file on disk that points to the commit's SHA-1 hash, which is what Git really uses for all of its work.  The branch is just there for us puny humans to have some convenient, memorable name pointing to part of the graph.</p>
+
+<p>At the end of <%= section_link('the Savepoint pattern') %>, the command you type to reset your branch to the savepoint is <code class="inline">git reset --hard savepoint</code> (where "savepoint" is a branch name).  If you look at the documentation that comes up when you type <code class="inline">git reset -h</code>, you'll see that the final argument it takes is called <code class="inline">&lt;commit&gt;</code>.  Older versions of the documentation called this <code class="inline">&lt;commit-ish&gt;</code>, which was a convenient reminder that you could use anything that Git can turn into a SHA-1 hash.</p>
+
+<p>Things Git is happy to accept in a <code class="inline">&lt;commit&gt;</code> argument include (but are probably not limited to):</p>
+
+<ul class="full-size">
+  <li>Branch names</li>
+  <li>Tags</li>
+  <li>Relative references like <strong>HEAD^</strong>, <strong>HEAD^^</strong>, or <strong>HEAD~3</strong></li>
+  <li>partial SHA-1 hashes like 8d434382 (you just have to provide enough initial digits to be unique; Git will fill in the rest for you)</li>
+  <li>SHA-1 hashes like 8d434382d9420940be260199a8a058cf468d9037 (these are <em>very</em> easy for Git to turn into SHA-1 hashes!)</li>
+</ul>
+
+<p>So, at the end of <%= section_link('the Savepoint pattern') %>, if you wanted to back out of the merge, you could just as easily use <code class="inline">git log</code> or your visualizer to find the SHA-1 of the commit (let's say it starts with 1234abcd), and type this:</p>
+
+<code>git reset --hard 1234abcd</code>
+
+<p>...and <strong>Git would behave exactly the same</strong> as if you'd remembered to create a branch in the first place.</p>
+
+<div class="wp-caption" style="text-align: left; padding: 5px;">
+  That bit about "if you'd remembered to" reminds me:  one of the single most helpful bits of commentary I ever read about Git was Ryan Tomayko's <a href="http://tomayko.com/writings/the-thing-about-git">The Thing About Git</a>.  (Yes, that's the same thing I linked to in <%= section_link('example-4-lsd-and-chainsaws', 'LSD and Chainsaws') %>.)
+</div>

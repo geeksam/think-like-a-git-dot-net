@@ -1,0 +1,19 @@
+---
+title:      "Rebase From the Ground Up"
+created_at: 2011-10-02 23:51:29.003703 -07:00
+layout:     section
+---
+
+<p>Git's <code class="inline">rebase</code> command was one of those things that it took me forever to figure out.  This was partly because I just had a lot to learn about managing branches in general, but it was also partly because it seemed like the only time people bothered to write about rebase was to say <%= section_link('example-4-lsd-and-chainsaws', 'how incredibly weird and dangerous it was') %>.</p>
+
+<p>This is a damn shame, because <strong>rebase is the single most useful command I use in Git</strong>.  More importantly, <strong>it's actually pretty easy to understand once you get the hang of it.</strong></p>
+
+<h3>Danger, Will Robinson!</h3>
+
+<p>I've tried to demystify rebase in this section, and I do plan to write up a strategy for experimenting with rebase, just as I have with merge.  However, I recently realized that I forgot to mention something very important about rebase:  <strong>it is generally considered rude to rewrite history in public!</strong></p>
+
+<p>Make sure <strong>everyone</strong> who works on your project is comfortable working with rebase before you start using it, and change everyone's default pull strategy to "rebase" instead of "merge".</p>
+
+<h3>End of Public Service Announcement.</h3>
+
+<p>With that said, I'm going to take a brief digression, because I think it's much easier to explain rebase in the context of another Git command:  <code class="inline">git cherry-pick</code>.</p>

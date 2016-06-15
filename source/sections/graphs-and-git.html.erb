@@ -1,0 +1,22 @@
+---
+title:      "Graphs and Git"
+created_at: 2011-09-21 20:40:00.968102 -07:00
+layout:     section
+---
+
+<p>The reason I've gone on at some length about graph theory is that a Git repository is one giant graph.</p>
+
+<div class="fr wp-caption pad-left">
+  <img src="/assets/images2/graphs-and-git.png" class="no-shadow" />
+  <br /><strong>Git commits (simplified view)</strong>
+</div>
+
+<p>Most of the time when you interact with Git, you're working with commits in one way or another.  At the surface level, a Git commit consists of two things:  (1) a pointer to the state of your code at some moment in time, and (2) zero or more pointers to "parent" commits.</p>
+
+<p><em>(Hint: <strong>the word "pointer" means you're probably talking about a graph.</strong>)</em></p>
+
+<p><strong>A Git commit is a node in a graph</strong>, and nodes can point to other nodes that came before them.</p>
+
+<div class="wp-caption" style="text-align: left; padding: 5px;">
+  By the way:  if you want to learn way more about this than any reasonable human should ever know, I highly recommend Scott Chacon's <a href="https://github.com/pluralsight/git-internals-pdf/releases">"Git Internals" PDF</a>.  Scott's knowledge of Git is... impressive.
+</div>
