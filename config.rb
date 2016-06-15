@@ -46,6 +46,20 @@ helpers do
     @toc ||= TOC.from_file('lib/toc.txt')
   end
 
+  def nav_list(options = {})
+    options.merge!({
+      :current_section => current_page.data.title.dasherize,
+      :link_path_template => current_page.data.nav_list_links || '/sections/%s.html',
+    })
+    toc.nav_list(options)
+  end
+
+end
+
+class String
+  def dasherize
+    strip.downcase.gsub('ö', 'o').gsub(/[^a-z0-9]+/, '-').gsub(/(^-|-$)/, '')
+  end
 end
 
 # Or, you can do the module thing.  Just keep in mind that these won't

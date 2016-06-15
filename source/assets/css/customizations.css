@@ -1,12 +1,11 @@
 ---
 extension: css
-filter:    erb
 layout: none
+
+#/* Custom colors: */
+#/* #3F5C9A is blue */
+#/* #D08125 is orange */
 ---
-<%
-  @blue   = '#3F5C9A'
-  @orange = '#D08125'
--%>
 .post .entry-content li {
 	text-indent: -1em;
 }
@@ -17,7 +16,7 @@ layout: none
 }
 
 abbr {
-  border-bottom: 1px dotted <%= @blue %>;
+  border-bottom: 1px dotted #3F5C9A;
 }
 
 #content p {
@@ -36,7 +35,7 @@ ol.full-size ul, ul.full-size ol {
 
 .linear_nav_links {
   margin-top: 1em;
-  border-top: 1px solid <%= @blue %>;
+  border-top: 1px solid #3F5C9A;
   padding-top: 0.5em;
 }
 
@@ -50,7 +49,7 @@ ol.full-size ul, ul.full-size ol {
 
 li span.current-marker {
   font-weight: bold;
-  color: <%= @orange %>;
+  color: #D08125;
 }
 
 code {
@@ -58,7 +57,7 @@ code {
   background-color: #eee;
   margin: 5px 0px;
   padding: 2px 5px;
-  border: 1px solid <%= @blue %>;
+  border: 1px solid #3F5C9A;
   text-indent: 0;
 }
 
