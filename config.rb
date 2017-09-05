@@ -68,11 +68,10 @@ require_relative 'lib/site_helper'
 module SiteHelper
 
   def section_link(section_title, text = nil, opts = {})
+    path = section_path(section_title)
     # TODO: actually link to section
     text ||= section_title
-    content_tag( :a, opts ) {
-      content_tag( :strong ) { text.upcase }
-    }
+    content_tag( :a, opts.reverse_merge(href: path) ) { text }
   end
 
   def linear_nav_links
