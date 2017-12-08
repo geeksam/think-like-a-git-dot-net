@@ -10,11 +10,11 @@ layout:     section
   <p>Given one or more existing commits, apply the change each one introduces, recording a new commit for each.</p>
 </blockquote>
 
-<p>I've already mentioned (back on the page about <%= section_link('garbage collection') %>) that a Git commit's ID is a hash of both its contents and its history.  So, even if you have two commits that introduce the exact same change, if they point to different parent commits, they'll have different IDs.</p>
+<p>I've already mentioned (back on the page about <%= section_link('Garbage Collection') %>) that a Git commit's ID is a hash of both its contents and its history.  So, even if you have two commits that introduce the exact same change, if they point to different parent commits, they'll have different IDs.</p>
 
 <p>What <code class="inline">git cherry-pick</code> does, basically, is take a commit from somewhere else, and "play it back" wherever you are right now.  Because this introduces the same change with a different parent, Git builds a new commit with a different ID.</p>
 
-<p>Let's go back to this example from the <%= section_link('reachability') %> section:</p>
+<p>Let's go back to this example from the <%= section_link('Reachability') %> section:</p>
 
 <div class="wp-caption">
   <img src="/assets/images2/reachability-example.png" class="no-shadow" />
