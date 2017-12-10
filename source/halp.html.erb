@@ -18,13 +18,13 @@ title: HALP!
 
 <p><strong>If you were in the middle of a rebase and something weird happened,</strong> you may be able to just type <code class="inline">git rebase --abort</code> and get back to a known-good state.  First, though, just try scrolling back in your history; Git will print a message telling you what to do every time it stops during a rebase.</p>
 
-<p><strong>If you tried a merge and got stuck resolving nasty merge conflicts,</strong> <code class="inline">git status</code> may include a message like "Unmerged paths:" followed by a list of files.  If you just want to back out of the merge, you can probably use <code class="inline">git reset</code> to get back.  If you're *really* sure you don't need any of the current working state (i.e., you started the merge from a clean working state), <code class="inline">git reset --hard</code> may be what you want.</p>
+<p><strong>If you tried a merge and got stuck resolving nasty merge conflicts,</strong> <code class="inline">git status</code> may include a message like "Unmerged paths:" followed by a list of files.  If you just want to back out of the merge, you can probably use <code class="inline">git reset</code> to get back.  If you're <em>really</em> sure you don't need any of the current working state (i.e., you started the merge from a clean working state), <code class="inline">git reset --hard</code> may be what you want.</p>
 
 <p><strong>If you did a merge and it appears to have worked successfully, but now you want to undo it,</strong> just use <code class="inline">git reset --hard</code> to point your branch back at the commit it was on right before you did the merge.  (You should be able to see this in the output from <code class="inline">git log</code>, or your visualizer, but if not, read on.)</p>
 
 <h2>Finding your lost commit</h2>
 
-<p>Whatever branch you're on, here's the good news:  Git keeps track of every commit that that branch has ever pointed to.  It does this in what's called the 'reflog' *(that's short for "reference log")* for your branch, which lives in the following plain-text file:  <strong>[repository-root]/.git/logs/refs/heads/[branch-name]</strong>.  The reflog for the <strong>master</strong> branch is in <strong>.git/logs/refs/heads/master</strong>, and the reflog for <strong>very-important-branch</strong> is in <strong>.git/logs/refs/heads/very-important-branch</strong>, and so on.</p>
+<p>Whatever branch you're on, here's the good news:  Git keeps track of every commit that that branch has ever pointed to.  It does this in what's called the 'reflog' <em>(that's short for "reference log")</em> for your branch, which lives in the following plain-text file:  <strong>[repository-root]/.git/logs/refs/heads/[branch-name]</strong>.  The reflog for the <strong>master</strong> branch is in <strong>.git/logs/refs/heads/master</strong>, and the reflog for <strong>very-important-branch</strong> is in <strong>.git/logs/refs/heads/very-important-branch</strong>, and so on.</p>
 
 <p>So. Take a deep breath, go to the root of your repository at the command line, and type this:  <code class="inline">cat .git/logs/refs/heads/master</code></p>
 

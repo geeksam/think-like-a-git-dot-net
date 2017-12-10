@@ -3,7 +3,7 @@ title:  "Cherry-Picking Explained"
 layout: section
 ---
 
-<p>Git's own online help has a great, if characteristically terse, description of what the command does:</p>
+<p>Git's own online help has a perfectly accurate, if characteristically terse, description of what the command does:</p>
 
 <blockquote>
   <p>Given one or more existing commits, apply the change each one introduces, recording a new commit for each.</p>
@@ -19,7 +19,7 @@ layout: section
   <img src="/assets/images2/reachability-example.png" class="no-shadow" />
 </div>
 
-<p>If you were at node H in this graph, and you typed <code class="inline">git cherry-pick E</code> *(yes, you'd actually type part or all of the SHA for the commit, but for simplicity's sake, I'll just use the labels that are already here)*, you'd wind up with a copy of commit E&mdash;let's call it "E prime" or **E'**&mdash;that pointed to **H** as its parent, like so:</p>
+<p>If you were at node H in this graph, and you typed <code class="inline">git cherry-pick E</code> <em>(yes, you'd actually type part or all of the SHA for the commit, but for simplicity's sake, I'll just use the labels that are already here)</em>, you'd wind up with a copy of commit E&mdash;let's call it "E prime" or <strong>E'</strong>&mdash;that pointed to <strong>H</strong> as its parent, like so:</p>
 
 <div class="wp-caption">
   <img src="/assets/images2/cherry-pick-example-1.png" class="no-shadow" />

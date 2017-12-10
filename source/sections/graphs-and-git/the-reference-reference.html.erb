@@ -17,6 +17,8 @@ layout: section
   <code class="inline">push</code>.
 </p>
 
+<p><em>(The <code class="inline">pull</code> command is a special case: it combines <code class="inline">fetch</code> and either a <code class="inline">merge</code> or a <code class="inline">rebase</code>, depending on how you've got Git configured.)</em></p>
+
 <p><strong>Tag references</strong> are basically like branch references that never move.  <strong>Once you've created a tag, it will never change</strong> (unless you explicitly update it using the <code class="inline">--force</code> option).  This behavior makes them useful for marking specific versions of a software package, or marking exactly what got deployed to a production server on a particular date.  As of this writing, I only know of one command that affects tags.  As you might guess, it's
   <code class="inline">tag</code>.
 </p>
