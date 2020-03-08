@@ -23,7 +23,6 @@ task :rebuild => ['clear_build_dir', 'build']
 
 
 ##### Deployment #####
-require 'rake/contrib/sshpublisher'
 namespace :deploy do
   desc 'Deploy to the server using rsync'
   task :rsync do
