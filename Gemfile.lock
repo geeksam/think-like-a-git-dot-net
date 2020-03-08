@@ -20,7 +20,7 @@ GEM
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.5)
-    ffi (1.10.0)
+    ffi (1.12.2)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -74,8 +74,8 @@ GEM
       activesupport (>= 3.1)
     parallel (1.14.0)
     public_suffix (3.0.3)
-    rack (2.0.6)
-    rake (12.3.2)
+    rack (2.2.2)
+    rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -102,4 +102,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.6
+   1.17.2
