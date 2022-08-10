@@ -12,7 +12,7 @@ title: HALP!
 
 <h2>Figure out where you are right now</h2>
 
-<p><strong>I'm going to assume you're on a branch.</strong>  You can confirm this by typing <code class="inline">git status</code> in your repo.  The very first line should say "On branch master" (or "On branch very-important-branch" or whatever the name of the branch you're on is).  <strong>If not, please make a backup of your directory before proceeding and try to get some expert help</strong>!  I can't cover all the possibilities in a document like this, and I'd hate to lead you further astray at this point.</p>
+<p><strong>I'm going to assume you're on a branch.</strong>  You can confirm this by typing <code class="inline">git status</code> in your repo.  The very first line should say "On branch main" (or "On branch very-important-branch" or whatever the name of the branch you're on is).  <strong>If not, please make a backup of your directory before proceeding and try to get some expert help</strong>!  I can't cover all the possibilities in a document like this, and I'd hate to lead you further astray at this point.</p>
 
 <p>If the second line <strong>doesn't</strong> say "nothing to commit (working directory clean)", you have some unsaved changes.  You might be able to save them by using 'git stash', or you might want to copy some files out somewhere else if you're really paranoid.  Or, you just may not care...</p>
 
@@ -24,9 +24,9 @@ title: HALP!
 
 <h2>Finding your lost commit</h2>
 
-<p>Whatever branch you're on, here's the good news:  Git keeps track of every commit that that branch has ever pointed to.  It does this in what's called the 'reflog' <em>(that's short for "reference log")</em> for your branch, which lives in the following plain-text file:  <strong>[repository-root]/.git/logs/refs/heads/[branch-name]</strong>.  The reflog for the <strong>master</strong> branch is in <strong>.git/logs/refs/heads/master</strong>, and the reflog for <strong>very-important-branch</strong> is in <strong>.git/logs/refs/heads/very-important-branch</strong>, and so on.</p>
+<p>Whatever branch you're on, here's the good news:  Git keeps track of every commit that that branch has ever pointed to.  It does this in what's called the 'reflog' <em>(that's short for "reference log")</em> for your branch, which lives in the following plain-text file:  <strong>[repository-root]/.git/logs/refs/heads/[branch-name]</strong>.  The reflog for the <strong>main</strong> branch is in <strong>.git/logs/refs/heads/main</strong>, and the reflog for <strong>very-important-branch</strong> is in <strong>.git/logs/refs/heads/very-important-branch</strong>, and so on.</p>
 
-<p>So. Take a deep breath, go to the root of your repository at the command line, and type this:  <code class="inline">cat .git/logs/refs/heads/master</code></p>
+<p>So. Take a deep breath, go to the root of your repository at the command line, and type this:  <code class="inline">cat .git/logs/refs/heads/main</code></p>
 
 <p>You should see a bunch of lines of the form:</p>
 
