@@ -20,7 +20,7 @@ title: HALP!
 
 <p><strong>If you tried a merge and got stuck resolving nasty merge conflicts,</strong> <code class="inline">git status</code> may include a message like "Unmerged paths:" followed by a list of files.  If you just want to back out of the merge, you can probably use <code class="inline">git reset</code> to get back.  If you're <em>really</em> sure you don't need any of the current working state (i.e., you started the merge from a clean working state), <code class="inline">git reset --hard</code> may be what you want.</p>
 
-<p><strong>If you did a merge and it appears to have worked successfully, but now you want to undo it,</strong> just use <code class="inline">git reset --hard</code> to point your branch back at the commit it was on right before you did the merge.  (You should be able to see this in the output from <code class="inline">git log</code>, or your visualizer, but if not, read on.)</p>
+<p><strong>If you did a merge and it appears to have worked successfully, but now you want to undo it,</strong> just use <code class="inline">git reset --hard [SHA]</code> to point your branch back at the commit it was on right before you did the merge.  (You should be able to see this in the output from <code class="inline">git log</code>, or your visualizer, but if not, read on.)</p>
 
 <h2>Finding your lost commit</h2>
 
