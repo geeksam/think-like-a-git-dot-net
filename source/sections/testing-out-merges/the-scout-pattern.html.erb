@@ -23,7 +23,7 @@ layout: section
 
 <h3>The long version</h3>
 
-<p>You're on the <em><strong>master</strong></em> branch and you want the changes from the <em><strong>spiffy_new_feature</strong></em> branch to be incorporated into <em><strong>master.</strong></em>  You're not sure if this will be a good idea, so you want to try out the merge, but be able to abort it if things don't go smoothly.</p>
+<p>You're on the <em><strong>main</strong></em> branch and you want the changes from the <em><strong>spiffy_new_feature</strong></em> branch to be incorporated into <em><strong>main.</strong></em>  You're not sure if this will be a good idea, so you want to try out the merge, but be able to abort it if things don't go smoothly.</p>
 
 <ol>
   <li>
@@ -32,7 +32,7 @@ layout: section
       <li>
         Whatever visualizer you're using, figure out how it shows you where your current branch is.  Or, at the command line, type <code class="inline">git status</code> and you should see something like this:
         <code>
-          # On branch master <br />
+          # On branch main <br />
           nothing to commit (working directory clean)
         </code>
       </li>
@@ -63,7 +63,7 @@ layout: section
         <ol>
           <li>After a merge, you should see a new commit.</li>
           <li>The new commit should have a message like "Merge branch 'spiffy_new_feature' into test_merge".</li>
-          <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>master</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
+          <li>Your <em><strong>test_merge</strong></em> branch label should have moved to this new commit, while the <em><strong>main</strong></em> and <em><strong>spiffy_new_feature</strong></em> branch labels should still be in the same place.</li>
         </ol>
       </li>
     </ul>
@@ -75,12 +75,12 @@ layout: section
     <strong>Are you happy with the result?</strong>
     <ul>
       <li>
-        <strong>If YES:</strong> Move the <em>master</em> branch forward to where the <em>test_merge</em> branch is with:
-        <code>git checkout master <br />git merge test_merge</code>
+        <strong>If YES:</strong> Move the <em>main</em> branch forward to where the <em>test_merge</em> branch is with:
+        <code>git checkout main <br />git merge test_merge</code>
       </li>
       <li>
         <strong>If NO:</strong> Drop the <em>test_merge</em> branch with:
-        <code>git checkout master <br />git branch -D test_merge</code>
+        <code>git checkout main <br />git branch -D test_merge</code>
       </li>
     </ul>
   </li>
